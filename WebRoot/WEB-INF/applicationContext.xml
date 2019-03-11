@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                     http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
+                     http://www.springframework.org/schema/tx 
+                     http://www.springframework.org/schema/tx/spring-tx-4.0.xsd 
+                     http://www.springframework.org/schema/aop 
+                     http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+
+
+
+	<bean id="dataSourceDSNmysql"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<property name="url">
+			 <!-- <value>jdbc:mysql://192.168.1.81:3306/QAII</value> --> 
+			 <!--  <value>jdbc:mysql://192.168.8.80:53306/QAII</value>  -->
+			 <value>jdbc:mysql://192.168.0.245:3306/qaii</value>
+		</property>
+		<property name="username" value="root">
+		</property>
+		<property name="password" value="Caoxijiang">
+		</property>
+		<!-- <property name="username" value="capinfo">
+		</property>
+		<property name="password" value="capinfo">
+		</property> -->
+	</bean>
+	<bean id="simpleJdbcTemplate" class="org.springframework.jdbc.core.simple.SimpleJdbcTemplate">
+		<constructor-arg ref="dataSourceDSNmysql" />
+	</bean>
+	<bean id="jdbcTemplatemysql" class="org.springframework.jdbc.core.JdbcTemplate"
+		abstract="false" lazy-init="false" autowire="default">
+		<property name="dataSource" ref="dataSourceDSNmysql" />
+	</bean>
+
+	<bean id="namedParameterJdbcTemplatemysql"
+		class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+		<constructor-arg ref="dataSourceDSNmysql" />
+	</bean>
+
+	<bean id="txManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource">
+			<ref bean="dataSourceDSNmysql" />
+		</property>
+	</bean>
+
+	<!-- 数据库配置，使用jtds第三方驱动包链接SqlServer（解决SqlServer本身驱动的缺陷） -->
+	<!-- <bean id="dataSourceDSN" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
+		<property name="driverClassName"> <value>sun.jdbc.odbc.JdbcOdbcDriver</value> 
+		</property> <property name="url"> <value>jdbc:odbc:JDBC-ODBC</value> </property> 
+		<property name="username" value=""> </property> <property name="password" 
+		value=""> </property> </bean> <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate" 
+		abstract="false" lazy-init="false" autowire="default"> <property name="dataSource" 
+		ref="dataSourceDSN" /> </bean> <bean id="namedParameterJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate"> 
+		<constructor-arg ref="dataSourceDSN" /> </bean> -->
+	<!-- 配置事务管理器 -->
+	<!-- <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"> 
+		<property name="dataSource"> <ref bean="dataSourceDSN" /> </property> </bean> -->
+	<!-- 采用@Transactional注解方式使用事务 ,开启事务 -->
+	<tx:annotation-driven transaction-manager="txManager"
+		proxy-target-class="true" />
+</beans>

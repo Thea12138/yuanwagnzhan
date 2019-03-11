@@ -1,0 +1,610 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 0 0;
+}
+
+.pagecontent {
+	width: 100%;
+	min-height:950px;
+	margin-top: 2px;
+	
+}
+
+.pagecontent .contentall {
+	width: 100%;
+	height: auto;
+}
+
+.pagecontent .pageimg {
+	background: url(contentimg/pageimg.jpg) center no-repeat;
+	width: 100%;
+	height: 190px;
+	background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+}
+
+.pagecontent .contentall .blank {
+	height: 24px;
+	width: 100%;
+}
+
+.pagecontent .contentall .contentshow {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.pagecontent .contentall .contentshow .leftnav {
+	width: 155px;
+	height: auto;
+	float: left;
+	border: 2px solid #0956ac;
+}
+
+.pagecontent .contentall .contentshow .leftnav .ld {
+	width: 151px;
+	height: 44px;
+	line-height: 44px;
+	float: left;
+	background-color: #0956ac;
+	text-align: center;
+	font-family: Microsoft Yahei;
+	font-size: 16px;
+	color: #ffffff;
+	padding: 0;
+}
+
+.pagecontent .contentall .contentshow .leftnav .secondnav {
+	width: 155px;
+	height: auto;
+	float: left;
+	font-family: Microsoft Yahei;
+	font-size: 14px;
+	color: #000000;
+}
+
+.pagecontent .contentall .contentshow .leftnav .secondnav ul {
+	height: auto;
+	padding: 0 0;
+	margin: 0;
+}
+
+.pagecontent .contentall .contentshow .leftnav .secondnav ul li {
+	width: 150px;
+	height: auto;
+	display: block;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	background-color: #ffffff;
+	clear: both;
+}
+
+.pagecontent .contentall .contentshow .leftnav .secondnav ul li a {
+	text-decoration: none;
+	font-family: Microsoft Yahei;
+	font-size: 14px;
+	color: #000000;
+	width: 136px;
+	height: auto;
+	line-height: 43px;
+	display: block;
+	border-bottom: 1px dashed #9b9b9b;
+	background-color: #ffffff;
+	float: right;
+	margin-left: 0px;
+	margin-right: 6px;
+}
+
+.pagecontent .contentall .contentshow .leftnav .secondnav ul li a:hover
+	{
+	color: #000000;
+}
+
+.pagecontent .contentall .contentshow .leftnav .secondnav ul li ul {
+	position: relative;
+	top: 0px;
+	z-index: 1;
+	float: left;
+	width: 145px;
+	height: auto;
+	padding-top: 7px;
+	list-style-type: none;
+	border: 0;
+}
+
+.pagecontent .contentall .contentshow .leftnav .secondnav ul li ul li {
+	border: 0;
+	clear: both;
+	list-style: none;
+	float: left;
+	width: 145px;
+	height: 12px;
+	margin-bottom: 7px;
+	margin-top: 5px;
+	border: 0;
+}
+
+.pagecontent .contentall .contentshow .leftnav .secondnav ul li ul li a
+	{
+	text-decoration: none;
+	font-family: Microsoft Yahei;
+	font-size: 12px;
+	color: #000000;
+	margin: 0;
+	float: left;
+	width: 145px;
+	height: 12px;
+	line-height: 12px;
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+}
+
+.pagecontent .contentall .contentshow .rightcontent {
+	width: 783px;
+	float: right;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contentnav {
+	width: 783px;
+	height: 30px;
+	margin-left: 0px;
+	line-height: 22px;
+	font-family: Arial;
+	font-size: 13px;
+	border-bottom: 1px dashed #000000
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contentnav a {
+	text-decoration: none;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents {
+	font-family: 微软雅黑;
+	font-size: 16px;
+	color: #333333;
+	line-height: 30px;
+	height: auto;
+	margin-top: 30px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .listtable a
+	{
+	text-decoration: none;
+	color: #000000;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .listtable a:hover
+	{
+	color: #0066cc;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .researchborder
+	{
+	border: 1px solid green;
+	width: 780px;
+	height: auto;
+	padding: 15 20 15 20;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .researchborder .researchnow
+	{
+	width: 86px;
+	height: 35px;
+	background: url(contentimg/researchbj.png) no-repeat center;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .cgfenlei ul
+	{
+	color: green;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .cgfenlei ul li
+	{
+	height: 50px;
+	line-height: 50px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .cgfenlei ul li a
+	{
+	text-decoration: none;
+	color: #000000;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .cgfenlei ul li a:hover
+	{
+	color: #0066cc;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .departmenttitle
+	{
+	margin: 0 auto;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	font-family: 微软雅黑;
+	font-size: 22px;
+	font-weight: bolder;
+	color: #2c2c2c;
+	text-align: center;
+	border-bottom: 1px solid #ECECEC;
+	margin-bottom: 10px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .divtitle
+	{
+	margin: 0 auto;
+	width: 200px;
+	height: 60px;
+	line-height: 60px;
+	font-family: 微软雅黑;
+	font-size: 20px;
+	color: #2c2c2c;
+	text-align: center;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents p {
+        line-height:29px;
+		 margin-top: 33px;
+		 text-indent: 2em;
+		 font-family: "微软雅黑";
+		 font-size: 16px;
+		 color: #000000;
+		 opacity: 0.8;
+
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .yjyimg .yjybrief
+	{
+	width: 210px;
+	height: 210px;
+	background-color: #ffffff;
+	opacity: 0.6;
+	position: relative;
+	top: 138px;
+	left: 573px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .xrldimg {
+	margin-top: 30px;
+	width: 100%;
+	height: 120px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .xrldname
+	{
+	margin-top: 10px;
+	width: 100%;
+	height: 50px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .xrldimg .box1
+	{
+	float: left;
+	width: 112px;
+	height: 110px;
+	margin: 0 auto;
+	-webkit-border-radius: 80px;
+	-moz-border-radius: 80px;
+	-o-border-radius: 80px;
+	border-radius: 80px;
+	padding: 0 0;
+	border: 0;
+	background: url(contentimg/xrld_1.jpg) no-repeat center;
+	cursor: pointer;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .xrldimg .box2
+	{
+	float: left;
+	width: 112px;
+	height: 110px;
+	margin: 0 auto;
+	-webkit-border-radius: 80px;
+	-moz-border-radius: 80px;
+	-o-border-radius: 80px;
+	border-radius: 80px;
+	padding: 0 0;
+	border: 0;
+	background: url(contentimg/xrld_2.jpg) no-repeat center;
+	cursor: pointer;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .xrldimg .box3
+	{
+	float: left;
+	width: 112px;
+	height: 110px;
+	margin: 0 auto;
+	-webkit-border-radius: 80px;
+	-moz-border-radius: 80px;
+	-o-border-radius: 80px;
+	border-radius: 80px;
+	padding: 0 0;
+	border: 0;
+	background: url(contentimg/xrld_3.gif) no-repeat center;
+	cursor: pointer;
+	z-index: -1000;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .xrldimg .box4
+	{
+	float: left;
+	width: 112px;
+	height: 110px;
+	margin: 0 auto;
+	-webkit-border-radius: 80px;
+	-moz-border-radius: 80px;
+	-o-border-radius: 80px;
+	border-radius: 80px;
+	padding: 0 0;
+	border: 0;
+	background: url(contentimg/xrld_4.gif) no-repeat center;
+	cursor: pointer;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .xrldimg .box5
+	{
+	float: left;
+	width: 110px;
+	height: 110px;
+	margin: 0 auto;
+	-webkit-border-radius: 80px;
+	-moz-border-radius: 80px;
+	-o-border-radius: 80px;
+	border-radius: 80px;
+	padding: 0 0;
+	border: 0;
+	background: url(contentimg/xrld_5.png) no-repeat center;
+	cursor: pointer;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .xrldimg .box6
+	{
+	float: left;
+	width: 112px;
+	height: 110px;
+	margin: 0 auto;
+	-webkit-border-radius: 80px;
+	-moz-border-radius: 80px;
+	-o-border-radius: 80px;
+	border-radius: 80px;
+	padding: 0 0;
+	border: 0;
+	background: url(contentimg/xrld_6.png) no-repeat center;
+	cursor: pointer;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .xrldimg .box1 a
+	{
+	outline: none;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .xrldimg .box2 a
+	{
+	outline: none;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .xrldimg .box3 a
+	{
+	outline: none;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .xrldimg .box4 a
+	{
+	outline: none;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .xrldimg .box5 a
+	{
+	outline: none;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .xrldimg .box6 a
+	{
+	outline: none;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .xrldimg .box
+	{
+	float: left;
+	width: 16px;
+	height: 120px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .xrldname .box0
+	{
+	float: left;
+	width: 16px;
+	height: 50px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .xrldname .box11
+	{
+	float: left;
+	width: 112px;
+	height: 50px;
+	text-align: center;
+	font-family: Arial;
+	font-size: 12px;
+	line-height: 30px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .xrldname .styleactive
+	{
+	color: #4E98F7;
+	font-WEIGHT: bold;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .yz1 {
+	width: 100%;
+	height: auto;
+	text-indent: 2em;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .yz2 {
+	width: 100%;
+	height: auto;
+	text-indent: 2em;
+	display: none;
+	
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .yz3 {
+	width: 100%;
+	height: auto;
+	text-indent: 2em;
+	display: none;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .yz4 {
+	width: 100%;
+	height: auto;
+	text-indent: 2em;
+	display: none;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .yz5 {
+	width: 100%;
+	height: auto;
+	text-indent: 2em;
+	display: none;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .yz6 {
+	width: 100%;
+	height: auto;
+	text-indent: 2em;
+	display: none;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .xrldimg .ldys
+	{
+	color: blue;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .listtable
+	{
+	font-family: Arial;
+	font-size: 12px;
+	color: #333333;
+	line-height: 28px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .zzjgdiv {
+	width: 770px;
+	height: 609px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .topparty
+	{
+	width: 100%;
+	height: 400px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .topparty .tleft
+	{
+	float: left;
+	width: 33%;
+	height: 390px;
+	margin-right: 0px;
+	padding-top: 10px;
+	padding-left: 0px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .topparty .tleft ul li
+	{
+	margin-top: 15px;
+	margin-left: 0px;
+	border-top: 1px solid #dddddd;
+	height: 42px;
+	line-height: 42px;
+	margin-top: 0px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .topparty .tcenter
+	{
+	float: left;
+	width: 33%;
+	height: 390px;
+	margin-right: 0px;
+	padding-top: 10px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .topparty .tcenter ul li
+	{
+	margin-top: 15px;
+	margin-left: 0px;
+	border-top: 1px solid #dddddd;
+	height: 42px;
+	line-height: 42px;
+	margin-top: 0px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .topparty .tright
+	{
+	float: left;
+	width: 33%;
+	height: 390px;
+	padding-top: 10px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .topparty .tright ul li
+	{
+	margin-top: 15px;
+	margin-left: 0px;
+	border-top: 1px solid #dddddd;
+	height: 42px;
+	line-height: 42px;
+	margin-top: 0px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .bottomparty
+	{
+	width: 100%;
+	height: 200px;
+	margin-top: 20px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .bottomparty .bleft,.bcenter,.bright
+	{
+	float: left;
+	width: 33%;
+	height: 190px;
+	margin-right: 0px;
+	padding-top: 10px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .bottomparty .bleft ul li
+	{
+	margin-top: 15px;
+	margin-left: 0px;
+	border-top: 1px solid #dddddd;
+	height: 42px;
+	line-height: 42px;
+	margin-top: 0px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .bottomparty .bcenter ul li
+	{
+	margin-top: 15px;
+	margin-left: 0px;
+	border-top: 1px solid #dddddd;
+	height: 42px;
+	line-height: 42px;
+	margin-top: 0px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .bottomparty .bright ul li
+	{
+	margin-top: 15px;
+	margin-left: 0px;
+	border-top: 1px solid #dddddd;
+	height: 42px;
+	line-height: 42px;
+	margin-top: 0px;
+}

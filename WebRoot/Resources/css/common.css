@@ -1,0 +1,849 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 0 0;
+}
+
+
+.header{
+	width: 100%;
+	height:auto;
+}
+.show{
+	display: block;
+}
+.hide{
+	display: none;
+}
+.header .headertop {	
+	width:100%;
+	padding:16px 19.3%;
+	height:77px;
+	margin: 0 auto;
+	vertical-align:middle;
+	background-color:#093e8e;		
+}
+
+
+.header .headertop img {
+	display:inline-block;
+	float:left;
+}
+
+.header .headertop .language {
+	display:inline-block;
+	width:200px;
+	text-align:right;
+	height: 40px;
+	line-height: 40px;
+	float:right;
+	font-size: 16px;
+	color: #ffffff;
+}
+
+.header .headertop .language a {
+	text-decoration: none;
+	font-size: 16px;
+	color: #ffffff;
+}
+
+.header .headertop .language .lanActive {
+	color: #fff;
+}
+
+.header .nav {
+	width: 61.4%;
+	height: 40px;
+	margin: 0 auto;
+}
+
+.header .nav ul {
+	width: 100%;
+	height: 40px;
+	padding: 0px;
+	margin: 0px;
+	margin: 0 auto;
+}
+
+.header .nav ul li {
+	display: inline;
+	width: 14%;
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	text-align: center;
+	position: relative;
+}
+
+.header .nav ul li a {
+	text-decoration: none;
+	color: #093e8e;
+	font-size:18px;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	display: block;
+	outline: none;
+}
+
+.header .nav ul li ul {
+	position: absolute;
+	z-index: 1;
+	padding: 0;
+	float: left;
+	width: 100%;
+	height: auto;
+	display: none;
+}
+
+.header .nav ul li ul li {
+	clear: both;
+	list-style: none;
+	float: left;
+	margin: 0;
+	width: 100%;
+}
+.header .nav ul li ul li a {
+	margin: 0;
+	text-decoration: none;
+	width: 100%;
+	height: 40px;
+	color: #fff;
+	font-size:16px;
+	line-height: 40px;
+	/* background-color: #4a5659; */
+	background-color:rgb(0,62,141);
+	filter: alpha(Opacity =60);
+	-moz-opacity: 0.57;
+	opacity: 0.60;
+}
+.header .nav ul li .active1 {
+	color: #ffffff;
+	/*border: 1px solid white;*/
+	background: url(../img/nav_active.png)  no-repeat center;
+}
+
+.header .nav ul li .active11 {
+	color: #000000;
+	background-color: #ffffff;
+	border: 0;
+}
+
+.pagecontent {
+	width: 100%;
+	min-height:950px;
+	margin-top: 2px;
+	
+}
+
+.pagecontent .contentall {
+	width: 100%;
+	height: auto;
+}
+
+.pagecontent .pageimg {	
+	width: 100%;
+	background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+}
+
+.pagecontent .contentall .blank {
+	height: 24px;
+	width: 100%;
+}
+
+.pagecontent .contentall .contentshow {
+	width:61.4%;
+	margin: 0 auto;
+}
+
+.pagecontent .contentall .contentshow .leftnav {
+	width: 20%;
+	height: auto;
+	float: left;	
+}
+
+.pagecontent .contentall .contentshow .leftnav .ld {
+	width: 100%;
+	height: 114px;
+	line-height: 114px;
+	float: left;
+	background-color: #134290;
+	text-align: center;
+	font-family: Microsoft Yahei;
+	font-size: 30px;
+	font-weight:bold;
+	color: #ffffff;
+	padding: 0;
+}
+
+.pagecontent .contentall .contentshow .leftnav .secondnav {
+	width: 100%;
+	height: auto;
+	float: left;
+	margin-top:25px;
+	font-family: Microsoft Yahei;
+	font-size: 14px;
+	color: #000000;
+	background-color: #f7f8fa;
+}
+
+.pagecontent .contentall .contentshow .leftnav .secondnav ul {
+	height: auto;
+	padding: 0 0;
+	margin: 0;
+}
+
+.pagecontent .contentall .contentshow .leftnav .secondnav ul li {
+	width:100%;
+	height:44px;
+	display: block;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	background-color: #f7f7f9;
+	border-bottom: 1px dashed #9b9b9b;	
+	clear: both;
+}
+
+.pagecontent .contentall .contentshow .leftnav .secondnav ul li a {
+	text-decoration: none;
+	font-family: Microsoft Yahei;
+	font-size: 14px;
+	color: #000000;
+	width:100%;
+	height: auto;
+	line-height: 44px;
+	display: block;	
+	background-color:#f7f7f9;
+	float: right;
+	padding-left:20px;
+}
+.pagecontent .contentall .contentshow .leftnav .secondnav ul li a span{
+	color:#036eb8;
+}
+
+.pagecontent .contentall .contentshow .leftnav .secondnav .active {
+	color: #ffffff;
+	/*border: 1px solid white;*/
+	background: url(../img/juset.png)  no-repeat center;
+}
+.pagecontent .contentall .contentshow .leftnav .secondnav ul li ul {
+	position: relative;
+	top: 0px;
+	z-index: 1;
+	float: left;
+	width: 145px;
+	height: auto;
+	padding-top: 7px;
+	list-style-type: none;
+	border: 0;
+}
+
+.pagecontent .contentall .contentshow .leftnav .secondnav ul li ul li {
+	border: 0;
+	clear: both;
+	list-style: none;
+	float: left;
+	width: 145px;
+	height: 12px;
+	margin-bottom: 7px;
+	margin-top: 5px;
+	border: 0;
+}
+
+.pagecontent .contentall .contentshow .leftnav .secondnav ul li ul li a
+	{
+	text-decoration: none;
+	font-family: Microsoft Yahei;
+	font-size: 12px;
+	color: #000000;
+	margin: 0;
+	float: left;
+	width: 145px;
+	height: 12px;
+	line-height: 12px;
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+}
+
+.pagecontent .contentall .contentshow .rightcontent {
+	width: 76%;
+	float: right;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contentnav {
+	width: 100%;
+	height: 30px;
+	margin-left: 0px;
+	line-height:30px;
+	font-family:  Microsoft Yahei;
+	font-size: 13px;
+	border-bottom: 1px solid gray;
+}
+.pagecontent .contentall .contentshow .rightcontent .contentnav .nav_title{
+	height: 30px;
+	margin-left: 0px;
+	line-height: 30px;
+	font-family: 微软雅黑;
+	font-size: 16px;
+	font-weight:bold;
+	display:inline-block;
+	border-bottom: 2px solid #134290
+}
+.pagecontent .contentall .contentshow .rightcontent .contentnav p{
+	width: 50%;
+	height: 30px;
+	margin: 0px;
+	padding:0;
+	text-align:right;
+	line-height: 30px;
+	font-family: 微软雅黑;
+	font-size: 14px;
+	display:inline-block;
+	float:right;
+}
+.pagecontent .contentall .contentshow .rightcontent .contentnav a {
+	text-decoration: none;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents {
+	font-family: 微软雅黑;
+	font-size: 16px;
+	color: #333333;
+	width:100%;
+	height: auto;
+	margin:30px 0;
+}
+.pagecontent .contentall .contentshow .rightcontent .contents .listtable
+	{
+	width:100%;
+	font-family: Microsoft Yahei;
+	font-size: 12px;
+	color: #333333;
+	line-height: 28px;
+}
+.pagecontent .contentall .contentshow .rightcontent .contents .listtable tr
+	{
+	width:100%;
+	font-family: Microsoft Yahei;
+	font-size: 13px;
+	color: #333333;
+	/* line-height: 28px; */
+	border-bottom:1px dashed gray;
+}
+.pagecontent .contentall .contentshow .rightcontent .contents .listtable tr td
+	{
+	border-bottom:1px dashed #dedede;
+}
+.pagecontent .contentall .contentshow .rightcontent .contents .listtable tr .new_title
+	{
+	width:70%;
+}
+.pagecontent .contentall .contentshow .rightcontent .contents .listtable tr .new_time
+	{
+	width:20%;
+	text-align:right;
+}
+.pagecontent .contentall .contentshow .rightcontent .contents .listtable a
+	{
+	margin-left:12px;
+	text-decoration: none;
+	color:  #555555;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .listtable a:hover
+	{
+	color: #0066cc;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .researchborder
+	{
+	border: 1px solid green;
+	width: 100%;
+	height: auto;
+	padding: 15 20 15 20;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .researchborder .researchnow
+	{
+	width: 86px;
+	height: 35px;
+	background: url(contentimg/researchbj.png) no-repeat center;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .cgfenlei ul
+	{
+	color: green;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .cgfenlei ul li
+	{
+	height: 50px;
+	line-height: 50px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .cgfenlei ul li a
+	{
+	text-decoration: none;
+	color: #000000;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .cgfenlei ul li a:hover
+	{
+	color: #0066cc;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .departmenttitle
+	{
+	margin: 0 auto;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	font-family: 微软雅黑;
+	font-size: 22px;
+	font-weight: bolder;
+	color: #2c2c2c;
+	text-align: center;
+	border-bottom: 1px solid #ECECEC;
+	margin-bottom: 10px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .divtitle
+	{
+	margin: 0 auto;
+	width: 200px;
+	height: 60px;
+	line-height: 60px;
+	font-family: 微软雅黑;
+	font-size: 20px;
+	color: #2c2c2c;
+	text-align: center;
+}
+
+/* .pagecontent .contentall .contentshow .rightcontent .contents p {
+        line-height:29px;
+		 margin-top: 33px;
+		 text-indent: 2em;
+		 font-family: "微软雅黑";
+		 font-size: 16px;
+		 color: #000000;
+		 opacity: 0.8;
+
+} */
+
+.pagecontent .contentall .contentshow .rightcontent .contents .yjyimg .yjybrief
+	{
+	width: 210px;
+	height: 210px;
+	background-color: #ffffff;
+	opacity: 0.6;
+	position: relative;
+	top: 138px;
+	left: 573px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .xrldimg {
+	margin-top: 30px;
+	width: 100%;
+	height:auto;
+}
+
+
+.pagecontent .contentall .contentshow .rightcontent .contents .yz1 {
+	width: 100%;
+	height: auto;
+	text-indent: 2em;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .yz2 {
+	width: 100%;
+	height: auto;
+	text-indent: 2em;
+	display: none;
+	
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .yz3 {
+	width: 100%;
+	height: auto;
+	text-indent: 2em;
+	display: none;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .yz4 {
+	width: 100%;
+	height: auto;
+	text-indent: 2em;
+	display: none;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .yz5 {
+	width: 100%;
+	height: auto;
+	text-indent: 2em;
+	display: none;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .yz6 {
+	width: 100%;
+	height: auto;
+	text-indent: 2em;
+	display: none;
+}
+.pagecontent .contentall .contentshow .rightcontent .contents .yz7 {
+	width: 100%;
+	height: auto;
+	text-indent: 2em;
+	display: none;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .zzjgdiv {
+	width: 770px;
+	height: 609px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .topparty
+	{
+	width: 100%;
+	height: 400px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .topparty .tleft
+	{
+	float: left;
+	width: 33%;
+	height: 390px;
+	margin-right: 0px;
+	padding-top: 10px;
+	padding-left: 0px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .topparty .tleft ul li
+	{
+	margin-top: 15px;
+	margin-left: 0px;
+	border-top: 1px solid #dddddd;
+	height: 42px;
+	line-height: 42px;
+	margin-top: 0px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .topparty .tcenter
+	{
+	float: left;
+	width: 33%;
+	height: 390px;
+	margin-right: 0px;
+	padding-top: 10px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .topparty .tcenter ul li
+	{
+	margin-top: 15px;
+	margin-left: 0px;
+	border-top: 1px solid #dddddd;
+	height: 42px;
+	line-height: 42px;
+	margin-top: 0px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .topparty .tright
+	{
+	float: left;
+	width: 33%;
+	height: 390px;
+	padding-top: 10px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .topparty .tright ul li
+	{
+	margin-top: 15px;
+	margin-left: 0px;
+	border-top: 1px solid #dddddd;
+	height: 42px;
+	line-height: 42px;
+	margin-top: 0px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .bottomparty
+	{
+	width: 100%;
+	height: 200px;
+	margin-top: 20px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .bottomparty .bleft,.bcenter,.bright
+	{
+	float: left;
+	width: 33%;
+	height: 190px;
+	margin-right: 0px;
+	padding-top: 10px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .bottomparty .bleft ul li
+	{
+	margin-top: 15px;
+	margin-left: 0px;
+	border-top: 1px solid #dddddd;
+	height: 42px;
+	line-height: 42px;
+	margin-top: 0px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .bottomparty .bcenter ul li
+	{
+	margin-top: 15px;
+	margin-left: 0px;
+	border-top: 1px solid #dddddd;
+	height: 42px;
+	line-height: 42px;
+	margin-top: 0px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .bottomparty .bright ul li
+	{
+	margin-top: 15px;
+	margin-left: 0px;
+	border-top: 1px solid #dddddd;
+	height: 42px;
+	line-height: 42px;
+	margin-top: 0px;
+}
+
+.pagecontent .contentall .contentshow .rightcontent .contents .producttitle{	
+	width:100%;
+	height: 206px;
+	background-color:#f1f1f4;
+}
+.pagecontent .contentall .contentshow .rightcontent .contents .producttitle .productimg{	
+	width:43%;
+	display:inline-block;
+	height: 100%;
+	float:left;
+
+	
+}
+.pagecontent .contentall .contentshow .rightcontent .contents .producttitle .productimg img{	
+	width:100%;
+	height:100%;
+	background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    background-size:cover;
+}
+.pagecontent .contentall .contentshow .rightcontent .contents .producttitle .productsum{	
+	width:56%;
+	display:inline-block;
+	height: 100%;
+	margin:auto;
+	float:left;
+	background-color:#f1f1f4;
+}
+.pagecontent .contentall .contentshow .rightcontent .contents .producttitle .productsum p{	
+	width:100%;
+	margin:auto;
+	text-indent: 0em;
+	vertial-align:middle;
+	font-size: 14px;
+	padding:7% 5%;
+	
+}
+.pagecontent .contentall .contentshow .rightcontent .contents .producttitle .productsum p span{	
+	font-size: 16px;
+	font-weight:bold;
+	
+}
+
+
+.foot {
+	width: 100%;
+	/* height: 300px; */
+	background-color: #363737;
+	margin: 0;
+}
+
+.foottext {
+	width: 100%;
+	height: 40px;
+}
+
+.foot .footnav {
+	width: 61.4%;
+	height:270px;
+	margin: 0px auto;
+}
+
+.foot .footnav ul {
+	width: 90%;
+	height: 220px;
+	margin:auto;
+	padding: 0;
+	color:white;	
+}
+.foot .footnav ul li{
+	width: 10%;
+	height: 200px;
+	margin: 1%;
+	padding: 0;
+	float:left;
+	text-align: center;
+	display:inline-block;	
+}
+.foot .footnav ul li ul{
+	width: 100%;
+	height: 180px;
+	margin-top: 10px;
+	padding: 0;
+	text-align: center;
+} 
+.foot .footnav ul li ul li{
+	width: 100%;
+	height: 22px;
+	line-height: 22px;
+	margin: 0;
+	padding: 0;
+	display:block;	
+	text-align: center;
+	clear: both;
+}
+.foot .footlink ul li {
+	display: inline;
+	height: 30px;
+	line-height: 30px;
+	margin: auto 0px;
+}
+
+.foot .footlink ul li a {
+	font-family: Microsoft Yahei;
+	font-size: 12px;
+	color: #fff;
+	text-decoration: none;
+	width: 170px;
+}
+
+.foot .footlink {
+	padding-top:10px;
+	font-size:16px;
+	border-top:1px solid #fff;
+	width: 61.4%;
+	/* height: 30px;
+	line-height: 30px; */
+	margin: 0px auto;
+}
+
+.foot .footlink ul {
+	widht: 100%%;
+	height: 30px;
+	line-height: 30px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.foot .footlink ul li {
+	display: inline;
+	height: 30px;
+	line-height: 30px;
+	margin: auto 0px;
+}
+
+.foot .footlink ul li a {
+	font-family: Microsoft Yahei;
+	font-size: 14px;
+	color: #fff;
+	text-decoration: none;
+	width: 170px;
+}
+
+.foot .footlink ul li a:hover {
+	color: #fff;
+}
+
+.foot .copyright {
+	width: 61.4%;
+	height: 60px;
+	line-height: 30px;
+	margin: 0px auto;
+	text-align: center;
+	font-family: Microsoft Yahei;
+	font-size: 14px;
+	color: #fff;
+}
+
+.foot .address {
+	margin-left:24px;
+}
+
+.clear {
+	clear: both;
+}
+.footTitle{
+	font-size:17px;
+	border-bottom:1px solid rgba(255,255,255,0.5);
+	padding-bottom:3px;
+	line-height: 24px;
+}
+.footline{
+	border-bottom: 2px solid #fff;
+    width: 8px;
+    bottom: 0;
+    float: left;
+    /* position: absolute; */
+    padding-top: 26px
+}
+.foot .footnav ul li ul li a{
+	color:#fff;
+	font-size:14px;
+}
+.foot .footnav ul li ul li a:hover{
+	color:#3179d8;
+	text-decoration: none;
+}
+.small li{
+	height:18px !important;
+	line-height:18px !important;
+}
+.small li a{
+	color:#fff;
+	font-size:12px !important;
+}
+.clear {
+	clear: both;
+}
+
+/* 产品介绍 */
+.contents .img{
+		text-align:center;}
+.protitlt{
+color:rgb(9,69,165);font-weight:bold;text-indent: 2em;
+/* margin:0px; */
+}
+#pages ul,#pages li{
+	list-style:none;
+}
+#pages li{
+	list-style: none;
+    background: #f7f7f7;
+    border: 1px solid #ededed;
+    /* width: 30px; */
+    /* height: 30px; */
+    text-align: center;
+    color: #aaa;
+    display: inline-block;
+    min-width: 40px;
+    height:30px;
+    line-height:30px;}
+#pages li.active{
+	background-color: #134290;
+	color:#fff;
+}    
+@media(max-width:1600px){
+	.header .nav ul li a {
+    font-size: 16px;
+    }
+}
