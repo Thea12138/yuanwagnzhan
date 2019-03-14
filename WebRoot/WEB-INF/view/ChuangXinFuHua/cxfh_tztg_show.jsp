@@ -76,6 +76,8 @@
 					href="javascript:PageJumpNo('xwdtyjydtframe');">新闻中心</a>
 					<ul class="xiala2" id="xiala2">						
 						<li><a
+							href="javascript:ContentJump('xwdt_tztg_frame.do','xwdtyjydtframe');">通知通告</a></li>
+						<li><a
 							href="javascript:ContentJump('xwdt_ldsc_frame.do','xwdtyjydtframe');">领导视察</a></li>
 						<li><a
 							href="javascript:ContentJump('xwdt_zqdj_frame.do','xwdtyjydtframe');">合作交流</a></li>
