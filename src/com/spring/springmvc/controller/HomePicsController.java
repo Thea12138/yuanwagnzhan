@@ -31,6 +31,7 @@ public class HomePicsController extends BaseController {
 	 * exec_code：exec_code=1表示执行成功，exec_code!=1表示执行失败
 	 * fail_code：fail_code=-1表示没有异常，fail_code!=-1表示有异常
 	 **/
+	//主页轮播图接口
 	@ResponseBody
 	@RequestMapping(value = "GetHomeList.do", method = RequestMethod.POST)
 	public Map<String, Object> GetHomeList() {

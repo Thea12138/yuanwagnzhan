@@ -54,7 +54,7 @@ public class LogDao extends BaseDao {
 
 	public int AddData(LogDomain domain) {
 
-		String sql = " insert into  Log(AccountID,Module,CreateTime,Operating,TableName,DataID) ";
+		String sql = " insert into  log(AccountID,Module,CreateTime,Operating,TableName,DataID) ";
 		sql = sql
 				+ " values (:AccountID,:Module,:CreateTime,:Operating,:TableName,:DataID);";
 		SqlParameterSource params = new MapSqlParameterSource();

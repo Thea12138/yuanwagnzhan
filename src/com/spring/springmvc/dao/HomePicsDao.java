@@ -74,7 +74,7 @@ public class HomePicsDao extends BaseDao {
 
 	public int GetListCount() {
 
-		String sql = "select count(*) from QAII_HomePics where IsActive='1' ";
+		String sql = "select count(*) from qaii_homepics where IsActive='1' ";
 
 		int rows = 0;
 		try {
@@ -93,15 +93,15 @@ public class HomePicsDao extends BaseDao {
 		List<Map<String, Object>> list = null;
 		String sql;
 		if (rows > pagerow && pageno > 1) {
-			sql = "select HomePicsID,DisplayType,Title,PicUrl,Memo,EndShowTime,CreateDate,CreateBy from QAII_HomePics "
+			sql = "select HomePicsID,DisplayType,Title,PicUrl,Memo,EndShowTime,CreateDate,CreateBy from qaii_homepics "
 					+ " where IsActive='1' and HomePicsID not in "
-					+ "( select t.HomePicsID from (select HomePicsID from QAII_HomePics "
+					+ "( select t.HomePicsID from (select HomePicsID from qaii_homepics "
 					+ " where IsActive='1' order by HomePicsID desc limit 0,"
 					+ start
 					+ ") as t) order by HomePicsID desc limit 0,"
 					+ pagerow + ";";
 		} else {
-			sql = "select HomePicsID,DisplayType,Title,PicUrl,Memo,EndShowTime,CreateDate,CreateBy from QAII_HomePics "
+			sql = "select HomePicsID,DisplayType,Title,PicUrl,Memo,EndShowTime,CreateDate,CreateBy from qaii_homepics "
 					+ " where IsActive='1' order by HomePicsID desc limit 0,"
 					+ pagerow + ";";
 		}
@@ -124,7 +124,7 @@ public class HomePicsDao extends BaseDao {
 
 	public Map<String, Object> GetInfoByID(int HomePicsID) {
 		String sql = "select HomePicsID,Title,DisplayType,CONCAT('fileload/HomePics/',HomePicsID,'/',PicUrl) as PicUrl,Memo,EndShowTime,CreateDate,CreateBy "
-				+ "from QAII_HomePics where HomePicsID= :HomePicsID and IsActive='1'";
+				+ "from qaii_homepics where HomePicsID= :HomePicsID and IsActive='1'";
 		SqlParameterSource params = new MapSqlParameterSource();
 		((MapSqlParameterSource) params).addValue("HomePicsID", HomePicsID);
 		Map<String, Object> map = new HashMap<String, Object>();
@@ -138,7 +138,7 @@ public class HomePicsDao extends BaseDao {
 
 	public int AddData(HomePicsDomain domain, String userid) {
 
-		String sql = " insert into  QAII_HomePics(DisplayType,Title,PicUrl,Memo,EndShowTime,CreateDate,CreateBy,IsActive) "
+		String sql = " insert into  qaii_homepics(DisplayType,Title,PicUrl,Memo,EndShowTime,CreateDate,CreateBy,IsActive) "
 				+ " values (:DisplayType,:Title,:PicUrl,:Memo,:EndShowTime,:CreateDate,:CreateBy,'1');";
 
 		SqlParameterSource params = new MapSqlParameterSource();
@@ -164,7 +164,7 @@ public class HomePicsDao extends BaseDao {
 			String dateString = formatter.format(date);
 
 			// 获取最大ID
-			String maxidsql = " select max(HomePicsID) as MaxID from QAII_HomePics ";
+			String maxidsql = " select max(HomePicsID) as MaxID from qaii_homepics ";
 			Map<String, Object> row = queryForMap(maxidsql);
 
 			int maxID = row.get("MaxID") == null ? 0 : Integer.parseInt(row
@@ -177,7 +177,7 @@ public class HomePicsDao extends BaseDao {
 			log.setAccountID(Integer.parseInt(userid));
 			log.setCreateTime(dateString);
 			log.setOperating("新增");
-			log.setTableName("QAII_HomePics");
+			log.setTableName("qaii_homepics");
 			log.setDataID(String.valueOf(maxID));
 
 			dao.AddData(log);
@@ -193,12 +193,12 @@ public class HomePicsDao extends BaseDao {
 		String sql = "";
 		SqlParameterSource params = new MapSqlParameterSource();
 		if (domain.getPicUrl() == "") {
-			sql = " update QAII_HomePics set Title=:Title,"
+			sql = " update qaii_homepics set Title=:Title,"
 					+ " DisplayType=:DisplayType,Memo=:Memo, "
 					+ " EndShowTime=:EndShowTime,CreateDate=:CreateDate,CreateBy=:CreateBy "
 					+ " where HomePicsID=:HomePicsID and IsActive='1' ";
 		} else {
-			sql = " update QAII_HomePics set Title=:Title,"
+			sql = " update qaii_homepics set Title=:Title,"
 					+ " DisplayType=:DisplayType,PicUrl=:PicUrl,Memo=:Memo, "
 					+ " EndShowTime=:EndShowTime,CreateDate=:CreateDate,CreateBy=:CreateBy "
 					+ " where HomePicsID=:HomePicsID and IsActive='1' ";
@@ -233,7 +233,7 @@ public class HomePicsDao extends BaseDao {
 			log.setAccountID(Integer.parseInt(userid));
 			log.setCreateTime(dateString);
 			log.setOperating("修改");
-			log.setTableName("QAII_HomePics");
+			log.setTableName("qaii_homepics");
 			log.setDataID(String.valueOf(domain.getHomePicsID()));
 
 			dao.AddData(log);
@@ -247,7 +247,7 @@ public class HomePicsDao extends BaseDao {
 
 	public int DelData(int HomePicsID, String userid) {
 		StringBuilder sqlstr = new StringBuilder();
-		sqlstr.append(" update QAII_HomePics set IsActive='0' ");
+		sqlstr.append(" update qaii_homepics set IsActive='0' ");
 		sqlstr.append("  where HomePicsID=:HomePicsID ");
 		SqlParameterSource params = new MapSqlParameterSource();
 		((MapSqlParameterSource) params).addValue("HomePicsID", HomePicsID);
@@ -265,7 +265,7 @@ public class HomePicsDao extends BaseDao {
 			log.setAccountID(Integer.parseInt(userid));
 			log.setCreateTime(dateString);
 			log.setOperating("删除");
-			log.setTableName("QAII_HomePics");
+			log.setTableName("qaii_homepics");
 			log.setDataID(String.valueOf(HomePicsID));
 
 			dao.AddData(log);
