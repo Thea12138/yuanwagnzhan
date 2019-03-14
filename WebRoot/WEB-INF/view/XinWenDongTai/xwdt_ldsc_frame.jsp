@@ -202,7 +202,7 @@
 					</ul>
 				</li>			
 				<li id="cxfhframe"><a
-					href="javascript:PageJumpNo('cxfhframe');">创新孵化</a>
+					href="javascript:PageJumpNo('cxfhframe');">产业孵化</a>
 					<ul class="xiala4" id="xiala4">
 						<li><a
 							href="javascript:ContentJump('cxfh_fhfw.do','cxfhframe');">孵化服务</a></li>					

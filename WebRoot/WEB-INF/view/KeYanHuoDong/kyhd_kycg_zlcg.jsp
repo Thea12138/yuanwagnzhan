@@ -282,6 +282,8 @@
 					href="javascript:PageJumpNo('xwdtyjydtframe');">新闻中心</a>
 					<ul class="xiala2" id="xiala2">						
 						<li><a
+							href="javascript:ContentJump('xwdt_tztg_frame.do','xwdtyjydtframe');">通知通告</a></li>	
+						<li><a
 							href="javascript:ContentJump('xwdt_ldsc_frame.do','xwdtyjydtframe');">领导视察</a></li>
 						<li><a
 							href="javascript:ContentJump('xwdt_zqdj_frame.do','xwdtyjydtframe');">合作交流</a></li>
@@ -303,7 +305,7 @@
 					</ul>
 				</li>			
 				<li id="cxfhframe"><a
-					href="javascript:PageJumpNo('cxfhframe');">创新孵化</a>
+					href="javascript:PageJumpNo('cxfhframe');">产业孵化</a>
 					<ul class="xiala4" id="xiala4">
 						<li><a
 							href="javascript:ContentJump('cxfh_fhfw.do','cxfhframe');">孵化服务</a></li>					

@@ -310,11 +310,6 @@ margin-bottom:30px;}
 		    }
 		);		
 		
-		//parent.setiHeight(1340);
-		////initxssy();
-		//initDynamic();
-		//initzqdj();
-		//initnotice();
 
 	});
 
@@ -462,12 +457,140 @@ margin-bottom:30px;}
 								}
 								$("#noticedata").append(ht);
 								pages(data.rows, pagerow, pageno);
-								parent
-										.setiHeight($(".rightcontent").height() + 240);
+								parent.setiHeight($(".rightcontent").height() + 240);
 							}
 						});
 	}
 </script>
+
+<script type="text/javascript">
+	//当前页数
+	var pageno = 1;
+
+	//每页加载记录数量
+	var pagerow = 20;
+	var NewsCategory = "A";
+	//数据记录数
+	var rowcount;
+	window.onload = function() {
+		parent.setiHeight($(".rightcontent").height() + 240);
+
+	};
+	$(function() {
+	if(sessionStorage.focusUrl_Name=="xwdt_ldsc_frame.do" ){
+		if(sessionStorage.pageno!=undefined && sessionStorage.pageno!='')	{
+		    pageno=sessionStorage.pageno;
+		}
+		
+	 }
+	 sessionStorage.focusUrl_Name = "xwdt_ldsc_frame.do";
+		sessionStorage.focusUrl_ID = "xwdtyjydtframe";
+		initNewsList();
+		NavXWDT();
+		window.onload = parent.setiHeight($(".rightcontent").height() + 240);
+
+	});
+	function initNewsList() {
+		$
+				.post(
+						"LoadNewsList.do",
+						{
+							pageno : pageno,
+							pagerow : pagerow,
+							NewsCategory : NewsCategory
+						},
+						function(data) {
+							//alert(JSON.stringify(data));
+							if (data != null) {
+								$("#newsTable").html('');
+								rowcount = data.rows;
+								var list = data.list;
+							    var ht = "";
+							    /* 	ht=+ "<li>"
+								+"<img src='Resources/img/icon_point.png'/>"
+								+"<a href='javascript:ContentJumpPage(\"NewsShow.do?NewsID="
+								+ list[0].NewsID
+								+ "&NewsCategory="
+								+ NewsCategory
+								+ "\");'>"
+								+"<span class='itemtitle'>"
+								+ SubStrFun(list[0].NewsTitle, 50)
+								+ "</span><span class='itemtime'>"
+								+ (list[i].PublishDate == null ? ""
+										: ("["
+												+ (ymdDate(
+														list[0].PublishDate,
+														'yyyy-MM-dd')) + "]"))
+								+ "</span></a></li>"; */
+								for (var i = 1; i <9; i++) {
+									ht = ht
+											+ "<li>"
+											+"<img src='Resources/img/icon_point.png'/>"
+											+"<a href='javascript:ContentJumpPage(\"NewsShow.do?NewsID="
+											+ list[i].NewsID
+											+ "&NewsCategory="
+											+ NewsCategory
+											+ "\");'>"
+											+"<span class='itemtitle'>"
+											+ SubStrFun(list[i].NewsTitle, 50)
+											+ "</span><span class='itemtime'>"
+											+ (list[i].PublishDate == null ? ""
+													: ("["
+															+ (ymdDate(
+																	list[i].PublishDate,
+																	'yyyy-MM-dd')) + "]"))
+											+ "</span></a></li>";
+								}
+								$("#newsTable").append(ht);
+								pages(data.rows, pagerow, pageno);
+
+								parent.setiHeight($(".rightcontent").height() + 240);
+							}
+						});
+	}
+	function GetChangePageData(pageno) {
+		$
+				.post(
+						"LoadNewsList.do",
+						{
+							pageno : pageno,
+							pagerow : pagerow,
+							NewsCategory : NewsCategory
+						},
+						function(data) {
+							if (data != null) {
+								$("#newsTable").html('');
+								rowcount = data.rows;
+								var list = data.list;
+								var ht = "";
+								for (var i = 0; i < 6; i++) {
+									ht = ht+ "<li>"
+											+"<img src='Resources/img/icon_point.png'/>"
+											+"<a href='javascript:ContentJumpPage(\"NewsShow.do?NewsID="
+											+ list[i].NewsID
+											+ "&NewsCategory="
+											+ NewsCategory
+											+ "\");'>"
+											+"<span class='itemtitle'>"
+											+ SubStrFun(list[i].NewsTitle, 50)
+											+"</span>"
+											+ "<span class='itemtime'>"
+											+ (list[i].PublishDate == null ? ""
+													: ("["
+															+ (ymdDate(
+																	list[i].PublishDate,
+																	'yyyy-MM-dd')) + "]"))
+											+ "</span></a></li>";
+								}
+								$("#newsTable").append(ht);
+								currentPage = pageno;
+								pages(data.rows, pagerow, pageno);
+								parent.setiHeight($(".rightcontent").height() + 240);
+							}
+						});
+	}
+</script>
+
 </head>
 
 <body style="overflow:auto;overflow-x:hidden;margin:0 0;">
@@ -620,21 +743,20 @@ margin-bottom:30px;}
 			</div>
 			<div class="newscontent"> 
 				<div class="newsimg">
-					<div class="newsTitle">2018国家智能产业峰会即将在青岛盛大开幕</div>
+					<div class="newsTitle">王飞跃院长受邀参加2018世界科技创新论坛</div>
 				</div>				
 				<div class="newslist">
 					<div class="newshow">
-						<p class="newshowtitle">2018国家智能产业峰会即将在青岛盛大开幕</p>
+						<p class="newshowtitle">2018国家智能产业峰会取得圆满结束</p>
 						<p class="newshowcontent">为丰富员工的业余生活，加强精神文明建设，增强团队凝聚力，舒缓工作压力，青岛智能产业技术研究院工会于5月27日组织开展。</p>
 					</div>
 					<div class="newsotherlist">
-						<ul>							
-							<li>
-								<img src="Resources/img/ic_ new_point.png"/>
-								<span class="itemtitle">青岛智能院开展“凝心聚力，携手并进”团队开展团建活动</span>
-								<span class="itemtime">[2017-10-09]</span>
-							</li>
-							<li>
+						<!-- <table id="newsTable" class="listtable">
+						</table> -->
+						<div id="pages"></div>
+						<ul id="newsTable">							
+							
+							<!-- <li>
 								<img src="Resources/img/ic_ new_point.png"/>
 								<span class="itemtitle">青岛智能院开展“凝心聚力，携手并进”团队开展团建活动</span>
 								<span class="itemtime">[2017-10-09]</span>
@@ -663,7 +785,7 @@ margin-bottom:30px;}
 								<img src="Resources/img/ic_ new_point.png"/>
 								<span class="itemtitle">青岛智能院开展“凝心聚力，携手并进”团队开展团建活动</span>
 								<span class="itemtime">[2017-10-08]</span>
-							</li>
+							</li> -->
 						
 						</ul>
 					</div>
