@@ -277,4 +277,9 @@ public class HomePicsDao extends BaseDao {
 		return 0;
 	}
 
+	public List listHomePicture() throws DAOException {
+		String sql = "SELECT * FROM qaii_homepics WHERE IsActive ='1'";
+		return queryForList(sql);
+	}
+
 }
