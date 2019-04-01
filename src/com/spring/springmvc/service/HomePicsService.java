@@ -1,12 +1,14 @@
 package com.spring.springmvc.service;
 
 import java.net.URLDecoder;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.spring.spring.exception.realize.DAOException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -255,6 +257,16 @@ public class HomePicsService extends BaseService {
 			e.printStackTrace();
 		}
 		return map;
+	}
+
+	public List listHomePicture() throws DAOException {
+		List<Map<String, Object>> list = dao.listHomePicture();
+		List<String> result = new ArrayList();
+		for (Map<String, Object> record:list){
+			result.add(record.get("PicUrl").toString());
+		}
+		return result;
+
 	}
 
 }

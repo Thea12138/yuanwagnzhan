@@ -32,6 +32,10 @@
 		NavCPFA();
 		parent.setiHeight($(".rightcontent").height() + 240);
 	});
+    $.post("getProduct.do", {
+        productName : "zhinengchanye"
+    }, function(data) {
+    });
 </script>
 
 <style>

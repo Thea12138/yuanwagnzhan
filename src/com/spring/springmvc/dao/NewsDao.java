@@ -68,7 +68,7 @@ public class NewsDao extends BaseDao {
 		if (rows > pagerow && pageno > 1) {
 			sql = "SELECT NewsID,NewsCategory,NewsTitle,Synopsis,"
 					+ "CONCAT('fileload/html/News/',NewsCategory,'/',LinkAddress) as LinkAddress,"
-					+ "PublishDate,CreateBy"
+					+ "PublishDate,CreateBy, html_content"
 					+ " FROM qaii_news WHERE NewsCategory=:NewsCategory and IsActive='1' and NewsID NOT IN "
 					+ "( select t.NewsID from (SELECT NewsID FROM qaii_news WHERE  NewsCategory=:NewsCategory  and IsActive='1' ORDER BY PublishDate desc limit 0,"
 					+ start + ") as t) ORDER BY PublishDate desc limit 0,"
@@ -76,7 +76,7 @@ public class NewsDao extends BaseDao {
 		} else {
 			sql = "SELECT NewsID,NewsCategory,NewsTitle,Synopsis,"
 					+ "CONCAT('fileload/html/News/',NewsCategory,'/',LinkAddress) as LinkAddress,"
-					+ "PublishDate,CreateBy"
+					+ "PublishDate,CreateBy, html_content"
 					+ "  FROM qaii_news WHERE NewsCategory=:NewsCategory and IsActive='1' ORDER BY PublishDate desc limit 0,"
 					+ pagerow + ";";
 		}
