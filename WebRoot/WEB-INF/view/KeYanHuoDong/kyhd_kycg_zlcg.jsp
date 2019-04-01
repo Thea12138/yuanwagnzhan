@@ -261,7 +261,7 @@
 				<li id="home" class="home"><a
 					href="javascript:PageJump('index');">首页 </a></li>
 				<li id="jibengk" class="jibengk"><a
-					href="javascript:PageJumpNo('jibengk');">关于我们</a>
+					href="javascript:PageJumpNo('jibengk');">智能院概况</a>
 					<ul id="xiala1" class="xiala1">
 						<li id="yjygkjj"><a
 							href="javascript:ContentJump('jbgk_wyjs.do','jibengk');">院情简介</a></li>
@@ -372,6 +372,24 @@
 					<div class=contents>
 						<div class="researchborder">
 							<table
+								style="width:100%;height:80px;font-size:14px;color:#000000;"
+								border="0" cellspacing=0>
+								<tr>
+									<td style="width:30%;height:40px;text-align:right;">专利类型：</td>
+									<td style="width:30%;height:40px;"><select
+										style="height:30px;width:200px;" id="PatentType"
+										name="PatentType" onchange="PatentCategory_ChangeHandler()">
+											<option value="">-请选择-</option>
+											<option value="1">发明</option>
+											<option value="2">外观</option>
+											<option value="3">实用新型</option>
+									</select></td>
+									<td style="text-align:center;"><input
+										type="button" value="开始搜索" onclick="searchBtn_clickHandler()"
+										class="btn btn-success"></td>
+								</tr>
+							</table>
+							<!-- <table
 								style="width:740px;height:80px;font-size:14px;color:#000000;"
 								border="0" cellspacing=0>
 								<tr>
@@ -403,10 +421,10 @@
 										style="height:30px;line-height:30px;width:200px;"></td>
 
 								</tr>
-							</table>
+							</table> -->
 						</div>
 						<table class="table table-bordered table-hover"
-							style="border-collapse:collapse;width:780px;margin-top:20px;font-size:14px;line-height:32px;color:#000000;border-color:#ccc;"
+							style="border-collapse:collapse;width:100%;margin-top:20px;font-size:14px;line-height:32px;color:#000000;border-color:#ccc;"
 							cellspacing=0px cellpadding=5px>
 							<thead>
 								<tr>
@@ -439,7 +457,7 @@
 					<div class="footTitle">首页<div class="footline"></div></div>
 				</li>
 				<li>
-					<div class="footTitle">关于我们<div class="footline"></div></div>
+					<div class="footTitle">智能院概况<div class="footline"></div></div>
 					<ul>
 						<li ><a
 							href="javascript:ContentJump('jbgk_wyjs.do','jibengk');">院情简介</a></li>

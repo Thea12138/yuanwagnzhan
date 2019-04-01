@@ -93,7 +93,7 @@
 				<li id="home" class="home"><a
 					href="javascript:PageJump('index');">首页 </a></li>
 				<li id="jibengk" class="jibengk"><a
-					href="javascript:PageJumpNo('jibengk');">关于我们</a>
+					href="javascript:PageJumpNo('jibengk');">智能院概况</a>
 					<ul id="xiala1" class="xiala1">
 						<li id="yjygkjj"><a
 							href="javascript:ContentJump('jbgk_wyjs.do','jibengk');">院情简介</a></li>
@@ -174,7 +174,7 @@
 			<div class=blank></div>
 			<div class=contentshow>
 				<div class=leftnav>
-					<div class=ld>关于我们</div>
+					<div class=ld>智能院概况</div>
 					<div class=secondnav>
 						<ul>
 							<li id="yjygkjj"><a
@@ -209,7 +209,7 @@
 						<span class="nav_title">发展历程</span>
 						<p>
 							<img src="Resources/img/home.png" width="14px" style="margin-top:-2px;"/>&nbsp;&nbsp;&nbsp;&nbsp;
-							<span>关于我们</span><span>></span>
+							<span>智能院概况</span><span>></span>
 							<span>发展历程 </span>
 						</p>					
 					</div>
@@ -233,7 +233,7 @@
 					<div class="footTitle">首页<div class="footline"></div></div>
 				</li>
 				<li>
-					<div class="footTitle">关于我们<div class="footline"></div></div>
+					<div class="footTitle">智能院概况<div class="footline"></div></div>
 					<ul>
 						<li ><a
 							href="javascript:ContentJump('jbgk_wyjs.do','jibengk');">院情简介</a></li>
