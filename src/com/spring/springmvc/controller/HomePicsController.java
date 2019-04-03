@@ -1,7 +1,9 @@
 package com.spring.springmvc.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -31,6 +33,7 @@ public class HomePicsController extends BaseController {
 	 * exec_code：exec_code=1表示执行成功，exec_code!=1表示执行失败
 	 * fail_code：fail_code=-1表示没有异常，fail_code!=-1表示有异常
 	 **/
+	//主页轮播图接口
 	@ResponseBody
 	@RequestMapping(value = "GetHomeList.do", method = RequestMethod.POST)
 	public Map<String, Object> GetHomeList() {
@@ -136,6 +139,15 @@ public class HomePicsController extends BaseController {
 			e.printStackTrace();
 		}
 		return map;
+	}
+
+	//新版院网站轮播图接口
+	@RequestMapping("listHomePicture.do")
+	@ResponseBody
+	List listHomePicture() throws DAOException {
+		List result = new ArrayList();
+
+		return service.listHomePicture();
 	}
 
 }

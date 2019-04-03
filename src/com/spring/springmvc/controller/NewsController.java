@@ -189,4 +189,18 @@ public class NewsController extends BaseController {
 		return map;
 	}
 	/*************** end*******后台方法 ***********************/
+
+	//新版新闻添加接口
+    @RequestMapping(value = "insertNews.do", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> insertNews(HttpServletRequest request,
+                                      HttpServletResponse response) throws IOException, DAOException {
+        Map<String, Object> map = new HashMap<String, Object>();
+        try {
+            map = newsservice.AddNew(request);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return map;
+    }
 }
