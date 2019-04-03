@@ -640,9 +640,9 @@ margin-bottom:30px;}
 			<img src="Resources/img/logo.png" height="40px"/>
 			<div class=language>
 				<!-- <img src="Resources/img/fir1.png" height="40px"/> -->	
-				<div class="langue">
+				<!-- <div class="langue">
 					<a class="lanActive" href="index.do">中文</a> | <a href="index_e.do" target="_blank">English</a>
-				</div>	
+				</div> -->	
 				<div>
 					<img src="Resources/img/weibo.png" height="40px" style="float:right;"/>
 					<div class="wechat" style="display:none;"><img src="Resources/img/code.png"/></div>
@@ -783,8 +783,8 @@ margin-bottom:30px;}
                 <div class="containerpro">
                     <div class="front" style="background-image: url(Resources/img/product_intro_industry.png);">
                         <div class="inner">
-                            <p>智慧产业</p>
-              <span>Intelligent Industry</span>
+                            <p>智能产业</p>
+              <span>Intelligent Industries</span>
                         </div>
                     </div>
                     
@@ -797,7 +797,7 @@ margin-bottom:30px;}
                     <div class="front" style="background-image: url(Resources/img/product_intro_manufacture.png);">
                         <div class="inner">
                             <p>智能制造</p>
-              <span>Manufacture</span>
+              <span>Intelligent Manufacturing</span>
                         </div>
                     </div>
                    
@@ -810,7 +810,7 @@ margin-bottom:30px;}
                     <div class="front" style="background-image: url(Resources/img/product_intro_driving.png);">
                         <div class="inner">
                             <p>平行驾驶</p>
-              <span>Driving</span>
+              <span>Parallel Driving</span>
                         </div>
                     </div>
                     
@@ -823,7 +823,7 @@ margin-bottom:30px;}
                     <div class="front" style="background-image: url(Resources/img/product_intro_traffic.png);">
                         <div class="inner">
                             <p>平行交通</p>
-              <span>Traffic</span>
+              <span>Parallel Traffic</span>
                         </div>
                     </div>
                     
@@ -836,7 +836,7 @@ margin-bottom:30px;}
                     <div class="front" style="background-image: url(Resources/img/product_intro_data.png);">
                         <div class="inner">
                             <p>视频大数据</p>
-              <span>Big Data</span>
+              <span>Video Big Data</span>
                         </div>
                     </div>
                     
@@ -849,7 +849,7 @@ margin-bottom:30px;}
                     <div class="front" style="background-image: url(Resources/img/product_intro_health.png);">
                         <div class="inner">
                             <p>智慧医疗</p>
-              <span>Medical  & Health</span>
+              <span>Intelligent Medical</span>
                         </div>
                     </div>
                     
@@ -862,7 +862,7 @@ margin-bottom:30px;}
                     <div class="front" style="background-image: url(Resources/img/product_intro_logistics.png);">
                         <div class="inner">
                             <p>智慧物流</p>
-              <span>Logistics</span>
+              <span>Intelligent Logistics</span>
                         </div>
                     </div>
                     
@@ -875,7 +875,7 @@ margin-bottom:30px;}
                     <div class="front" style="background-image: url(Resources/img/product_intro_education.png);">
                         <div class="inner">
                             <p>智慧教育</p>
-              <span>Education</span>
+              <span>Intelligent Education</span>
                         </div>
                     </div>
                     
@@ -888,7 +888,7 @@ margin-bottom:30px;}
                     <div class="front" style="background-image: url(Resources/img/product_intro_agriculture.png);">
                         <div class="inner">
                             <p>智慧农业</p>
-              <span>Agriculture</span>
+              <span>Intelligent Agriculture</span>
                         </div>
                     </div>
                     
@@ -901,7 +901,7 @@ margin-bottom:30px;}
                     <div class="front" style="background-image: url(Resources/img/product_intro_energy.png);">
                         <div class="inner">
                             <p>平行能源</p>
-              <span>Energy</span>
+              <span>Parallel Energy</span>
                         </div>
                     </div>
                     
@@ -914,7 +914,7 @@ margin-bottom:30px;}
                     <div class="front" style="background-image: url(Resources/img/product_intro_media.png);">
                         <div class="inner">
                             <p>平行传媒</p>
-              <span>Media</span>
+              <span>Parallel Media</span>
                         </div>
                     </div>
                     

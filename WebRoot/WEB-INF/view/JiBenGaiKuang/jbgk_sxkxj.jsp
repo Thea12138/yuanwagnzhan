@@ -87,9 +87,9 @@
 		<div class="headertop">
 			<div class="headerinner">
 				<img src="Resources/img/ic_logo.png" height="40px"/>	
-				<div class=language>
+				<!-- <div class=language>
 					<a class="lanActive" href="index.do">中文</a> | <a href="index_e.do">English</a>
-				</div>			
+				</div> -->			
 			</div>
 		</div>
 		<div class="nav" id="nav">

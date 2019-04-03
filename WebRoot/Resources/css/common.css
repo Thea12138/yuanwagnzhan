@@ -203,7 +203,7 @@ body {
 	padding: 0;
 	cursor: pointer;
 	background-color: #f7f7f9;
-	border-bottom: 1px dashed #9b9b9b;	
+	border-bottom: 1px dashed #dedede;	
 	clear: both;
 }
 
@@ -216,7 +216,7 @@ body {
 	height: auto;
 	line-height: 44px;
 	display: block;	
-	background-color:#f7f7f9;
+	/* background-color:#f7f7f9; */
 	float: right;
 	padding-left:20px;
 }
@@ -649,7 +649,7 @@ body {
 	margin:auto;
 	text-indent: 0em;
 	vertial-align:middle;
-	font-size: 14px;
+	font-size: 14px !important;
 	padding:7% 5%;
 	
 }
@@ -858,6 +858,16 @@ color:rgb(9,69,165);font-weight:bold;text-indent: 2em;
 }
 /*首页小屏适配*/
 @media(max-width:1600px){
+	.pagecontent .contentall .contentshow .rightcontent .contents .producttitle .productsum p{	
+		width:100%;
+		margin:auto;
+		text-indent: 0em;
+		vertial-align:middle;
+		font-size: 12px !important;
+		padding:7% 5%;
+		line-height:23px !important;
+		
+	}
 	.header .nav ul li a {
 	    font-size: 14px;
 	}
@@ -1021,7 +1031,7 @@ color:rgb(9,69,165);font-weight:bold;text-indent: 2em;
 		font-size:12px !important;
 	}
 	p {
-    line-height: 20px !important;
+    line-height: 28px !important;
     margin-top: 20px !important;
     text-indent: 2em;
     font-family: "微软雅黑";
@@ -1035,8 +1045,7 @@ color:rgb(9,69,165);font-weight:bold;text-indent: 2em;
 	    margin: auto !important;
 	    text-indent: 0em;
 	    vertial-align: middle;
-	    font-size: 12px !important;
-	    padding: 7% 5%;
+	    font-size: 14px !important;
     }
     .pagecontent .contentall .contentshow .rightcontent .contents{
     	font-size:14px;

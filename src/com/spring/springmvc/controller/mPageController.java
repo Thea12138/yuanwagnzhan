@@ -20,6 +20,7 @@ public class mPageController extends BaseController {
 	private static final String LingDaoShiCha_PAGE = "Management/XinWenDongTai/LingDaoShiCha"; // 新闻动态-领导视察
 	private static final String ZhengQiDuiJie_PAGE = "Management/XinWenDongTai/ZhengQiDuiJie"; // 新闻动态-政企对接
 	private static final String YuanGongFengCai_PAGE = "Management/XinWenDongTai/YuanGongFengCai"; // 新闻动态-员工风采
+	private static final String YuanGongFengCaiAdd_PAGE = "Management/XinWenDongTai/YuanGongFengCaiAdd"; // 新闻动态-员工风采添加
 	private static final String ZhongYaoRongYu_PAGE = "Management/XinWenDongTai/ZhongYaoRongYu"; // 新闻动态-重要荣誉
 	private static final String HangYeQingBaoJianBao_PAGE = "Management/XinWenDongTai/HangYeQingBaoJianBao"; // 新闻动态-行业情报简报
 
@@ -85,6 +86,11 @@ public class mPageController extends BaseController {
 	@RequestMapping(value = "YuanGongFengCai.do")
 	public String YuanGongFengCai() {
 		return YuanGongFengCai_PAGE;
+	}
+	// 新闻动态-员工风采-添加
+	@RequestMapping(value = "YuanGongFengCaiAdd.do")
+	public String YuanGongFengCaiAdd() {
+		return YuanGongFengCaiAdd_PAGE;
 	}
 
 	// 新闻动态-重要荣誉

@@ -148,9 +148,9 @@
 		<div class="headertop">
 			<div class="headerinner">
 				<img src="Resources/img/ic_logo.png" height="40px"/>	
-				<div class=language>
+				<!-- <div class=language>
 					<a class="lanActive" href="index.do">中文</a> | <a href="index_e.do">English</a>
-				</div>			
+				</div> -->			
 			</div>
 		</div>
 		<div class="nav" id="nav">
@@ -188,8 +188,7 @@
 							href="javascript:ContentJump('xwdt_ygfc_frame.do','xwdtyjydtframe');">员工风采</a></li>						
 					</ul>
 				</li>
-				<li id="cpfayyhygl" class="cpfayyhygl"><a
-					href="#product">产品介绍</a></li>
+				<li id="cpfayyhygl" class="cpfayyhygl"><a href="javascript:ContentJump('product_industry.do','kyhdyjfx');">产品介绍</a></li>
 				<li id="kyhdyjfx" class="kyhdyjfx"><a
 					href="javascript:PageJumpNo('kyhdyjfx');">科学研究</a>
 					<ul class="xiala3" id="xiala3">
