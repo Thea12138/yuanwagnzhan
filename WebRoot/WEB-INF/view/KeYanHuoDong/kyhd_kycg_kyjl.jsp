@@ -48,8 +48,14 @@
 		sessionStorage.focusUrl_ID = "kyhdyjfx";
 		initTableData();
 		NavKYHD();
+		
 	});
-
+	function selectOnchang(){
+		let str=$("#sel1").val();
+		$(".find").hide();
+		$("[name='"+str+"']").show(); 
+		console.log(str);
+	}
 	//初始化表格内容
 	function initTableData() {
 		//XXXX代表后台do方法
@@ -202,9 +208,9 @@
 		<div class="headertop">
 			<div class="headerinner">
 				<img src="Resources/img/ic_logo.png" height="40px"/>	
-				<div class=language>
+				<!-- <div class=language>
 					<a class="lanActive" href="index.do">中文</a> | <a href="index_e.do">English</a>
-				</div>			
+				</div> -->			
 			</div>
 		</div>
 		<div class="nav" id="nav">
@@ -212,7 +218,7 @@
 				<li id="home" class="home"><a
 					href="javascript:PageJump('index');">首页 </a></li>
 				<li id="jibengk" class="jibengk"><a
-					href="javascript:PageJumpNo('jibengk');">关于我们</a>
+					href="javascript:PageJumpNo('jibengk');">智能院概况</a>
 					<ul id="xiala1" class="xiala1">
 						<li id="yjygkjj"><a
 							href="javascript:ContentJump('jbgk_wyjs.do','jibengk');">院情简介</a></li>
@@ -323,10 +329,37 @@
 					</div>
 					<div class=contents>
 						<div class="researchborder">
-							<table
-								style="width:100%;height:80px;font-size:14px;color:#000000;"
-								border="0" cellspacing=0>
-								<tr>
+							<div class="row">
+								 <div class="col">
+									<div class="form-group">
+										<select class="form-control" id="sel1" onchange="selectOnchang()">
+											<option value="">请选择搜索项</option>
+									        <option value="hjmc">获奖名称</option>
+									        <option value="sydw">授予单位</option>
+									        <option value="hdsj">获得时间</option>
+									        <option value="hjry">获奖人员</option>
+									      </select>
+									 </div>
+								</div>
+								<div class="col">
+									<div class="form-group find" name="hjmc">
+									   <input type=text id="AwardTitle" maxlength="200" placeholder="搜索获奖名称" class="form-check-input">
+									</div>
+									<div class="form-group find" name="sydw" style="display:none;">
+									   <input type=text id="GrantUnit" maxlength="200" placeholder="搜索授予单位" class="form-check-input">
+									</div> 
+									<div class="form-group find" name="hdsj" style="display:none;">
+									   <input type=text id="GetTime" maxlength="200" onclick="WdatePicker()" placeholder="搜索获得时间" class="form-check-input">
+									</div> 
+									<div class="form-group find" name="hjry" style="display:none;">
+									   <input type=text id="Winners" maxlength="200" placeholder="搜索获奖人员" class="form-check-input">
+									</div>  
+								</div>
+								<div class="col">
+									<input	type="button" value="开始搜索" onclick="searchBtn_clickHandler()"	class="btn btn-success">
+								</div>	
+								
+								<!-- <tr>
 									<td style="width:70px;height:40px;text-align:right;">获奖名称：</td>
 									<td style="width:220px;height:40px;"><input type=text
 										id="AwardTitle" style="height:30px;line-height:30px;"
@@ -349,11 +382,11 @@
 										id="Winners" style="height:30px;line-height:30px;"
 										maxlength="200"></td>
 
-								</tr>
-							</table>
+								</tr> -->
+							
 						</div>
 						<table class="table table-bordered table-hover"
-							style="border-collapse:collapse;width:780px;margin-top:20px;font-size:14px;line-height:32px;color:#000000;border-color:#ccc;"
+							style="border-collapse:collapse;width:100%;margin-top:20px;font-size:14px;line-height:32px;color:#000000;border-color:#ccc;"
 							cellspacing=0px cellpadding=5px>
 							<thead>
 								<tr>
@@ -384,7 +417,7 @@
 					<div class="footTitle">首页<div class="footline"></div></div>
 				</li>
 				<li>
-					<div class="footTitle">关于我们<div class="footline"></div></div>
+					<div class="footTitle">智能院概况<div class="footline"></div></div>
 					<ul>
 						<li ><a
 							href="javascript:ContentJump('jbgk_wyjs.do','jibengk');">院情简介</a></li>

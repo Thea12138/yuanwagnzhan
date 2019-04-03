@@ -150,9 +150,9 @@
 		<div class="headertop">
 			<div class="headerinner">
 				<img src="Resources/img/ic_logo.png" height="40px"/>	
-				<div class=language>
+				<!-- <div class=language>
 					<a class="lanActive" href="index.do">中文</a> | <a href="index_e.do">English</a>
-				</div>			
+				</div>	 -->		
 			</div>
 		</div>
 		<div class="nav" id="nav">
@@ -160,7 +160,7 @@
 				<li id="home" class="home"><a
 					href="javascript:PageJump('index');">首页 </a></li>
 				<li id="jibengk" class="jibengk"><a
-					href="javascript:PageJumpNo('jibengk');">关于我们</a>
+					href="javascript:PageJumpNo('jibengk');">智能院概况</a>
 					<ul id="xiala1" class="xiala1">
 						<li id="yjygkjj"><a
 							href="javascript:ContentJump('jbgk_wyjs.do','jibengk');">院情简介</a></li>
@@ -191,8 +191,7 @@
 
 					</ul>
 				</li>
-				<li id="cpfayyhygl" class="cpfayyhygl"><a
-					href="#product">产品介绍</a></li>
+				<li id="cpfayyhygl" class="cpfayyhygl"><a href="javascript:ContentJump('product_industry.do','kyhdyjfx');">产品介绍</a></li>
 				<li id="kyhdyjfx" class="kyhdyjfx"><a
 					href="javascript:PageJumpNo('kyhdyjfx');">科学研究</a>
 					<ul class="xiala3" id="xiala3">
@@ -297,7 +296,7 @@
 					<div class="footTitle">首页<div class="footline"></div></div>
 				</li>
 				<li>
-					<div class="footTitle">关于我们<div class="footline"></div></div>
+					<div class="footTitle">智能院概况<div class="footline"></div></div>
 					<ul>
 						<li ><a
 							href="javascript:ContentJump('jbgk_wyjs.do','jibengk');">院情简介</a></li>

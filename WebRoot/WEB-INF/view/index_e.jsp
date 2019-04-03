@@ -78,6 +78,23 @@ padding: 0 19.3%;
     background-color: #093e8e;
     border:none;
 }
+@media (max-width: 1600px){
+	.header .headertop {
+	    width: 100%;
+	    padding: 15px 0;
+	    height: 60px;
+	    margin: 0 auto;
+	    vertical-align: middle;
+	    background-color: #093e8e;
+	    border:none;
+	}
+	.pagecontent .pageimg {
+	    padding-top: 100px !important;
+	}
+	.header .nav {
+	    top: 62px !important;
+	}
+}
 .pagecontent .pageimg{
 padding-top:137px;}
 .pagecontent .contentall .contentshow .leftnav .ld{
@@ -174,7 +191,7 @@ padding-top:137px;}
 				<li id="home" class="home"><a
 					href="javascript:PageJump('index');">首页 </a></li>
 				<li id="jibengk" class="jibengk"><a
-					href="javascript:PageJumpNo('jibengk');">关于我们</a>
+					href="javascript:PageJumpNo('jibengk');">智能院概况</a>
 					<ul id="xiala1" class="xiala1">
 						<li id="yjygkjj"><a
 							href="javascript:ContentJump('jbgk_wyjs.do','jibengk');">院情简介</a></li>
@@ -624,7 +641,7 @@ padding-top:137px;}
 					<div class="footTitle">首页<div class="footline"></div></div>
 				</li>
 				<li>
-					<div class="footTitle">关于我们<div class="footline"></div></div>
+					<div class="footTitle">智能院概况<div class="footline"></div></div>
 					<ul>
 						<li ><a
 							href="javascript:ContentJump('jbgk_wyjs.do','jibengk');">院情简介</a></li>

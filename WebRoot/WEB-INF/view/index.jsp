@@ -29,6 +29,9 @@
 	font-size: 8px;
 }
  */
+ 
+ a{
+ text-decoration: none !important;}
 .carousel-inner img {
       width: 100%;
       height: 100%;
@@ -192,14 +195,14 @@
             backface-visibility: hidden;
     border-radius: 10px;
 }
-.containerpro:hover .front,
+/* .containerpro:hover .front,
 .containerpro:hover .back{
     -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
     transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
     -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
     transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
     transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-}
+} */
 
 .back{
     position: absolute;
@@ -222,16 +225,16 @@
     -webkit-perspective: inherit;
             perspective: inherit;
     z-index: 2;
-}
+} 
 
-.containerpro .back{
+/* .containerpro .back{
     -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg);
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
-}
+} */
 
-.containerpro .front{
+/* .containerpro .front{
     -webkit-transform: rotateY(0deg);
             transform: rotateY(0deg);
     -webkit-transform-style: preserve-3d;
@@ -250,7 +253,7 @@
           transform: rotateY(-180deg);
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-}
+} */
 
 .front .inner p{
   font-size: 26px;
@@ -593,7 +596,7 @@ margin-bottom:30px;}
 
 </head>
 
-<body style="overflow:auto;overflow-x:hidden;margin:0 0;">
+<body style="overflow:auto;overflow-x:hidden;margin:0 0;background:#efeff1;">
 	<div id="demo" class="carousel slide" data-ride="carousel">
  
   <!-- 指示符 -->
@@ -637,9 +640,9 @@ margin-bottom:30px;}
 			<img src="Resources/img/logo.png" height="40px"/>
 			<div class=language>
 				<!-- <img src="Resources/img/fir1.png" height="40px"/> -->	
-				<div class="langue">
+				<!-- <div class="langue">
 					<a class="lanActive" href="index.do">中文</a> | <a href="index_e.do" target="_blank">English</a>
-				</div>	
+				</div> -->	
 				<div>
 					<img src="Resources/img/weibo.png" height="40px" style="float:right;"/>
 					<div class="wechat" style="display:none;"><img src="Resources/img/code.png"/></div>
@@ -653,8 +656,7 @@ margin-bottom:30px;}
 				<li id="home" class="home"><a
 					href="javascript:PageJump('index');"><span class="spanactive">首页</span> </a></li>
 				<li id="jibengk" class="jibengk">
-					<a	href="javascript:PageJumpNo('jibengk');"><span class="spanhov">关于我们</span></a>
-					<!-- <a	href="javascript:PageJumpNo('jibengk');">关于我们</a> -->
+					<a	href="javascript:PageJumpNo('jibengk');"><span class="spanhov">智能院概况</span></a>
 					<ul id="xiala1" class="xiala1 slideupd">
 						<li id="yjygkjj"><a
 							href="javascript:ContentJump('jbgk_wyjs.do','jibengk');">院情简介</a></li>
@@ -756,37 +758,6 @@ margin-bottom:30px;}
 						<div id="pages"></div>
 						<ul id="newsTable">							
 							
-							<!-- <li>
-								<img src="Resources/img/ic_ new_point.png"/>
-								<span class="itemtitle">青岛智能院开展“凝心聚力，携手并进”团队开展团建活动</span>
-								<span class="itemtime">[2017-10-09]</span>
-							</li>
-							<li>
-								<img src="Resources/img/ic_ new_point.png"/>
-								<span class="itemtitle">青岛智能院开展“凝心聚力，携手并进”团队开展团建活动</span>
-								<span class="itemtime">[2017-10-09]</span>
-							</li>
-							<li>
-								<img src="Resources/img/ic_ new_point.png"/>
-								<span class="itemtitle">青岛智能院开展“凝心聚力，携手并进”团队开展团建活动</span>
-								<span class="itemtime">[2017-10-09]</span>
-							</li>
-							<li>
-								<img src="Resources/img/ic_ new_point.png"/>
-								<span class="itemtitle">青岛智能院开展“凝心聚力，携手并进”团队开展团建活动</span>
-								<span class="itemtime">[2017-10-09]</span>
-							</li>
-							<li>
-								<img src="Resources/img/ic_ new_point.png"/>
-								<span class="itemtitle">青岛智能院开展“凝心聚力，携手并进”团队开展团建活动</span>
-								<span class="itemtime">[2017-10-09]</span>
-							</li>						
-							<li>
-								<img src="Resources/img/ic_ new_point.png"/>
-								<span class="itemtitle">青岛智能院开展“凝心聚力，携手并进”团队开展团建活动</span>
-								<span class="itemtime">[2017-10-08]</span>
-							</li> -->
-						
 						</ul>
 					</div>
 				</div>
@@ -812,15 +783,11 @@ margin-bottom:30px;}
                 <div class="containerpro">
                     <div class="front" style="background-image: url(Resources/img/product_intro_industry.png);">
                         <div class="inner">
-                            <p>智慧产业</p>
-              <span>Intelligent Industry</span>
+                            <p>智能产业</p>
+              <span>Intelligent Industries</span>
                         </div>
                     </div>
-                    <div class="back">
-                        <div class="inner">
-                          <p>Our technology can be used for intelligent industry.</p>
-                        </div>
-                    </div>
+                    
                 </div>
                 </a>
             </div>
@@ -830,14 +797,10 @@ margin-bottom:30px;}
                     <div class="front" style="background-image: url(Resources/img/product_intro_manufacture.png);">
                         <div class="inner">
                             <p>智能制造</p>
-              <span>Manufacture</span>
+              <span>Intelligent Manufacturing</span>
                         </div>
                     </div>
-                    <div class="back">
-                        <div class="inner">
-                            <p>Our technology can be used in manufacture.</p>
-                        </div>
-                    </div>
+                   
                 </div>
                 </a>
             </div>
@@ -847,14 +810,10 @@ margin-bottom:30px;}
                     <div class="front" style="background-image: url(Resources/img/product_intro_driving.png);">
                         <div class="inner">
                             <p>平行驾驶</p>
-              <span>Driving</span>
+              <span>Parallel Driving</span>
                         </div>
                     </div>
-                    <div class="back">
-                        <div class="inner">
-                            <p>Our technology used in driving.</p>
-                        </div>
-                    </div>
+                    
                 </div>
                 </a>
             </div>
@@ -864,14 +823,10 @@ margin-bottom:30px;}
                     <div class="front" style="background-image: url(Resources/img/product_intro_traffic.png);">
                         <div class="inner">
                             <p>平行交通</p>
-              <span>Traffic</span>
+              <span>Parallel Traffic</span>
                         </div>
                     </div>
-                    <div class="back">
-                        <div class="inner">
-                            <p>Our technology can be used in traffic.</p>
-                        </div>
-                    </div>
+                    
                 </div>
                 </a>
             </div>
@@ -881,14 +836,10 @@ margin-bottom:30px;}
                     <div class="front" style="background-image: url(Resources/img/product_intro_data.png);">
                         <div class="inner">
                             <p>视频大数据</p>
-              <span>Big Data</span>
+              <span>Video Big Data</span>
                         </div>
                     </div>
-                    <div class="back">
-                        <div class="inner">
-                            <p>Our technology can be used in big data</p>
-                        </div>
-                    </div>
+                    
                 </div>
                 </a>
             </div>
@@ -898,14 +849,10 @@ margin-bottom:30px;}
                     <div class="front" style="background-image: url(Resources/img/product_intro_health.png);">
                         <div class="inner">
                             <p>智慧医疗</p>
-              <span>Medical  & Health</span>
+              <span>Intelligent Medical</span>
                         </div>
                     </div>
-                    <div class="back">
-                        <div class="inner">
-                            <p>Our technology can be used in medical  & health</p>
-                        </div>
-                    </div>
+                    
                 </div>
                 </a>
             </div>
@@ -915,14 +862,10 @@ margin-bottom:30px;}
                     <div class="front" style="background-image: url(Resources/img/product_intro_logistics.png);">
                         <div class="inner">
                             <p>智慧物流</p>
-              <span>Logistics</span>
+              <span>Intelligent Logistics</span>
                         </div>
                     </div>
-                    <div class="back">
-                        <div class="inner">
-                            <p>Our technology can be used in logistics</p>
-                        </div>
-                    </div>
+                    
                 </div>
                 </a>
             </div>
@@ -932,14 +875,10 @@ margin-bottom:30px;}
                     <div class="front" style="background-image: url(Resources/img/product_intro_education.png);">
                         <div class="inner">
                             <p>智慧教育</p>
-              <span>Education</span>
+              <span>Intelligent Education</span>
                         </div>
                     </div>
-                    <div class="back">
-                        <div class="inner">
-                            <p>Our technology can be used in education</p>
-                        </div>
-                    </div>
+                    
                 </div>
                 </a>
             </div>
@@ -949,14 +888,10 @@ margin-bottom:30px;}
                     <div class="front" style="background-image: url(Resources/img/product_intro_agriculture.png);">
                         <div class="inner">
                             <p>智慧农业</p>
-              <span>Agriculture</span>
+              <span>Intelligent Agriculture</span>
                         </div>
                     </div>
-                    <div class="back">
-                        <div class="inner">
-                            <p>Our technology can be used in agriculture</p>
-                        </div>
-                    </div>
+                    
                 </div>
                 </a>
             </div>
@@ -966,14 +901,10 @@ margin-bottom:30px;}
                     <div class="front" style="background-image: url(Resources/img/product_intro_energy.png);">
                         <div class="inner">
                             <p>平行能源</p>
-              <span>Energy</span>
+              <span>Parallel Energy</span>
                         </div>
                     </div>
-                    <div class="back">
-                        <div class="inner">
-                            <p>Our technology can be used in energy</p>
-                        </div>
-                    </div>
+                    
                 </div>
                 </a>
             </div>
@@ -983,14 +914,10 @@ margin-bottom:30px;}
                     <div class="front" style="background-image: url(Resources/img/product_intro_media.png);">
                         <div class="inner">
                             <p>平行传媒</p>
-              <span>Media</span>
+              <span>Parallel Media</span>
                         </div>
                     </div>
-                    <div class="back">
-                        <div class="inner">
-                            <p>Our technology can be used in media</p>
-                        </div>
-                    </div>
+                    
                 </div>
                 </a>
             </div>
@@ -1003,11 +930,7 @@ margin-bottom:30px;}
               <span>Drone</span>
                         </div>
                     </div>
-                    <div class="back">
-                        <div class="inner">
-                            <p>Our technology can be used in drone</p>
-                        </div>
-                    </div>
+                    
                 </div>
                 </a>
             </div>
@@ -1016,7 +939,18 @@ margin-bottom:30px;}
 			<div class="clear"></div>
 		</div>
 		<div class="cooperation_partner">				
-		    <img src="Resources/img/pic_partner.png" width="100%">
+			<div class="news">
+				<div class="newsnav">
+					 <span>合作单位</span>
+					 <!-- <a href="javascript:ContentJump('xwdt_ldsc_frame.do','kyhdyjfx');">
+					 	<img src="Resources/img/ic_more.png">	
+					 </a> -->			
+				</div>
+				<div class="line">
+					 <img src="Resources/img/ic_line.png" width="100%">			
+				</div>
+			</div>
+			<img src="Resources/img/pic_partner.png" width="100%" style="margin-top: -20px;">
 		</div>
 	</div>
 	
@@ -1028,7 +962,7 @@ margin-bottom:30px;}
 					<div class="footTitle">首页<div class="footline"></div></div>
 				</li>
 				<li>
-					<div class="footTitle">关于我们<div class="footline"></div></div>
+					<div class="footTitle">智能院概况<div class="footline"></div></div>
 					<ul>
 						<li ><a
 							href="javascript:ContentJump('jbgk_wyjs.do','jibengk');">院情简介</a></li>

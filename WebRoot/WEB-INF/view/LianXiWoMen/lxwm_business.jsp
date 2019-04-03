@@ -69,9 +69,9 @@
 		<div class="headertop">
 			<div class="headerinner">
 				<img src="Resources/img/ic_logo.png" height="40px"/>	
-				<div class=language>
+				<!-- <div class=language>
 					<a class="lanActive" href="index.do">中文</a> | <a href="index_e.do">English</a>
-				</div>			
+				</div>	 -->		
 			</div>
 		</div>
 		<div class="nav" id="nav">
@@ -79,7 +79,7 @@
 				<li id="home" class="home"><a
 					href="javascript:PageJump('index');">首页 </a></li>
 				<li id="jibengk" class="jibengk"><a
-					href="javascript:PageJumpNo('jibengk');">关于我们</a>
+					href="javascript:PageJumpNo('jibengk');">智能院概况</a>
 					<ul id="xiala1" class="xiala1">
 						<li id="yjygkjj"><a
 							href="javascript:ContentJump('jbgk_wyjs.do','jibengk');">院情简介</a></li>
@@ -193,18 +193,18 @@
 							<div class="row" style="width:90%;margin:0px auto;padding-top:30px;padding-bottom:10px;">
 								<div class="col-sm-4" style="text-align:center;border-right:1px solid #dedede;display: inline-block;">
 									<img src="Resources/img/tel.png" /></br>
-									<span style="color:#888;font-size:16px;line-height:30px;">联系电话</span><br/>
-									<span style="color:#666;font-size:22px;line-height:40px;">0532-68012572</span>
+									<span class="lxwmmail">联系电话</span><br/>
+									<span class="submail">0532-68012572</span>
 								</div>
 								<div class="col-sm-4" style="text-align:center;display:inline-block;border-right:1px solid #dedede;">
 									<img src="Resources/img/map.png" /></br>
-									<span style="color:#888;font-size:16px;line-height:30px;">地址</span><br/>
-									<span style="color:#666;font-size:18px;line-height:30px;">青岛高新区智力岛路1号<br />创业大厦B座26层</span>
+									<span class="lxwmmail">地址</span><br/>
+									<span class="submailt">青岛高新区智力岛路1号<br />创业大厦B座26层</span>
 								</div>
 								<div class="col-sm-4" style="text-align:center;display: inline-block;">
 									<img src="Resources/img/mail.png" /></br>
-									<span style="color:#888;font-size:16px;line-height:30px;">邮箱</span><br/>
-									<span style="color:#666;font-size:20px;line-height:40px;">indus.dept@qaii.ac.cn</span>
+									<span class="lxwmmail">邮箱</span><br/>
+									<span class="submail">indus.dept@qaii.ac.cn</span>
 								</div>
 							</div>
 						</div>
@@ -226,7 +226,7 @@
 					<div class="footTitle">首页<div class="footline"></div></div>
 				</li>
 				<li>
-					<div class="footTitle">关于我们<div class="footline"></div></div>
+					<div class="footTitle">智能院概况<div class="footline"></div></div>
 					<ul>
 						<li ><a
 							href="javascript:ContentJump('jbgk_wyjs.do','jibengk');">院情简介</a></li>

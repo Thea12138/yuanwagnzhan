@@ -203,7 +203,7 @@ body {
 	padding: 0;
 	cursor: pointer;
 	background-color: #f7f7f9;
-	border-bottom: 1px dashed #9b9b9b;	
+	border-bottom: 1px dashed #dedede;	
 	clear: both;
 }
 
@@ -216,7 +216,7 @@ body {
 	height: auto;
 	line-height: 44px;
 	display: block;	
-	background-color:#f7f7f9;
+	/* background-color:#f7f7f9; */
 	float: right;
 	padding-left:20px;
 }
@@ -649,7 +649,7 @@ body {
 	margin:auto;
 	text-indent: 0em;
 	vertial-align:middle;
-	font-size: 14px;
+	font-size: 14px !important;
 	padding:7% 5%;
 	
 }
@@ -841,9 +841,236 @@ color:rgb(9,69,165);font-weight:bold;text-indent: 2em;
 #pages li.active{
 	background-color: #134290;
 	color:#fff;
-}    
+}
+.lxwmmail{
+	color:#888;font-size:16px;line-height:30px;
+} 
+.submail{
+	color:#666;font-size:20px;line-height:40px;
+} 
+.submailt{
+	color:#666;font-size:18px;line-height:40px;
+}  
 @media(max-width:1600px){
 	.header .nav ul li a {
     font-size: 16px;
     }
+}
+/*首页小屏适配*/
+@media(max-width:1600px){
+	.pagecontent .contentall .contentshow .rightcontent .contents .producttitle .productsum p{	
+		width:100%;
+		margin:auto;
+		text-indent: 0em;
+		vertial-align:middle;
+		font-size: 12px !important;
+		padding:7% 5%;
+		line-height:23px !important;
+		
+	}
+	.header .nav ul li a {
+	    font-size: 14px;
+	}
+	.header .nav ul li ul li a{
+		font-size:13px;
+		height:30px;
+		line-height:30px;
+	}
+	.header .nav ul li{
+		height:30px;
+		line-height:30px;
+	}
+	.homepage .news .newsnav span{
+		font-size:18px;
+	}
+	.homepage .news .newsnav{
+		height:25px;
+	}
+	.homepage .news .newscontent .newslist .newshow .newshowtitle{
+		margin-bottom:5px;
+		font-size:14px;
+	}
+	.homepage .news .newscontent .newslist .newshow .newshowcontent{
+		font-size:12px;
+		margin-bottom:5px;
+	}
+	.homepage .news .newscontent .newslist .newsotherlist ul li{
+		height:23px;
+		line-height: 23px;
+	}
+	.homepage .news .newscontent .newslist .newsotherlist ul li .itemtitle{
+		font-size:12px;
+		height:23px;
+		line-height:23px;
+	}
+	.homepage .news .newscontent .newslist .newsotherlist ul li .itemtime{
+		font-size:12px;
+		height:23px;
+		line-height:23px;
+	}
+	.newscontent .newsimg .newsTitle{
+		margin-top:176px;
+		font-size:14px;
+		height:30px;
+		line-height:30px;
+	}
+	.homepage .news .newscontent .newsimg{
+		height:206px;
+	}
+	.homepage .news .newscontent{
+		width: 100%;
+    	height: 210px;
+    	margin: 20px 0 30px 0;
+	}
+	.homepage .news .newscontent .newslist{
+		height:213px;
+	}
+	.header .headertop{
+		padding: 15px 19.3%;
+    	height: 60px;
+	}
+	.header .nav{
+		top:70px;
+	}
+	.homepage .product .productnav span{
+		font-size:18px;
+		line-height:25px;
+	}
+	.homepage .product .line{
+		top:7.3%;
+	}
+	.homepage .product .productnav{
+		top:2.5%;
+	}
+	.homepage .product .productshow{
+		top:10.5%;
+	}
+	.front .inner p{
+		font-size:20px !important;
+	}
+	.front .inner span{
+		font-size:18px !important;
+	}
+	.inner{
+		padding:0px !important;
+	}
+	.front, .back{
+		min-height:171px !important;
+	}
+	.homepage .product{
+		height: 670px !important;
+	}
+	.footTitle{
+		font-size:14px;
+	}
+	.foot .footnav ul li {
+	    width: 10.5%;
+	    height: 200px;
+	    margin: 0.5%;
+	    padding: 0;
+	    float: left;
+	    text-align: center;
+	    display: inline-block;
+	}
+	.foot .footnav ul li ul li a{
+		font-size:12px;
+	}
+	.footline{
+		padding-top: 23px;
+	    position: absolute;
+	    margin-top: -21px;
+	    bottom:auto;
+	}
+	.foot .footnav ul li ul li {
+	    width: 100%;
+	    height: 20px;
+	    line-height: 20px;
+	    margin: 0;
+	    padding: 0;
+	    display: block;
+	    text-align: center;
+	    clear: both;
+    }
+    .foot .footlink {
+	    padding-top: 10px;
+	    font-size: 13px;
+	    border-top: 1px solid rgba(255,255,255,0.1);
+	    width: 100%;
+	    margin: 0px auto;
+	}
+	.foot .copyright {
+	    width: 61.4%;
+	    height: 60px;
+	    line-height: 30px;
+	    margin: 0px auto;
+	    text-align: center;
+	    font-family: Microsoft Yahei;
+	    font-size: 12px;
+	    color: #fff;
+	}
+	.foot .footlink ul {
+	    widht: 100%;
+	    height: 25px;
+	    line-height: 25px;
+	    margin: 0;
+	    padding: 0;
+	    text-align: center;
+	}
+	.pagecontent .contentall .contentshow .leftnav .ld{
+		font-size:26px;
+	}
+	.pagecontent .contentall .contentshow .leftnav .secondnav ul li a{
+		font-size:13px;
+	}
+	.pagecontent .contentall .contentshow .rightcontent .contentnav .nav_title{
+		font-size:14px;
+	}
+	.pagecontent .contentall .contentshow .rightcontent .contentnav p{
+		line-height: 30px !important;
+    	margin-top: 0px !important;
+		font-size:12px !important;
+	}
+	p {
+    line-height: 28px !important;
+    margin-top: 20px !important;
+    text-indent: 2em;
+    font-family: "微软雅黑";
+    font-size: 13px !important;
+    }
+    .pagecontent .contentall .contentshow .rightcontent .contents .producttitle .productsum p span{
+    	font-size:14px;
+    }
+    .pagecontent .contentall .contentshow .rightcontent .contents .producttitle .productsum p span {
+	    width: 100%;
+	    margin: auto !important;
+	    text-indent: 0em;
+	    vertial-align: middle;
+	    font-size: 14px !important;
+    }
+    .pagecontent .contentall .contentshow .rightcontent .contents{
+    	font-size:14px;
+    }
+    .header .headertop .headerinner img{
+    	height:30px !important;
+    }
+    .header .headertop .language{
+    	height: 30px;
+	    line-height: 30px;
+	    font-size: 14px;
+    }
+    .header .headertop .language a{
+    	font-size: 14px !important;
+    }
+    .lxwmmail{
+		color:#888;font-size:14px;line-height:30px;
+	} 
+	.submail{
+		color:#666;font-size:16px;line-height:40px;
+	} 
+	.submailt{
+		color:#666;font-size:14px;line-height:40px;
+	} 
+	#newsTable tr td a{
+		font-size:14px !important;
+	} 
 }
