@@ -67,16 +67,14 @@ public class NewsDao extends BaseDao {
 		// 拼接地址去掉newID
 		if (rows > pagerow && pageno > 1) {
 			sql = "SELECT NewsID,NewsCategory,NewsTitle,Synopsis,"
-					+ "CONCAT('fileload/html/News/',NewsCategory,'/',LinkAddress) as LinkAddress,"
-					+ "PublishDate,CreateBy, html_content"
+					+ "PublishDate,CreateBy"
 					+ " FROM qaii_news WHERE NewsCategory=:NewsCategory and IsActive='1' and NewsID NOT IN "
 					+ "( select t.NewsID from (SELECT NewsID FROM qaii_news WHERE  NewsCategory=:NewsCategory  and IsActive='1' ORDER BY PublishDate desc limit 0,"
 					+ start + ") as t) ORDER BY PublishDate desc limit 0,"
 					+ pagerow + ";";
 		} else {
 			sql = "SELECT NewsID,NewsCategory,NewsTitle,Synopsis,"
-					+ "CONCAT('fileload/html/News/',NewsCategory,'/',LinkAddress) as LinkAddress,"
-					+ "PublishDate,CreateBy, html_content"
+					+ "PublishDate,CreateBy"
 					+ "  FROM qaii_news WHERE NewsCategory=:NewsCategory and IsActive='1' ORDER BY PublishDate desc limit 0,"
 					+ pagerow + ";";
 		}
@@ -346,4 +344,24 @@ public class NewsDao extends BaseDao {
 		}
 		return 0;
 	}
+
+	public Map<String, Object> getRecord(int id){
+		String sql = "select * from qaii_news where NewsID = :id";
+		SqlParameterSource params = new MapSqlParameterSource();
+		try {
+			((MapSqlParameterSource) params).addValue("id", id);
+			return queryForMap(sql, params);
+		} catch (DAOException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+//	List<Map<String, Object>> listNews(int pageno, int pagerow,
+//										   String NewsCategory) {
+//		int start = (pageno - 1) * pagerow;
+//		int rows = GetListCount(NewsCategory);
+//		List<Map<String, Object>> list = null;
+//		String sql;
+//	}
 }
