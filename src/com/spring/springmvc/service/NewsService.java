@@ -73,28 +73,28 @@ public class NewsService extends BaseService {
 			rows = newsdao.GetListCount(NewsCategory);
 			list = newsdao.LoadNewsList(pageno, pagerow, NewsCategory);
 
-			ImportFile upfile = new ImportFile();
-			String dir = "";
-			for (Map<String, Object> row : list) {
-				/*
-				 * dir = "fileload/html/News/" + row.get("NewsCategory") + "/" +
-				 * row.get("NewsID") + "/Home/";
-				 */
-				// 不用newID作为路径
-				String linkname = (String) row.get("LinkAddress");
-				String picname = linkname.substring(0,
-						linkname.lastIndexOf("."));
-				dir = picname + "/Home/";
-				String filename = upfile.getFileName(dir);
-
-				if (filename != "") {
-					dir = dir + filename;
-				} else {
-					dir = "";
-				}
-
-				row.put("ThumbPicture", dir);
-			}
+//			ImportFile upfile = new ImportFile();
+//			String dir = "";
+//			for (Map<String, Object> row : list) {
+//				/*
+//				 * dir = "fileload/html/News/" + row.get("NewsCategory") + "/" +
+//				 * row.get("NewsID") + "/Home/";
+//				 */
+//				// 不用newID作为路径
+//				String linkname = (String) row.get("LinkAddress");
+//				String picname = linkname.substring(0,
+//						linkname.lastIndexOf("."));
+//				dir = picname + "/Home/";
+//				String filename = upfile.getFileName(dir);
+//
+//				if (filename != "") {
+//					dir = dir + filename;
+//				} else {
+//					dir = "";
+//				}
+//
+//				row.put("ThumbPicture", dir);
+//			}
 
 			map.put("rows", rows);
 			map.put("list", list);
@@ -488,4 +488,11 @@ public class NewsService extends BaseService {
 		domain.setHtmlContent(request.getParameter("content"));
 	}
 
+	public Map<String, Object> getRecord(int id){
+		return newsdao.getRecord(id);
+	}
+//	List<Map<String, Object>> LoadNewsList(int pageno, int pagerow,
+//										   String NewsCategory) {
+//
+//	}
 }

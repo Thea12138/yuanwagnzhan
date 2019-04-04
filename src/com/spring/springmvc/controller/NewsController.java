@@ -5,6 +5,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -210,6 +211,24 @@ public class NewsController extends BaseController {
         return map;
     }
 
+	//新版获取单一对象接口
+	@RequestMapping(value = "getNews.do", method = RequestMethod.POST)
+	@ResponseBody
+	public Map<String, Object> getRecord(@RequestParam("id") int id){
+		Map<String, Object> result = newsservice.getRecord(id);
+		return result;
+	}
+
+	//新版新闻列表
+//	public Map<String, Object> listNews(@RequestParam int pageno,
+//										@RequestParam int pagerow,
+//										@RequestParam String NewsCategory){
+//		Map<String, Object> result = new HashMap<>();
+//		List
+////		result.put("count", )
+//    	return null;
+//	}
+
     //添加文件到服务器，返回服务器路径地址
 	@RequestMapping("uploadfile.do")
 	@ResponseBody
@@ -228,6 +247,7 @@ public class NewsController extends BaseController {
 
     	return FileUtil.upFile(htmlAttachment,path);
 	}
+
 
 	@RequestMapping("testTo.do")
 	public String toTest(){

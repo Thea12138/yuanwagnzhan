@@ -77,6 +77,7 @@
 				return false;
 			}
 			var ids=$("#hiddenID").val().trim();
+
 			srchange("YuanGongFengCaiEdit.do?id="+ids)
 			/* $("#btnEdit").attr("data-target", "#myModal"); *///添加时需要去掉该值，否则也能打开
 			/* openDetail($("#hiddenID").val());  *///打开编辑操作
