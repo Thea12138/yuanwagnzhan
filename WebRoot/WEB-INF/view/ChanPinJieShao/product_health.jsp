@@ -245,7 +245,7 @@
 								<img src="Resources/img/itme_zhyl.jpg" />
 							</div>
 							<div class="productsum">
-								<p>
+								<p class="subtitlec">
 									<span>智慧医疗</span><br>
 									智慧健康研究所以ACP平行理论为基础，使用人工智能算法、现代信息技术和系统工程，提供与医疗、健康、养老相关的现代化技术解决方案，致力于解决中国的医疗、健康、养老问题，以帮助国家推进健康中国建设，实现更高水平的全民健康。
 								</p>

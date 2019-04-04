@@ -102,33 +102,12 @@
 	function Save() {
 		if (!CheckUI())
 			return;
-		var ajax_option = {
-			url : "AddNews.do",
-			data: {
-                'title': title,
-                'content': content
-            },
-			success : function(data) {
-				alert(JSON.stringify(data));
-				/* var flg = false;
-				switch (data.fail_code) {
-				case "M01U004E001":
-					alert("用户登录失效，请重新登录。");
-					parent.window.open("login.do", "_self");
-					break;
-				case -1:
-					flg = true;
-					break;
-				}
-				if (data.exec_code == 1 && flg) {
-					alert("保存成功。");
-					parent.$("#btnmodalclose").click();
-					ClearUI();
-					LoadData();
-				} */
-			}
-		};
-		$("#editform").ajaxSubmit(ajax_option);
+		var html=editor.txt.html(),
+		PublishDate=$("#PublishDate").val(),
+		NewsTitle=$("#NewsTitle").val(),
+		CreateBy=$("#CreateBy").val();
+		console.log(PublishDate+"sdfs"+NewsTitle+"sdfs"+CreateBy+"sdfs"+html)
+		
 	}
 
 	function Close() {
@@ -262,7 +241,6 @@
 										<div id="editor">
 									        <p>请输入内容</p>
 									    </div>
-									
 									</td>
 								</tr>
 							</table>
@@ -277,7 +255,7 @@
 			        var editor = new E('#editor')
 			        // 或者 var editor = new E( document.getElementById('editor') )
 					// editor.customConfig.uploadImgShowBase64 = true   // 使用 base64 保存图片
-			     editor.customConfig.uploadImgServer = '/upload'  // 上传图片到服务器
+			     	editor.customConfig.uploadImgServer = '/uploadfile.do'  // 上传图片到服务器
 			        editor.create()
 			    </script>
 				<div class="modal-footer">

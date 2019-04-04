@@ -245,7 +245,7 @@
 								<img src="Resources/img/itme_pxjt.jpg" />
 							</div>
 							<div class="productsum">
-								<p>
+								<p class="subtitlec">
 									<span>平行交通</span><br>
 									智慧城市研究所致力于智能交通、自动控制、人工智能等领域的基础理论和应用技术研究，在平行交通管控、智慧平行停车系统、智能视频分析、视觉物联网、云计算技术、嵌入式设备开发等方面拥有丰富的经验与技术积累。
 								</p>

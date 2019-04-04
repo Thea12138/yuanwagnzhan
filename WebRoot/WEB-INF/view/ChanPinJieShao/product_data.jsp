@@ -245,7 +245,7 @@
 								<img src="Resources/img/itme_data.jpg"/>
 							</div>
 							<div class="productsum">
-								<p style="padding: 4% 5%;">
+								<p class="subtitlec">
 									<span>视频大数据</span><br>
 									智慧数据研究所及其孵化公司青岛传视智能科技有限公司专注于提升互联网视频的收视体验，以“服务于互联网上的每一次视频播放”为自身使命，通过搭建的混合（公有＋私有）视频大数据云平台为互联网视频行业客户的系统运维（视频收视体验）和业务运营（盈利能力）提供数据服务。
 								</p>

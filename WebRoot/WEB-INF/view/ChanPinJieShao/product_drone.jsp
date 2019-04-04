@@ -245,7 +245,7 @@
 								<img src="Resources/img/itme_wrj.jpg" />
 							</div>
 							<div class="productsum">
-								<p>
+								<p class="subtitlec">
 									<span>无人机</span><br>
 									智能系统研究所下设平行机器人技术创新中心。平行机器人是物理机器人、软件机器人、仿真系统、物联网、数据库、广义的人工智能技术等相结合而成的机器人控制与管理系统。
 								</p>

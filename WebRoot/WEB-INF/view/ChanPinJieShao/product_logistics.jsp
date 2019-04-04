@@ -245,7 +245,7 @@
 								<img src="Resources/img/itme_zhwl.jpg" />
 							</div>
 							<div class="productsum">
-								<p>
+								<p class="subtitlec">
 									<span>智慧物流</span><br>
 									智慧物流研究所及其孵化公司“青岛中科慧畅信息科技有限公司”专注于AI+智慧物流领域的研究。
 								</p>

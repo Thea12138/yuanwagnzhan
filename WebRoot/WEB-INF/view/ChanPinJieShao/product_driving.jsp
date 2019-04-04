@@ -245,7 +245,7 @@
 								<img src="Resources/img/item_industry.png" />
 							</div>
 							<div class="productsum">
-								<p>
+								<p class="subtitlec">
 									<span>平行驾驶</span><br>
 									我院孵化公司青岛慧拓智能机器有限公司（VIPioneers）（简称‘慧拓智能’）是由一批具有北美顶级名校、国际无人驾驶及人工智能巨头企业背景的AI博士与行业专家成立的一家趋于行业内领先地位的科技创新型企业。
 								</p>
