@@ -31,6 +31,7 @@
 	});
 
 	$(function() {
+		alert(${param.id});//获取地址携带id
 		$("#btnClose").click(function() {
 			srchange("YuanGongFengCai.do");
 		});
@@ -220,7 +221,7 @@
 	<div>
 		<ul class="breadcrumb">
 			<li><a href="javascript:void(0);">首页</a></li>
-			<li><a href="javascript:void(0);">员工风采添加</a></li>
+			<li><a href="javascript:void(0);">员工风采修改</a></li>
 		</ul>
 	</div>
 
@@ -229,7 +230,7 @@
 			<div class="box-inner">
 				<div class="box-header well">
 					<h2>
-						<i class="glyphicon glyphicon-forward"></i> 员工风采添加
+						<i class="glyphicon glyphicon-forward"></i> 员工风采修改
 					</h2>
 				</div>
 				<div>

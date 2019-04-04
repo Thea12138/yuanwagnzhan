@@ -61,7 +61,7 @@
 	$(function() {
 		LoadData();
 		$("#btnClose").click(function() {
-			Close();
+			srchange("YuanGongFengCai.do");
 		});
 		$("#btnSave").click(function() {
 			Save();
@@ -76,8 +76,10 @@
 				alert("请选择操作对象。");
 				return false;
 			}
-			$("#btnEdit").attr("data-target", "#myModal");//添加时需要去掉该值，否则也能打开
-			openDetail($("#hiddenID").val()); //打开编辑操作
+			var ids=$("#hiddenID").val().trim();
+			srchange("YuanGongFengCaiEdit.do?id="+ids)
+			/* $("#btnEdit").attr("data-target", "#myModal"); *///添加时需要去掉该值，否则也能打开
+			/* openDetail($("#hiddenID").val());  *///打开编辑操作
 		});
 
 		$("#btnmodalclose").click(function() {

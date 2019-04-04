@@ -1049,6 +1049,7 @@ color:rgb(9,69,165);font-weight:bold;text-indent: 2em;
     }
     .pagecontent .contentall .contentshow .rightcontent .contents{
     	font-size:14px;
+    	margin: 20px 0;
     }
     .header .headertop .headerinner img{
     	height:30px !important;
@@ -1071,6 +1072,19 @@ color:rgb(9,69,165);font-weight:bold;text-indent: 2em;
 		color:#666;font-size:14px;line-height:40px;
 	} 
 	#newsTable tr td a{
-		font-size:14px !important;
+		font-size:12px !important;
 	} 
+	.pagecontent .contentall .contentshow .rightcontent .contents .listtable tr .new_time{
+		font-size:12px !important;
+	}
+	.pagecontent .contentall .contentshow .rightcontent .contents .listtable{
+		line-height:26px !important;
+	}
+	.showbox {
+	    background: #f7f7f7;
+	    padding: 10px;
+	    line-height: 26px;
+	    font-size: 13px;
+	    display: none;
+	}
 }
