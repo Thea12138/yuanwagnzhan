@@ -1,12 +1,16 @@
 package com.spring.springmvc.controller;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.spring.util.FileUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +22,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.spring.core.BaseController;
 import com.spring.spring.exception.realize.DAOException;
 import com.spring.springmvc.service.NewsService;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 @Controller
 public class NewsController extends BaseController {
@@ -197,10 +203,34 @@ public class NewsController extends BaseController {
                                       HttpServletResponse response) throws IOException, DAOException {
         Map<String, Object> map = new HashMap<String, Object>();
         try {
-            map = newsservice.AddNew(request);
+            map = newsservice.insertNews(request);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return map;
     }
+
+    //添加文件到服务器，返回服务器路径地址
+	@RequestMapping("uploadfile.do")
+	@ResponseBody
+	public String upLoadFile(HttpServletRequest request) throws IOException {
+		// 获取项目地址
+		String strRealPath = this.getClass().getResource("/").getFile();
+		strRealPath = URLDecoder.decode(strRealPath, "UTF-8").substring(1);
+		strRealPath = strRealPath.replaceAll("WEB-INF/classes/", "");
+		String linkname = "";
+		String path = strRealPath + "fileload/html/News/";
+		String newsType = request.getParameter("NewsCategory");
+		path = path + newsType + "/";
+		MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
+		MultipartFile htmlAttachment = multipartRequest
+				.getFile("LinkAddress");
+
+    	return FileUtil.upFile(htmlAttachment,path);
+	}
+
+	@RequestMapping("testTo.do")
+	public String toTest(){
+    	return "test";
+	}
 }

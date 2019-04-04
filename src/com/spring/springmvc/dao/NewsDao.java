@@ -300,4 +300,50 @@ public class NewsDao extends BaseDao {
 		return null;
 	}
 	/*************** end*******后台方法 ***********************/
+
+
+	public int insertNews(NewsDomain news, String userid) {
+		String sql = " Insert into  qaii_news(NewsCategory,NewsTitle,PublishDate,CreateBy,html_content,IsActive) ";
+		sql = sql
+				+ " values (:NewsCategory,:NewsTitle,:PublishDate,:CreateBy,:html_content,'1');";
+		SqlParameterSource params = new MapSqlParameterSource();
+		((MapSqlParameterSource) params).addValue("NewsCategory",
+				news.getNewsCategory());
+		((MapSqlParameterSource) params).addValue("NewsTitle",
+				news.getNewsTitle());
+		((MapSqlParameterSource) params).addValue("PublishDate",
+				news.getPublishDate());
+		((MapSqlParameterSource) params).addValue("CreateBy",
+				news.getCreateBy());
+		((MapSqlParameterSource) params).addValue("html_content",
+				news.getHtmlContent());
+		try {
+			ExecParamSql(sql, params);
+
+			Date date = new Date();
+			SimpleDateFormat formatter = new SimpleDateFormat(
+					"yyyy-MM-dd HH:mm:ss");
+			String dateString = formatter.format(date);
+			sql = " select max(NewsID) as MaxID from qaii_news ";
+			Map<String, Object> row = queryForMap(sql);
+			int maxID = 0;
+			maxID = row.get("MaxID") == null ? 0 : Integer.parseInt(row
+					.get("MaxID").toString());
+			// 记录日志
+			LogDomain log = new LogDomain();
+			log.setModule("院务新闻");
+			log.setAccountID(Integer.parseInt(userid));
+			log.setCreateTime(dateString);
+			log.setOperating("新增");
+			log.setTableName("qaii_news");
+			log.setDataID(String.valueOf(maxID));
+
+			dao.AddData(log);
+			return maxID;
+		} catch (DAOException e) {
+
+			e.printStackTrace();
+		}
+		return 0;
+	}
 }
