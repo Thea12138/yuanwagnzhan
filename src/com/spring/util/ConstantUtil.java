@@ -17,4 +17,6 @@ public class ConstantUtil {
 	public static final Object Template_IsEnable = "M01T001E001";// 模版已使用，不能修改、删除
 	public static final Object Template_IsInvalid = "M01T001E002";// 模版已作废，不能修改、删除、启用
 	public static final Object Template_IsExist = "M01T001E003";// 模版唯一性
+
+	public static final String HOST_NAME = "www.qaii.cn";
 }
