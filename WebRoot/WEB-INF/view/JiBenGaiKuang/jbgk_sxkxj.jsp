@@ -79,7 +79,15 @@
 	color: #134290;
 	width:100%;
 	margin-right:16px;
-}		
+}
+@media (max-width: 1600px){
+	p {
+		text-indent:0px;
+    	line-height: 25px !important;
+    	font-size:12px !important;
+    	margin: 5px 0px !important;
+    }
+}			
 </style>
 </head>
 <body style="overflow:auto;overflow-x:hidden;margin:0 0">
@@ -228,7 +236,7 @@
 									<p><span>王飞跃</span>教授</p>
 									<p>中国科学院自动化所复杂系统管理与控制国家重点实验室主任<br>
 									国防科技大学军事计算实验与平行系统技术研究中心主任<br>
-									中国科学院大学中国经济与社会安全研究中心主任&nbsp;&nbsp;&nbsp;&nbsp;
+									中国科学院大学中国经济与社会安全研究中心主任<br />
 									青岛智能产业技术研究院院长</p>
 								</div>
 							</li>
@@ -290,7 +298,7 @@
 								<div class="item_info">
 									<p><span>夏小华</span>教授</p>
 									<p>南非比勒陀利亚大学电气、电子和计算机系教授<br>
-									东北大学千人计划特聘教授&nbsp;&nbsp;&nbsp;&nbsp;国家节能减排研究基地主任</p>
+									东北大学千人计划特聘教授<br />国家节能减排研究基地主任</p>
 								</div>
 							</li>
 						</ul>

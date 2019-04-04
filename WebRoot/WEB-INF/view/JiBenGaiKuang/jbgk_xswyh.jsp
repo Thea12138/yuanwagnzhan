@@ -79,7 +79,15 @@
 	color: #134290;
 	width:100%;
 	margin-right:16px;
-}		
+}	
+@media (max-width: 1600px){
+	p {
+		text-indent:0px;
+    	line-height: 25px !important;
+    	font-size:12px !important;
+    	margin: 5px 0px !important;
+    }
+}	
 </style>
 </head>
 <body style="overflow:auto;overflow-x:hidden;margin:0 0">
@@ -226,7 +234,7 @@
 								<img src="Resources/img/xswyh_01.png"/>
 								<div class="item_info">
 									<p><span>郑南宁</span>院士</p>
-									<p>陕西省科学技术协会名誉主席&nbsp;&nbsp;&nbsp;&nbsp;中国自动化学会理事长</p>
+									<p>陕西省科学技术协会名誉主席<br>中国自动化学会理事长</p>
 								</div>
 							</li>
 							<li>
@@ -247,7 +255,7 @@
 								<img src="Resources/img/xswyh_04.png"/>
 								<div class="item_info">
 									<p><span>李国杰</span>院士</p>
-									<p>计算技术研究所所长&nbsp;&nbsp;&nbsp;&nbsp;中国工程院信息与电子学部主任<br/>中国计算机学会理事长</p>
+									<p>计算技术研究所所长<br />中国工程院信息与电子学部主任<br/>中国计算机学会理事长</p>
 								</div>
 							</li>
 							<li>
@@ -256,7 +264,7 @@
 									<p><span>王飞跃</span>教授</p>
 									<p>中国科学院自动化所复杂系统管理与控制国家重点实验室主任<br>
 									国防科技大学军事计算实验与平行系统技术研究中心主任<br>
-									中国科学院大学中国经济与社会安全研究中心主任&nbsp;&nbsp;&nbsp;&nbsp;
+									中国科学院大学中国经济与社会安全研究中心<br />
 									青岛智能产业技术研究院院长</p>
 								</div>
 							</li>
