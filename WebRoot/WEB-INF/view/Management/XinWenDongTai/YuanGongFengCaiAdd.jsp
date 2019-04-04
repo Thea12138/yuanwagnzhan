@@ -38,25 +38,7 @@
 			Save();
 		});
 
-		$("#btnmodalclose").click(function() {
-			Close();
-		});
-
 	});
-
-	function SelectNews(trid, objid) {
-		$("#datatb tr").each(function() {
-			if ($(this).attr("id") == trid) {
-				$("#" + trid).css("background-color", "#e7e8ec");
-				$("#" + trid).css("color", "#4289f1");
-			} else {
-				$(this).css("background-color", "");
-				$(this).css("color", "");
-			}
-		});
-
-		$("#hiddenID").val(objid);
-	}
 
 	function ClearNews() {
 		$("#datatb tr").each(function() {
@@ -102,88 +84,32 @@
 	function Save() {
 		if (!CheckUI())
 			return;
-		var html=editor.txt.html(),
-		PublishDate=$("#PublishDate").val(),
-		NewsTitle=$("#NewsTitle").val(),
-		CreateBy=$("#CreateBy").val();
-		console.log(PublishDate+"sdfs"+NewsTitle+"sdfs"+CreateBy+"sdfs"+html)
-		
+		$.ajax({
+	        type: "POST",
+	        url: "insertNews.do",
+	        contentType: "application/json; charset=utf-8",
+	        data: JSON.stringify(GetJsonData()),
+	        dataType: "json",
+	        success: function (message) {
+	        	alert("请求已提交！我们会尽快与您取得联系");
+	            console.log();
+	        },
+	        error: function (message) {
+	            /* $("#request-process-patent").html("提交数据失败！"); */
+	        }
+	    });
 	}
 
-	function Close() {
-		parent.$("#btnmodalclose").click();
-		ClearUI();
-		ClearNews();
-		$("#hiddenID").val("");
-	}
-
-	function Del() {
-		if ($("#hiddenID").val() == "") {
-			alert("请选择操作对象。");
-			return false;
-		}
-		if (window.confirm("删除是不可恢复的，你确认要删除吗？")) {
-			$.post("DelNews.do", {
-				newsid : $("#hiddenID").val(),
-				userid : UserID
-			}, function(data) {
-				//alert(JSON.stringify(data));
-				var flg = false;
-				switch (data.fail_code) {
-				case "M01U004E001":
-					alert("用户登录失效，请重新登录。");
-					parent.window.open("login.do", "_self");
-					break;
-				case -1:
-					flg = true;
-					break;
-				}
-				if (data.exec_code == 1 && flg) {
-					alert("删除成功。");
-					$("#hiddenID").val("");
-					LoadData();
-				}
-			});
-		} else {
-			$("#hiddenID").val("");
-			ClearNews();
-		}
-	}
-
-	function openDetail(objid) {
-		if (objid == null) {//Add
-			document.getElementById("spTitle").innerText = "新增院务新闻";
-		} else {//Edit
-			document.getElementById("spTitle").innerText = "修改院务新闻";
-
-			$.ajax({
-				async : false,
-				url : "GetNewsByNewsID.do",
-				data : {
-					newsid : $("#hiddenID").val()
-				},
-				type : "post",
-				success : function(data) {
-					if (data != null) {
-						$("#hiddenID").val(data.NewsID);
-						$("#PublishDate").val(data.PublishDate);
-						$("#NewsTitle").val(data.NewsTitle);
-						$("#CreateBy").val(data.CreateBy);
-
-						$("#editlink").val(data.LinkAddress);
-						$("#editlink").show();
-						var picurls = "";
-						for (var i = 0; i < data.picturesList.length; i++) {
-							picurls += data.picturesList[i] + ";";
-						}
-						if (picurls != "") {
-							$("#editpic").val(picurls);
-							$("#editpic").show();
-						}
-					}
-				}
-			});
-		}
+	function GetJsonData() {
+	    var json = {
+	        "UserID": UserID,
+	        "category": "H",
+	        "title": $("#NewsTitle").val(),
+	        "publishDate": $("#PublishDate").val(),
+	        "createBy ": $("#CreateBy").val(),
+	        "content": editor.txt.html()
+	    };
+	    return json;
 	}
 	//页面跳转
 	function srchange(obj){
