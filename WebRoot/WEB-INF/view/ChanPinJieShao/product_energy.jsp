@@ -245,7 +245,7 @@
 								<img src="Resources/img/itme_pxny.jpg" />
 							</div>
 							<div class="productsum">
-								<p>
+								<p class="subtitlec">
 									<span>平行能源</span><br>
 									平行能源创新技术中心以ACP平行理论为基础，应用人工智能算法、现代信息技术和系统工程，提供与能源、电网、新能源智慧城市相关的现代化技术解决方案。
 								</p>

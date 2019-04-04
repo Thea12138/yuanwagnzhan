@@ -245,7 +245,7 @@
 								<img src="Resources/img/item_znzc.jpg" />
 							</div>
 							<div class="productsum">
-								<p>
+								<p class="subtitlec">
 									<span>智慧制造</span><br>
 									青岛万龙智控科技有限公司由青岛万龙高新科技集团有限公司联合青岛智能产业技术研究院共同投资组建；公司致力于智能产业技术与传统产业的深度融合，智能产业前沿技术的创新和成果转移转化。
 								</p>

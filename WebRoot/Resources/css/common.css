@@ -616,32 +616,31 @@ body {
 
 .pagecontent .contentall .contentshow .rightcontent .contents .producttitle{	
 	width:100%;
-	height: 206px;
+	height: auto;
 	background-color:#f1f1f4;
+	vertical-align: top;
 }
 .pagecontent .contentall .contentshow .rightcontent .contents .producttitle .productimg{	
 	width:43%;
 	display:inline-block;
-	height: 100%;
-	float:left;
-
-	
+	height: auto;
+	/* float:left; */
+	vertical-align: top;
 }
 .pagecontent .contentall .contentshow .rightcontent .contents .producttitle .productimg img{	
 	width:100%;
-	height:100%;
 	background-position: center center;
     background-repeat: no-repeat;
     -webkit-background-size:cover;
     -moz-background-size:cover;
     background-size:cover;
+    vertical-align: top;
 }
 .pagecontent .contentall .contentshow .rightcontent .contents .producttitle .productsum{	
 	width:56%;
+	vertical-align: top;
 	display:inline-block;
-	height: 100%;
 	margin:auto;
-	float:left;
 	background-color:#f1f1f4;
 }
 .pagecontent .contentall .contentshow .rightcontent .contents .producttitle .productsum p{	
@@ -651,6 +650,7 @@ body {
 	vertial-align:middle;
 	font-size: 14px !important;
 	padding:7% 5%;
+	vertical-align: top;
 	
 }
 .pagecontent .contentall .contentshow .rightcontent .contents .producttitle .productsum p span{	
@@ -658,7 +658,9 @@ body {
 	font-weight:bold;
 	
 }
-
+.pagecontent .contentall .contentshow .rightcontent .contents .producttitle .productsum .subtitlec{
+	padding:3% 5%;
+}
 
 .foot {
 	width: 100%;
@@ -825,22 +827,64 @@ color:rgb(9,69,165);font-weight:bold;text-indent: 2em;
 }
 #pages ul,#pages li{
 	list-style:none;
+	padding: 0px;
+	margin-top:10px;
+	order-radius: 4px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 #pages li{
 	list-style: none;
-    background: #f7f7f7;
-    border: 1px solid #ededed;
+    background: #fff;
+    /* border: 1px solid #ededed; */
     /* width: 30px; */
     /* height: 30px; */
     text-align: center;
-    color: #aaa;
+    color: #337ab7;
     display: inline-block;
-    min-width: 40px;
+    /* min-width: 40px; */
     height:30px;
     line-height:30px;}
-#pages li.active{
-	background-color: #134290;
-	color:#fff;
+#pages li.active a{
+	color: #999;
+    background-color: #f5f5f5 !important;
+}
+#pages ul li a{
+	    float: left;
+    padding: 4px 12px;
+    line-height: 20px;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-left-width: 0;
+}
+#pages ul>li:last-child>a, #pages ul>li:last-child>span {
+    -webkit-border-top-right-radius: 4px;
+    border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomright: 4px;
+}
+
+#pages ul>li:first-child>a, #pages ul>li:first-child>span {
+    border-left-width: 1px;
+    -webkit-border-bottom-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -webkit-border-top-left-radius: 4px;
+    border-top-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    -moz-border-radius-topleft: 4px;
+}
+#pages ul>li>a, #pages ul>li>span {
+    float: left;
+    padding: 4px 12px;
+    line-height: 20px;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-left-width: 0;
 }
 .lxwmmail{
 	color:#888;font-size:16px;line-height:30px;
@@ -1036,6 +1080,7 @@ color:rgb(9,69,165);font-weight:bold;text-indent: 2em;
     text-indent: 2em;
     font-family: "微软雅黑";
     font-size: 13px !important;
+    text-align: justify;
     }
     .pagecontent .contentall .contentshow .rightcontent .contents .producttitle .productsum p span{
     	font-size:14px;
@@ -1043,6 +1088,7 @@ color:rgb(9,69,165);font-weight:bold;text-indent: 2em;
     .pagecontent .contentall .contentshow .rightcontent .contents .producttitle .productsum p span {
 	    width: 100%;
 	    margin: auto !important;
+	    line-height: 32px;
 	    text-indent: 0em;
 	    vertial-align: middle;
 	    font-size: 14px !important;
@@ -1086,5 +1132,11 @@ color:rgb(9,69,165);font-weight:bold;text-indent: 2em;
 	    line-height: 26px;
 	    font-size: 13px;
 	    display: none;
+	}
+	.pagecontent .contentall .contentshow .rightcontent .contents .producttitle .productsum .subtitlec{
+		margin-top:0px !important;
+		padding:3% 5%;
+		padding-left:8%;
+		text-align: justify;
 	}
 }

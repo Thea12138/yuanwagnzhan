@@ -245,7 +245,7 @@
 								<img src="Resources/img/itme_pxcm.png" style="max-width:100%;" />
 							</div>
 							<div class="productsum">
-								<p>
+								<p class="subtitlec">
 									<span>平行媒体</span><br>
 									以“平行智能”理论为指导，采用大数据挖掘、社会网络分析、语义解析、影响力计算等方式对信息传播的媒介及途径进行特征表示，借助自底向上的多智能体方法对物理传媒过程进行建模，构建Impact Resource Planning（IRP）系统。
 								</p>

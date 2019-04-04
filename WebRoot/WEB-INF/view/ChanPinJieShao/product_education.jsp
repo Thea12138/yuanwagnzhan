@@ -245,7 +245,7 @@
 								<img src="Resources/img/itme_zhjy.jpg" />
 							</div>
 							<div class="productsum">
-								<p>
+								<p class="subtitlec">
 									<span>智慧教育</span><br>
 									智慧教育研究所致力于开展教育领域智能技术研究与产业化工作，研究平行系统、大数据、物联网等技术与教育的深度融合，推动面向青少年儿童的人工智能科技创新教育，助力教育综合改革和课程改革落地实施。
 								</p>

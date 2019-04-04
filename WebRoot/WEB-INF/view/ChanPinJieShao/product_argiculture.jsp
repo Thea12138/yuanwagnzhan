@@ -245,7 +245,7 @@
 								<img src="Resources/img/itme_zhny.jpg"/>
 							</div>
 							<div class="productsum">
-								<p>
+								<p class="subtitlec">
 									<span>智慧农业</span><br>
 									智慧农业研究所基于ACP平行理论，构建融合物理世界、网络世界与实际社会的农业社会物理信息系统（CPSS），围绕农业种植的管理和控制，进行智慧农业关键技术和产品的研发，促进农业种植精细管理，保障安全健康农业生产，服务国家乡村振兴战略。
 								</p>
