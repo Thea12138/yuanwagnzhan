@@ -23,6 +23,8 @@ public class mPageController extends BaseController {
 	private static final String YuanGongFengCaiAdd_PAGE = "Management/XinWenDongTai/YuanGongFengCaiAdd"; // 新闻动态-员工风采添加
 	private static final String YuanGongFengCaiEdit_PAGE = "Management/XinWenDongTai/YuanGongFengCaiEdit"; // 新闻动态-员工风采修改
 	private static final String ZhongYaoRongYu_PAGE = "Management/XinWenDongTai/ZhongYaoRongYu"; // 新闻动态-重要荣誉
+	private static final String ZhongYaoRongYuAdd_PAGE = "Management/XinWenDongTai/ZhongYaoRongYuAdd"; // 新闻动态-重要荣誉-添加
+	private static final String ZhongYaoRongYuEdit_PAGE = "Management/XinWenDongTai/ZhongYaoRongYuEdit"; // 新闻动态-重要荣誉-修改
 	private static final String HangYeQingBaoJianBao_PAGE = "Management/XinWenDongTai/HangYeQingBaoJianBao"; // 新闻动态-行业情报简报
 
 	private static final String XueShuShengYan_PAGE = "Management/KeYanHuoDong/XueShuShengYan"; // 科研活动-学术盛宴
@@ -103,6 +105,16 @@ public class mPageController extends BaseController {
 	@RequestMapping(value = "ZhongYaoRongYu.do")
 	public String ZhongYaoRongYu() {
 		return ZhongYaoRongYu_PAGE;
+	}
+	// 新闻动态-重要荣誉添加
+	@RequestMapping(value = "ZhongYaoRongYuAdd.do")
+	public String ZhongYaoRongYuAdd() {
+		return ZhongYaoRongYuAdd_PAGE;
+	}
+	// 新闻动态-重要荣誉修改
+	@RequestMapping(value = "ZhongYaoRongYuEdit.do")
+	public String ZhongYaoRongYuEdit() {
+		return ZhongYaoRongYuEdit_PAGE;
 	}
 
 	// 新闻动态-行业情报简报

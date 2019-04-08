@@ -87,9 +87,10 @@
 		$.ajax({
 	        type: "POST",
 	        url: "insertNews.do",
-	        contentType: "application/json; charset=utf-8",
+	        data: GetJsonData(),
+	        /* contentType: "application/json; charset=utf-8",
 	        data: JSON.stringify(GetJsonData()),
-	        dataType: "json",
+	        dataType: "json", */
 	        success: function (message) {
 	        	alert("请求已提交！我们会尽快与您取得联系");
 	            console.log();
@@ -106,7 +107,7 @@
 	        "category": "H",
 	        "title": $("#NewsTitle").val(),
 	        "publishDate": $("#PublishDate").val(),
-	        "createBy ": $("#CreateBy").val(),
+	        "createBy": $("#CreateBy").val(),
 	        "content": editor.txt.html()
 	    };
 	    return json;
