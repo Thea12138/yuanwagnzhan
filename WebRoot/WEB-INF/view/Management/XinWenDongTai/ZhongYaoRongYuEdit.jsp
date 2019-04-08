@@ -60,9 +60,6 @@
 	$(function() {
 		LoadData();
 		$("#btnClose").click(function() {
-			srchange("ZhongYaoRongYu.do");
-		});
-		$("#btnClose").click(function() {
 			Close();
 		});
 		$("#btnSave").click(function() {
@@ -78,11 +75,8 @@
 				alert("请选择操作对象。");
 				return false;
 			}
-			var ids=$("#hiddenID").val().trim();
-
-			srchange("ZhongYaoRongYuEdit.do?id="+ids)
-			/* $("#btnEdit").attr("data-target", "#myModal");//添加时需要去掉该值，否则也能打开
-			openDetail($("#hiddenID").val()); //打开编辑操作 */
+			$("#btnEdit").attr("data-target", "#myModal");//添加时需要去掉该值，否则也能打开
+			openDetail($("#hiddenID").val()); //打开编辑操作
 		});
 
 		$("#btnmodalclose").click(function() {
@@ -372,10 +366,6 @@
 				}
 			});
 	}
-	//页面跳转
-	function srchange(obj){
-	    $("body", parent.document).find('iframe').attr('src',obj);
-	}
 </script>
 </head>
 
@@ -401,19 +391,13 @@
 					<div class="col-lg-7 col-md-12">
 
 						<div class="alert alert-info">
-							<a class="btn btn-primary"
-								href="javascript:srchange('ZhongYaoRongYuAdd.do');"> <i
-								class="glyphicon glyphicon-plus icon-white"></i> 增加
-							</a>
-							<!-- <a id="btnAdd" class="btn btn-primary" data-toggle="modal"
+							<a id="btnAdd" class="btn btn-primary" data-toggle="modal"
 								data-target="#myModal" data-backdrop='static'> <i
 								class="glyphicon glyphicon-plus icon-white"></i> 增加
-							</a> -->
-							<a id="btnEdit" class="btn btn-info" data-toggle="modal"
+							</a> <a id="btnEdit" class="btn btn-info" data-toggle="modal"
 								data-backdrop='static'> <i
 								class="glyphicon glyphicon-edit icon-white"></i> 修改
-							</a> 
-							<a id="btnDel" class="btn btn-danger"
+							</a> <a id="btnDel" class="btn btn-danger"
 								href="javascript:void Del();" data-backdrop='static'> <i
 								class="glyphicon glyphicon-remove icon-white"></i> 删除
 							</a>

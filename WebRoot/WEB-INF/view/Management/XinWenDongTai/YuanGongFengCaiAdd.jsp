@@ -85,33 +85,26 @@
 		if (!CheckUI())
 			return;
 		$.ajax({
-	        type: "POST",
-	        url: "insertNews.do",
-            data: JSON.stringify(GetJsonData()),
-	        /*contentType: "application/json; charset=utf-8",
-	        data: JSON.stringify(GetJsonData()),
-	        dataType: "json",*/
-	        success: function (message) {
-	        	alert("请求已提交！我们会尽快与您取得联系");
-	            console.log();
-	        },
-	        error: function (message) {
-	            /* $("#request-process-patent").html("提交数据失败！"); */
-	        }
-	    });
+			async : false,
+			url : "insertNews.do",
+			data : {
+				UserID: UserID,
+		        category: "H",
+		        title: $("#NewsTitle").val(),
+		        publishDate: $("#PublishDate").val(),
+		        createBy: $("#CreateBy").val(),
+		        content: editor.txt.html()
+			},
+			type : "post",
+			success : function(data) {
+				alert("请求已提交！我们会尽快与您取得联系");
+	            console.log(data);
+			}
+		})
+		
 	}
 
-	function GetJsonData() {
-	    var json = {
-	        "UserID": UserID,
-	        "category": "H",
-	        "title": $("#NewsTitle").val(),
-	        "publishDate": $("#PublishDate").val(),
-	        "createBy": $("#CreateBy").val(),
-	        "content": editor.txt.html()
-	    };
-	    return json;
-	}
+	
 	//页面跳转
 	function srchange(obj){
 	    $("body", parent.document).find('iframe').attr('src',obj);
