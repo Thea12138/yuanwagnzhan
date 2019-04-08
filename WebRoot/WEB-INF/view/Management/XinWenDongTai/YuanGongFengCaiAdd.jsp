@@ -177,7 +177,13 @@
 			     	editor.customConfig.uploadFileName = 'LinkAddress'
 		     		editor.customConfig.uploadImgParams = {
 			     		category: 'H'
-		     		}			        
+		     		}
+			     	editor.customConfig.uploadImgHooks = {
+		     		    customInsert: function (insertImg, result, editor) {
+		     		        var url = result.data
+		     		        insertImg(url)
+		     		    }
+			     	}
 			     	editor.create()
 			    </script>
 				<div class="modal-footer">
