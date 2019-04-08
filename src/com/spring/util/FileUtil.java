@@ -7,12 +7,15 @@ import java.io.*;
 
 //单例，用于全局上传文件,返回绝对路径
 public class FileUtil {
-    public static String upFile(MultipartFile file, String filePath) throws IOException {
+    public static String upFile(MultipartFile file, String realFilePath, String path) throws IOException {
         String fileName = file.getOriginalFilename();
         String newFileName = System.currentTimeMillis() + fileName.substring(fileName.lastIndexOf("."));
-        String fullyName = filePath + newFileName;
+        StringBuilder result = new StringBuilder("www.qaii.cn/");
+        result.append(path);
+        result.append(newFileName);
+        String fullyName = realFilePath + newFileName;
 //        File file1 = new File(fullyName);
-        File dir = new File(filePath);
+        File dir = new File(realFilePath);
         byte[] bs = new byte[1024];
         int len;
         try{
@@ -33,6 +36,6 @@ public class FileUtil {
             e.printStackTrace();
         }
 
-        return fullyName;
+        return result.toString();
     }
 }

@@ -231,19 +231,23 @@ public class NewsController extends BaseController {
     //添加文件到服务器，返回服务器路径地址
 	@RequestMapping("uploadfile.do")
 	@ResponseBody
-	public String upLoadFile(HttpServletRequest request) throws IOException {
+	public Map<String, String> upLoadFile(HttpServletRequest request) throws IOException {
     	try {
+    		Map<String, String> result = new HashMap<String, String>();
 			// 获取项目地址
 			String strRealPath = this.getClass().getResource("/").getFile();
 			strRealPath = URLDecoder.decode(strRealPath, "UTF-8").substring(1);
 			strRealPath = strRealPath.replaceAll("WEB-INF/classes/", "");
-			String linkname = "";
-			String path = strRealPath + "fileload/html/News/";
+			String realpath = strRealPath + "fileload/html/News/";
 			String newsType = request.getParameter("category");
-			path = path + newsType + "/";
+			StringBuilder path = new StringBuilder("html/News/");
+			path.append(newsType + "/");
+			realpath = realpath + newsType + "/";
 			MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
 			MultipartFile htmlAttachment = multipartRequest.getFile("LinkAddress");
-			return FileUtil.upFile(htmlAttachment,path);
+			
+			result.put("data", FileUtil.upFile(htmlAttachment,realpath, path.toString()));
+			return result;
 		} catch (Exception e){
     		e.printStackTrace();
 		}
