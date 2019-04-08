@@ -11,13 +11,28 @@ public class FileUtil {
         String fileName = file.getOriginalFilename();
         String newFileName = System.currentTimeMillis() + fileName.substring(fileName.lastIndexOf("."));
         String fullyName = filePath + newFileName;
-        File file1 = new File(fullyName);
-        file1.createNewFile();
-        InputStream is = file.getInputStream();
-        OutputStream os = new FileOutputStream(file1);
-        os.write(is.read());
-        is.close();
-        os.close();
+//        File file1 = new File(fullyName);
+        File dir = new File(filePath);
+        byte[] bs = new byte[1024];
+        int len;
+        try{
+            if (!dir.exists())
+                dir.mkdir();
+
+//            file1.createNewFile();
+            InputStream is = file.getInputStream();
+            OutputStream os = new FileOutputStream(fullyName);
+//            while (is.read(bs) != -1)
+//                os.write(bs);
+            while ((len = is.read(bs))!= -1)
+                os.write(bs, 0, len);
+            os.write(is.read());
+            is.close();
+            os.close();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
         return fullyName;
     }
 }

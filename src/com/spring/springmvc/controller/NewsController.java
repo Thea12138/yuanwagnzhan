@@ -201,7 +201,6 @@ public class NewsController extends BaseController {
     @RequestMapping(value = "insertNews.do", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> insertNews(HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
-    	request.setCharacterEncoding("UTF-8");
         Map<String, Object> map = new HashMap<String, Object>();
         try {
             map = newsservice.insertNews(request);
