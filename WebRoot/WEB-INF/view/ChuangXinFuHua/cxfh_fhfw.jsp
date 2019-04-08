@@ -242,49 +242,65 @@ $(function() {
 						<p>青岛智能院采用“投资+全方位孵化”服务模式，为智能领域的大学生、科研人员和青岛智能院创业者等创客个人和团体提供创业辅导、管理咨询、交流培训、项目推介、市场推广、融资投资、人才引进、技术支持等专业服务，致力于搭建多元化创新孵化服务体系，培育高成长性的智能科技创业公司，加快推动智能产业发展。服务内容包括：</p>
 						<ul class="fuserver">
 							<li class="handle">
-								<div><span style="color:#134290;font-weight:bold;">①创业辅导。</span>包含创业咨询、政策辅导、手续代理等内容。<div class="show"></div></div>
+								<div><span style="color:#134290;font-weight:bold;">①创业辅导。</span>包含创业咨询、政策辅导、手续代理等内容。
+									<!-- <div class="show"></div> -->
+								</div>
 								<div class="showbox">
 									以协助大学毕业生、城市下岗工人、失地农民等个人进入创业领域为发展目标，并为他们提供优质的创业平台及后续跟踪支持服务；以打造小本创业项目的超市平台为经营特色，为优质的特许经营项目在中国培养专业的代理商及推广服务；以咨询培训及人才甑别（规划）为经营优势，为发展中的企业提供创业辅导及人才提升服务。
 								</div>
 							</li>
 							<li class="handle">
-								<div><span style="color:#134290;font-weight:bold;">②管理咨询。</span>包含财务代理、法律咨询、专利服务等内容。<div class="show"></div></div>
+								<div><span style="color:#134290;font-weight:bold;">②管理咨询。</span>包含财务代理、法律咨询、专利服务等内容。
+									<!-- <div class="show"></div> -->
+								</div>
 								<div class="showbox">
 									以协助大学毕业生、城市下岗工人、失地农民等个人进入创业领域为发展目标，并为他们提供优质的创业平台及后续跟踪支持服务；以打造小本创业项目的超市平台为经营特色，为优质的特许经营项目在中国培养专业的代理商及推广服务；以咨询培训及人才甑别（规划）为经营优势，为发展中的企业提供创业辅导及人才提升服务。
 								</div>
 							</li>
 							<li class="handle">
-								<div><span style="color:#134290;font-weight:bold;">③交流培训。</span>包含管理培训、技术交流、专家咨询等内容。<div class="show"></div></div>
+								<div><span style="color:#134290;font-weight:bold;">③交流培训。</span>包含管理培训、技术交流、专家咨询等内容。
+									<!-- <div class="show"></div> -->
+								</div>
 								<div class="showbox">
 									以协助大学毕业生、城市下岗工人、失地农民等个人进入创业领域为发展目标，并为他们提供优质的创业平台及后续跟踪支持服务；以打造小本创业项目的超市平台为经营特色，为优质的特许经营项目在中国培养专业的代理商及推广服务；以咨询培训及人才甑别（规划）为经营优势，为发展中的企业提供创业辅导及人才提升服务。
 								</div>
 							</li>
 							<li class="handle">
-								<div><span style="color:#134290;font-weight:bold;">④项目推介。</span>包含成果展示、项目申报、新闻发布等内容。<div class="show"></div></div>
+								<div><span style="color:#134290;font-weight:bold;">④项目推介。</span>包含成果展示、项目申报、新闻发布等内容。
+								<!-- <div class="show"></div> -->
+								</div>
 								<div class="showbox">
 									以协助大学毕业生、城市下岗工人、失地农民等个人进入创业领域为发展目标，并为他们提供优质的创业平台及后续跟踪支持服务；以打造小本创业项目的超市平台为经营特色，为优质的特许经营项目在中国培养专业的代理商及推广服务；以咨询培训及人才甑别（规划）为经营优势，为发展中的企业提供创业辅导及人才提升服务。
 								</div>
 							</li>
 							<li class="handle">
-								<div><span style="color:#134290;font-weight:bold;">⑤市场推广。</span>包含展览会议、产品对接、信息咨询等内容。<div class="show"></div></div>
+								<div><span style="color:#134290;font-weight:bold;">⑤市场推广。</span>包含展览会议、产品对接、信息咨询等内容。
+								<!-- <div class="show"></div> -->
+								</div>
 								<div class="showbox">
 									以协助大学毕业生、城市下岗工人、失地农民等个人进入创业领域为发展目标，并为他们提供优质的创业平台及后续跟踪支持服务；以打造小本创业项目的超市平台为经营特色，为优质的特许经营项目在中国培养专业的代理商及推广服务；以咨询培训及人才甑别（规划）为经营优势，为发展中的企业提供创业辅导及人才提升服务。
 								</div>
 							</li>
 							<li class="handle">
-								<div><span style="color:#134290;font-weight:bold;">⑥融资投资。</span>包含银企对接、孵化基金、风险投资等内容。<div class="show"></div></div>
+								<div><span style="color:#134290;font-weight:bold;">⑥融资投资。</span>包含银企对接、孵化基金、风险投资等内容。
+								<!-- <div class="show"></div> -->
+								</div>
 								<div class="showbox">
 									以协助大学毕业生、城市下岗工人、失地农民等个人进入创业领域为发展目标，并为他们提供优质的创业平台及后续跟踪支持服务；以打造小本创业项目的超市平台为经营特色，为优质的特许经营项目在中国培养专业的代理商及推广服务；以咨询培训及人才甑别（规划）为经营优势，为发展中的企业提供创业辅导及人才提升服务。
 								</div>
 							</li>
 							<li class="handle">
-								<div><span style="color:#134290;font-weight:bold;">⑦人才引进。</span>包括校企合作、猎头服务、人才招聘等内容<div class="show"></div></div>
+								<div><span style="color:#134290;font-weight:bold;">⑦人才引进。</span>包括校企合作、猎头服务、人才招聘等内容
+								<!-- <div class="show"></div> -->
+								</div>
 								<div class="showbox">
 									以协助大学毕业生、城市下岗工人、失地农民等个人进入创业领域为发展目标，并为他们提供优质的创业平台及后续跟踪支持服务；以打造小本创业项目的超市平台为经营特色，为优质的特许经营项目在中国培养专业的代理商及推广服务；以咨询培训及人才甑别（规划）为经营优势，为发展中的企业提供创业辅导及人才提升服务。
 								</div>
 							</li>
 							<li class="handle">
-								<div><span style="color:#134290;font-weight:bold;">⑧技术支持。</span>包含技术平台、检验测试、技术联盟等内容。<div class="show"></div></div>
+								<div><span style="color:#134290;font-weight:bold;">⑧技术支持。</span>包含技术平台、检验测试、技术联盟等内容。
+								<!-- <div class="show"></div> -->
+								</div>
 								<div class="showbox">
 									以协助大学毕业生、城市下岗工人、失地农民等个人进入创业领域为发展目标，并为他们提供优质的创业平台及后续跟踪支持服务；以打造小本创业项目的超市平台为经营特色，为优质的特许经营项目在中国培养专业的代理商及推广服务；以咨询培训及人才甑别（规划）为经营优势，为发展中的企业提供创业辅导及人才提升服务。
 								</div>
