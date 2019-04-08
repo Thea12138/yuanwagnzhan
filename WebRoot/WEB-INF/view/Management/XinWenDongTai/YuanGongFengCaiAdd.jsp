@@ -101,10 +101,8 @@
 	            console.log(data);
 			}
 		})
-		
 	}
 
-	
 	//页面跳转
 	function srchange(obj){
 	    $("body", parent.document).find('iframe').attr('src',obj);
@@ -176,7 +174,9 @@
 			        // 或者 var editor = new E( document.getElementById('editor') )
 					// editor.customConfig.uploadImgShowBase64 = true   // 使用 base64 保存图片
 			     	editor.customConfig.uploadImgServer = '/uploadfile.do'  // 上传图片到服务器
-			        editor.create()
+			     	editor.customConfig.uploadFileName = 'LinkAddress'
+			        
+			     	editor.create()
 			    </script>
 				<div class="modal-footer">
 					<button id="btnClose" type="button" class="btn btn-default">返&nbsp;&nbsp;回</button>
