@@ -177,8 +177,7 @@
 			     	editor.customConfig.uploadFileName = 'LinkAddress'
 		     		editor.customConfig.uploadImgParams = {
 			     		category: 'H'
-		     		}
-			        
+		     		}			        
 			     	editor.create()
 			    </script>
 				<div class="modal-footer">
