@@ -200,7 +200,8 @@ public class NewsController extends BaseController {
 	//新版新闻添加接口
     @RequestMapping(value = "insertNews.do", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, Object> insertNews(HttpServletRequest request, HttpServletResponse response) {
+    public Map<String, Object> insertNews(HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException {
+    	request.setCharacterEncoding("UTF-8");
         Map<String, Object> map = new HashMap<String, Object>();
         try {
             map = newsservice.insertNews(request);
@@ -232,19 +233,24 @@ public class NewsController extends BaseController {
 	@RequestMapping("uploadfile.do")
 	@ResponseBody
 	public String upLoadFile(HttpServletRequest request) throws IOException {
-		// 获取项目地址
-		String strRealPath = this.getClass().getResource("/").getFile();
-		strRealPath = URLDecoder.decode(strRealPath, "UTF-8").substring(1);
-		strRealPath = strRealPath.replaceAll("WEB-INF/classes/", "");
-		String linkname = "";
-		String path = strRealPath + "fileload/html/News/";
-		String newsType = request.getParameter("NewsCategory");
-		path = path + newsType + "/";
-		MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
-		MultipartFile htmlAttachment = multipartRequest
-				.getFile("LinkAddress");
+    	try {
+			// 获取项目地址
+			String strRealPath = this.getClass().getResource("/").getFile();
+			strRealPath = URLDecoder.decode(strRealPath, "UTF-8").substring(1);
+			strRealPath = strRealPath.replaceAll("WEB-INF/classes/", "");
+			String linkname = "";
+			String path = strRealPath + "fileload/html/News/";
+			String newsType = request.getParameter("category");
+			path = path + newsType + "/";
+			MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
+			MultipartFile htmlAttachment = multipartRequest.getFile("LinkAddress");
+			return FileUtil.upFile(htmlAttachment,path);
+		} catch (Exception e){
+    		e.printStackTrace();
+		}
 
-    	return FileUtil.upFile(htmlAttachment,path);
+
+    	return null;
 	}
 
 
