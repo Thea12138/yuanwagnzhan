@@ -175,6 +175,9 @@
 					// editor.customConfig.uploadImgShowBase64 = true   // 使用 base64 保存图片
 			     	editor.customConfig.uploadImgServer = '/uploadfile.do'  // 上传图片到服务器
 			     	editor.customConfig.uploadFileName = 'LinkAddress'
+		     		editor.customConfig.uploadImgParams = {
+			     		category: 'H'
+		     		}
 			        
 			     	editor.create()
 			    </script>
