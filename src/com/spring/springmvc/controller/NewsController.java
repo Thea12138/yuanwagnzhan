@@ -200,8 +200,7 @@ public class NewsController extends BaseController {
 	//新版新闻添加接口
     @RequestMapping(value = "insertNews.do", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, Object> insertNews(HttpServletRequest request,
-                                      HttpServletResponse response) throws IOException, DAOException {
+    public Map<String, Object> insertNews(HttpServletRequest request, HttpServletResponse response) {
         Map<String, Object> map = new HashMap<String, Object>();
         try {
             map = newsservice.insertNews(request);
