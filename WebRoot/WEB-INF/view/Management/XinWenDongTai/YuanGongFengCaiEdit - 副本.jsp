@@ -94,7 +94,6 @@
 			url : "updateNews.do",
 			data : {
 				UserID: UserID,
-				id : $("#hiddenID").val(),
 		        category: "H",
 		        title: $("#NewsTitle").val(),
 		        publishDate: $("#PublishDate").val(),
@@ -197,7 +196,7 @@
 	<div>
 		<ul class="breadcrumb">
 			<li><a href="javascript:void(0);">首页</a></li>
-			<li><a href="javascript:void(0);">荣誉奖励修改</a></li>
+			<li><a href="javascript:void(0);">员工风采修改</a></li>
 		</ul>
 	</div>
 
@@ -206,7 +205,7 @@
 			<div class="box-inner">
 				<div class="box-header well">
 					<h2>
-						<i class="glyphicon glyphicon-forward"></i> 荣誉奖励修改
+						<i class="glyphicon glyphicon-forward"></i> 员工风采修改
 					</h2>
 				</div>
 				<div>
@@ -274,7 +273,7 @@
 						})
 						
 						$("#btnClose").click(function() {
-							srchange("ZhongYaoRongYu.do");
+							srchange("YuanGongFengCai.do");
 						});
 						$("#btnSave").click(function() {
 							Save();

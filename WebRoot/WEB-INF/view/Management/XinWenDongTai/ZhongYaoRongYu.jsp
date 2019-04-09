@@ -385,7 +385,7 @@
 	<div>
 		<ul class="breadcrumb">
 			<li><a href="javascript:void(0);">首页</a></li>
-			<li><a href="javascript:void(0);">重要荣誉</a></li>
+			<li><a href="javascript:void(0);">荣誉奖励</a></li>
 		</ul>
 	</div>
 
@@ -394,7 +394,7 @@
 			<div class="box-inner">
 				<div class="box-header well">
 					<h2>
-						<i class="glyphicon glyphicon-forward"></i> 重要荣誉
+						<i class="glyphicon glyphicon-forward"></i> 荣誉奖励
 					</h2>
 				</div>
 				<div class="box-content row">
@@ -451,7 +451,7 @@
 							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 						</button>
 						<h4 class="modal-title" id="myModalLabel">
-							<span id="spTitle">重要荣誉</span>
+							<span id="spTitle">荣誉奖励</span>
 						</h4>
 					</div>
 					<div class="modal-body">

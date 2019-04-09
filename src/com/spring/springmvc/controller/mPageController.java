@@ -17,14 +17,23 @@ public class mPageController extends BaseController {
 	private static final String MoBanXiaZai_PAGE = "Management/JiBenGaiKuang/MoBanXiaZai"; // 基本概况-模板下载
 
 	private static final String TongZhiTongGao_PAGE = "Management/XinWenDongTai/TongZhiTongGao"; // 新闻动态-通知通告
+	private static final String TongZhiTongGaoAdd_PAGE = "Management/XinWenDongTai/TongZhiTongGaoAdd"; // 新闻动态-通知通告-添加
+	private static final String TongZhiTongGaoEdit_PAGE = "Management/XinWenDongTai/TongZhiTongGaoEdit"; // 新闻动态-通知通告-修改
+	
 	private static final String LingDaoShiCha_PAGE = "Management/XinWenDongTai/LingDaoShiCha"; // 新闻动态-领导视察
+	private static final String LingDaoShiChaAdd_PAGE = "Management/XinWenDongTai/LingDaoShiChaAdd"; // 新闻动态-领导视察-添加
+	private static final String LingDaoShiChaEdit_PAGE = "Management/XinWenDongTai/LingDaoShiChaEdit"; // 新闻动态-领导视察-修改
+	
 	private static final String ZhengQiDuiJie_PAGE = "Management/XinWenDongTai/ZhengQiDuiJie"; // 新闻动态-政企对接
+	
 	private static final String YuanGongFengCai_PAGE = "Management/XinWenDongTai/YuanGongFengCai"; // 新闻动态-员工风采
 	private static final String YuanGongFengCaiAdd_PAGE = "Management/XinWenDongTai/YuanGongFengCaiAdd"; // 新闻动态-员工风采添加
 	private static final String YuanGongFengCaiEdit_PAGE = "Management/XinWenDongTai/YuanGongFengCaiEdit"; // 新闻动态-员工风采修改
+	
 	private static final String ZhongYaoRongYu_PAGE = "Management/XinWenDongTai/ZhongYaoRongYu"; // 新闻动态-重要荣誉
 	private static final String ZhongYaoRongYuAdd_PAGE = "Management/XinWenDongTai/ZhongYaoRongYuAdd"; // 新闻动态-重要荣誉-添加
 	private static final String ZhongYaoRongYuEdit_PAGE = "Management/XinWenDongTai/ZhongYaoRongYuEdit"; // 新闻动态-重要荣誉-修改
+	
 	private static final String HangYeQingBaoJianBao_PAGE = "Management/XinWenDongTai/HangYeQingBaoJianBao"; // 新闻动态-行业情报简报
 
 	private static final String XueShuShengYan_PAGE = "Management/KeYanHuoDong/XueShuShengYan"; // 科研活动-学术盛宴
