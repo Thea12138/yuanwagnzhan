@@ -25,24 +25,10 @@
 	//新闻类型
 	var NewsCategory = "H";
 	var UserID = "";
+	var htmlConten="";
 	$(document).ready(function() {
 		$("#UserID").val(sessionStorage.getItem("AccountID"));
 		UserID = sessionStorage.getItem("AccountID");
-	});
-
-	$(function() {
-		alert(${param.id});//获取地址携带id
-		$("#btnClose").click(function() {
-			srchange("YuanGongFengCai.do");
-		});
-		$("#btnSave").click(function() {
-			Save();
-		});
-
-		$("#btnmodalclose").click(function() {
-			Close();
-		});
-
 	});
 
 	function SelectNews(trid, objid) {
@@ -103,33 +89,22 @@
 	function Save() {
 		if (!CheckUI())
 			return;
-		var ajax_option = {
-			url : "AddNews.do",
-			data: {
-                'title': title,
-                'content': content
-            },
+		$.ajax({
+			async : false,
+			url : "updateNews.do",
+			data : {
+				UserID: UserID,
+		        category: "H",
+		        title: $("#NewsTitle").val(),
+		        publishDate: $("#PublishDate").val(),
+		        createBy: $("#CreateBy").val(),
+		        content: editor.txt.html()
+			},
+			type : "post",
 			success : function(data) {
-				alert(JSON.stringify(data));
-				/* var flg = false;
-				switch (data.fail_code) {
-				case "M01U004E001":
-					alert("用户登录失效，请重新登录。");
-					parent.window.open("login.do", "_self");
-					break;
-				case -1:
-					flg = true;
-					break;
-				}
-				if (data.exec_code == 1 && flg) {
-					alert("保存成功。");
-					parent.$("#btnmodalclose").click();
-					ClearUI();
-					LoadData();
-				} */
+	            console.log(data);
 			}
-		};
-		$("#editform").ajaxSubmit(ajax_option);
+		})
 	}
 
 	function Close() {
@@ -274,12 +249,41 @@
 			    <!-- 注意， 只需要引用 JS，无需引用任何 CSS ！！！-->
 			    <script type="text/javascript" src="Resources/js/wangEditor.min.js"></script>
 			    <script type="text/javascript">
-			        var E = window.wangEditor
-			        var editor = new E('#editor')
-			        // 或者 var editor = new E( document.getElementById('editor') )
-					// editor.customConfig.uploadImgShowBase64 = true   // 使用 base64 保存图片
-			     editor.customConfig.uploadImgServer = '/upload'  // 上传图片到服务器
+				    var E = window.wangEditor
+			        var editor = new E('#editor')					
+			     	editor.customConfig.uploadImgServer = '/upload'  // 上传图片到服务器
 			        editor.create()
+			       
+			        $(function() {
+						//alert(${param.id});//获取地址携带id
+						$.ajax({
+							async : false,
+							url : "getNews.do",
+							data : {
+								id: ${param.id}
+							},
+							type : "post",
+							success : function(data) {
+					           /*  console.log(data); */
+					            $("#NewsTitle").val(data.NewsTitle);
+						        $("#PublishDate").val(data.PublishDate);
+						        $("#CreateBy").val(data.CreateBy);
+						        editor.txt.html(data.html_content)
+							}
+						})
+						
+						$("#btnClose").click(function() {
+							srchange("YuanGongFengCai.do");
+						});
+						$("#btnSave").click(function() {
+							Save();
+						});
+				
+						$("#btnmodalclose").click(function() {
+							Close();
+						});
+				
+					});
 			    </script>
 				<div class="modal-footer">
 					<button id="btnClose" type="button" class="btn btn-default">返&nbsp;&nbsp;回</button>

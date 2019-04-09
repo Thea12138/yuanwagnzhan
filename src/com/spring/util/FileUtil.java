@@ -21,7 +21,6 @@ public class FileUtil {
         try{
             if (!dir.exists())
                 dir.mkdir();
-
 //            file1.createNewFile();
             InputStream is = file.getInputStream();
             OutputStream os = new FileOutputStream(fullyName);
