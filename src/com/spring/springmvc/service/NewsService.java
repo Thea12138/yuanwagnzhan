@@ -491,6 +491,7 @@ public class NewsService extends BaseService {
 	public int updateNews(HttpServletRequest request){
 		NewsDomain domain = new NewsDomain();
 		BindData(request, domain);
+		domain.setNewsID(Integer.parseInt(request.getParameter("id")));
 		try {
 			return newsdao.updateNews(domain, request.getParameter("UserID"));
 		}catch (Exception e) {

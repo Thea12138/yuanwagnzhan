@@ -219,6 +219,8 @@ public class NewsController extends BaseController {
 	}
 
 	//新版更新接口
+	@RequestMapping(value = "updateNews.do", method = RequestMethod.POST)
+	@ResponseBody
 	public Map<String, String> updateNews(HttpServletRequest request){
 		Map<String, String> result = new HashMap<String, String>();
 		try {
