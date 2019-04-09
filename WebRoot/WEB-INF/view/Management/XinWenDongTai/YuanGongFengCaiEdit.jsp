@@ -29,28 +29,9 @@
 	$(document).ready(function() {
 		$("#UserID").val(sessionStorage.getItem("AccountID"));
 		UserID = sessionStorage.getItem("AccountID");
+		/* alert(${param.id}); */
+		$("#hiddenID").val(${param.id});
 	});
-
-	function SelectNews(trid, objid) {
-		$("#datatb tr").each(function() {
-			if ($(this).attr("id") == trid) {
-				$("#" + trid).css("background-color", "#e7e8ec");
-				$("#" + trid).css("color", "#4289f1");
-			} else {
-				$(this).css("background-color", "");
-				$(this).css("color", "");
-			}
-		});
-
-		$("#hiddenID").val(objid);
-	}
-
-	function ClearNews() {
-		$("#datatb tr").each(function() {
-			$(this).css("background-color", "");
-			$(this).css("color", "");
-		});
-	}
 
 	function ClearUI() {
 		$("#hiddenID").val("");
