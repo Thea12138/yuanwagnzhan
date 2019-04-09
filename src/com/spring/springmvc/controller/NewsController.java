@@ -218,6 +218,21 @@ public class NewsController extends BaseController {
 		return result;
 	}
 
+	//新版更新接口
+	public Map<String, String> updateNews(HttpServletRequest request){
+		Map<String, String> result = new HashMap<String, String>();
+		try {
+			if(newsservice.updateNews(request) != 0) {
+				result.put("status", "1");
+			}else {
+				result.put("status", "0");
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+			// TODO: handle exception
+		}
+		return result;
+	}
 	//新版新闻列表
 //	public Map<String, Object> listNews(@RequestParam int pageno,
 //										@RequestParam int pagerow,

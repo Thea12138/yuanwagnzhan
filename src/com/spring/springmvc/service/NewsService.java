@@ -488,6 +488,18 @@ public class NewsService extends BaseService {
 		domain.setHtmlContent(request.getParameter("content"));
 	}
 
+	public int updateNews(HttpServletRequest request){
+		NewsDomain domain = new NewsDomain();
+		BindData(request, domain);
+		try {
+			return newsdao.updateNews(domain, request.getParameter("UserID"));
+		}catch (Exception e) {
+			e.printStackTrace();
+			// TODO: handle exception
+		}
+		return 0;
+	}
+	
 	public Map<String, Object> getRecord(int id){
 		return newsdao.getRecord(id);
 	}

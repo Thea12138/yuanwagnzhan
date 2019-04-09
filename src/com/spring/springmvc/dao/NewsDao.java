@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
@@ -15,6 +17,7 @@ import com.spring.core.BaseDao;
 import com.spring.spring.exception.realize.DAOException;
 import com.spring.springmvc.domain.LogDomain;
 import com.spring.springmvc.domain.NewsDomain;
+import com.spring.util.NewsFactory;
 
 @Repository
 public class NewsDao extends BaseDao {
@@ -304,17 +307,88 @@ public class NewsDao extends BaseDao {
 		String sql = " Insert into  qaii_news(NewsCategory,NewsTitle,PublishDate,CreateBy,html_content,IsActive) ";
 		sql = sql
 				+ " values (:NewsCategory,:NewsTitle,:PublishDate,:CreateBy,:html_content,'1');";
+		LogDomain log = new LogDomain();
+		log.setModule(NewsFactory.getCategory(news.getNewsCategory()));
+		log.setOperating("新增");
+		log.setTableName("qaii_news");
+		log.setAccountID(Integer.parseInt(userid));
+		return exeCuteSql(sql, news, log);
+//		SqlParameterSource params = new MapSqlParameterSource();
+//		((MapSqlParameterSource) params).addValue("NewsCategory",
+//				news.getNewsCategory());
+//		((MapSqlParameterSource) params).addValue("NewsTitle",
+//				news.getNewsTitle());
+//		((MapSqlParameterSource) params).addValue("PublishDate",
+//				news.getPublishDate());
+//		((MapSqlParameterSource) params).addValue("CreateBy",
+//				news.getCreateBy());
+//		((MapSqlParameterSource) params).addValue("html_content",
+//				news.getHtmlContent());
+//		try {
+//			ExecParamSql(sql, params);
+//
+//			Date date = new Date();
+//			SimpleDateFormat formatter = new SimpleDateFormat(
+//					"yyyy-MM-dd HH:mm:ss");
+//			String dateString = formatter.format(date);
+//			sql = " select max(NewsID) as MaxID from qaii_news ";
+//			Map<String, Object> row = queryForMap(sql);
+//			int maxID = 0;
+//			maxID = row.get("MaxID") == null ? 0 : Integer.parseInt(row
+//					.get("MaxID").toString());
+//			// 记录日志
+//			LogDomain log = new LogDomain();
+//			log.setModule("院务新闻");
+//			log.setAccountID(Integer.parseInt(userid));
+//			log.setCreateTime(dateString);
+//			log.setOperating("新增");
+//			log.setTableName("qaii_news");
+//			log.setDataID(String.valueOf(maxID));
+//
+//			dao.AddData(log);
+//			return maxID;
+//		} catch (DAOException e) {
+//
+//			e.printStackTrace();
+//		}
+	}
+	
+	public int updateNews(NewsDomain domain, String userid){
+		StringBuilder sb = new StringBuilder("update qaii_news SET NewsTitle=:NewsTitle, PublishDate=:PublishDate, CreateBy=:CreateBy, html_content=:html_content WHERE NewsID=:id AND IsActive = '1'");
+		LogDomain log = new LogDomain();
+		log.setModule(NewsFactory.getCategory(domain.getNewsCategory()));
+		log.setOperating("更新");
+		log.setTableName("qaii_news");
+		log.setAccountID(Integer.parseInt(userid));
+		return exeCuteSql(sb.toString(), domain, log);
+	}
+
+	public Map<String, Object> getRecord(int id){
+		String sql = "select * from qaii_news where NewsID = :id";
+		SqlParameterSource params = new MapSqlParameterSource();
+		try {
+			((MapSqlParameterSource) params).addValue("id", id);
+			return queryForMap(sql, params);
+		} catch (DAOException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	public int exeCuteSql(String sql, NewsDomain domain, LogDomain log) {
 		SqlParameterSource params = new MapSqlParameterSource();
 		((MapSqlParameterSource) params).addValue("NewsCategory",
-				news.getNewsCategory());
+				domain.getNewsCategory());
 		((MapSqlParameterSource) params).addValue("NewsTitle",
-				news.getNewsTitle());
+				domain.getNewsTitle());
 		((MapSqlParameterSource) params).addValue("PublishDate",
-				news.getPublishDate());
+				domain.getPublishDate());
 		((MapSqlParameterSource) params).addValue("CreateBy",
-				news.getCreateBy());
+				domain.getCreateBy());
 		((MapSqlParameterSource) params).addValue("html_content",
-				news.getHtmlContent());
+				domain.getHtmlContent());
+		((MapSqlParameterSource) params).addValue("id",
+				domain.getNewsID());
 		try {
 			ExecParamSql(sql, params);
 
@@ -328,12 +402,7 @@ public class NewsDao extends BaseDao {
 			maxID = row.get("MaxID") == null ? 0 : Integer.parseInt(row
 					.get("MaxID").toString());
 			// 记录日志
-			LogDomain log = new LogDomain();
-			log.setModule("院务新闻");
-			log.setAccountID(Integer.parseInt(userid));
 			log.setCreateTime(dateString);
-			log.setOperating("新增");
-			log.setTableName("qaii_news");
 			log.setDataID(String.valueOf(maxID));
 
 			dao.AddData(log);
@@ -343,18 +412,6 @@ public class NewsDao extends BaseDao {
 			e.printStackTrace();
 		}
 		return 0;
-	}
-
-	public Map<String, Object> getRecord(int id){
-		String sql = "select * from qaii_news where NewsID = :id";
-		SqlParameterSource params = new MapSqlParameterSource();
-		try {
-			((MapSqlParameterSource) params).addValue("id", id);
-			return queryForMap(sql, params);
-		} catch (DAOException e) {
-			e.printStackTrace();
-			return null;
-		}
 	}
 
 //	List<Map<String, Object>> listNews(int pageno, int pagerow,
