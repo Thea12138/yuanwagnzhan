@@ -117,7 +117,7 @@
 	<div>
 		<ul class="breadcrumb">
 			<li><a href="javascript:void(0);">首页</a></li>
-			<li><a href="javascript:void(0);">重要荣誉添加</a></li>
+			<li><a href="javascript:void(0);">荣誉奖励添加</a></li>
 		</ul>
 	</div>
 
@@ -126,7 +126,7 @@
 			<div class="box-inner">
 				<div class="box-header well">
 					<h2>
-						<i class="glyphicon glyphicon-forward"></i> 重要荣誉添加
+						<i class="glyphicon glyphicon-forward"></i> 荣誉奖励添加
 					</h2>
 				</div>
 				<div>
@@ -174,8 +174,17 @@
 			        // 或者 var editor = new E( document.getElementById('editor') )
 					// editor.customConfig.uploadImgShowBase64 = true   // 使用 base64 保存图片
 			     	editor.customConfig.uploadImgServer = '/uploadfile.do'  // 上传图片到服务器
-			     	editor.customConfig.uploadFileName = 'yourFileName'
-			        editor.create()
+			     	editor.customConfig.uploadFileName = 'LinkAddress'
+		     		editor.customConfig.uploadImgParams = {
+			     		category: 'H'
+		     		}
+			     	editor.customConfig.uploadImgHooks = {
+		     		    customInsert: function (insertImg, result, editor) {
+		     		        var url = result.data
+		     		        insertImg(url)
+		     		    }
+			     	}
+			     	editor.create()
 			    </script>
 				<div class="modal-footer">
 					<button id="btnClose" type="button" class="btn btn-default">返&nbsp;&nbsp;回</button>

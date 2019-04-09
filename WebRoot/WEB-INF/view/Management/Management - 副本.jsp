@@ -208,12 +208,8 @@ a:focus {
 									class="glyphicon glyphicon-download-alt"> </i> <span>
 										模板下载 </span>
 							</a></li>
-							<li class="nav-header hidden-md">智能院概况</li>
-							<li id="ZhongYaoRongYu"><a class="ajax-link"
-								href="javascript:TrunPage('ZhongYaoRongYu');"> <i
-									class="glyphicon glyphicon-tower"> </i> <span> 荣誉奖励 </span>
-							</a></li>
-							<li class="nav-header hidden-md">新闻中心</li>
+							
+							<li class="nav-header hidden-md">新闻动态</li>
 							<li id="TongZhiTongGao"><a class="ajax-link"
 								href="javascript:TrunPage('TongZhiTongGao');"> <i
 									class="glyphicon glyphicon-transfer"> </i> <span> 通知通告 </span>
@@ -224,11 +220,15 @@ a:focus {
 							</a></li>
 							<li id="ZhengQiDuiJie"><a class="ajax-link"
 								href="javascript:TrunPage('ZhengQiDuiJie');"> <i
-									class="glyphicon glyphicon-film"> </i> <span> 合作交流 </span>
+									class="glyphicon glyphicon-film"> </i> <span> 政企对接 </span>
 							</a></li>
 							<li id="YuanGongFengCai"><a class="ajax-link"
 								href="javascript:TrunPage('YuanGongFengCai');"> <i
 									class="glyphicon glyphicon-leaf"> </i> <span> 员工风采 </span>
+							</a></li>
+							<li id="ZhongYaoRongYu"><a class="ajax-link"
+								href="javascript:TrunPage('ZhongYaoRongYu');"> <i
+									class="glyphicon glyphicon-tower"> </i> <span> 重要荣誉 </span>
 							</a></li>
 							<li id="HangYeQingBaoJianBao"><a class="ajax-link"
 								href="javascript:TrunPage('HangYeQingBaoJianBao');"> <i

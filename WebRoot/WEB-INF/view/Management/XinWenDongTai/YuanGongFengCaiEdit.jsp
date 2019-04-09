@@ -94,6 +94,7 @@
 			url : "updateNews.do",
 			data : {
 				UserID: UserID,
+				id : $("#hiddenID").val(),
 		        category: "H",
 		        title: $("#NewsTitle").val(),
 		        publishDate: $("#PublishDate").val(),

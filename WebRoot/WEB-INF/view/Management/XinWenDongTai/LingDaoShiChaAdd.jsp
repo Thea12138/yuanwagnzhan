@@ -25,25 +25,20 @@
 	//新闻类型
 	var NewsCategory = "H";
 	var UserID = "";
-	var htmlConten="";
 	$(document).ready(function() {
 		$("#UserID").val(sessionStorage.getItem("AccountID"));
 		UserID = sessionStorage.getItem("AccountID");
 	});
 
-	function SelectNews(trid, objid) {
-		$("#datatb tr").each(function() {
-			if ($(this).attr("id") == trid) {
-				$("#" + trid).css("background-color", "#e7e8ec");
-				$("#" + trid).css("color", "#4289f1");
-			} else {
-				$(this).css("background-color", "");
-				$(this).css("color", "");
-			}
+	$(function() {
+		$("#btnClose").click(function() {
+			srchange("YuanGongFengCai.do");
+		});
+		$("#btnSave").click(function() {
+			Save();
 		});
 
-		$("#hiddenID").val(objid);
-	}
+	});
 
 	function ClearNews() {
 		$("#datatb tr").each(function() {
@@ -91,10 +86,9 @@
 			return;
 		$.ajax({
 			async : false,
-			url : "updateNews.do",
+			url : "insertNews.do",
 			data : {
 				UserID: UserID,
-				id : $("#hiddenID").val(),
 		        category: "H",
 		        title: $("#NewsTitle").val(),
 		        publishDate: $("#PublishDate").val(),
@@ -103,86 +97,12 @@
 			},
 			type : "post",
 			success : function(data) {
+				alert("请求已提交！我们会尽快与您取得联系");
 	            console.log(data);
 			}
 		})
 	}
 
-	function Close() {
-		parent.$("#btnmodalclose").click();
-		ClearUI();
-		ClearNews();
-		$("#hiddenID").val("");
-	}
-
-	function Del() {
-		if ($("#hiddenID").val() == "") {
-			alert("请选择操作对象。");
-			return false;
-		}
-		if (window.confirm("删除是不可恢复的，你确认要删除吗？")) {
-			$.post("DelNews.do", {
-				newsid : $("#hiddenID").val(),
-				userid : UserID
-			}, function(data) {
-				//alert(JSON.stringify(data));
-				var flg = false;
-				switch (data.fail_code) {
-				case "M01U004E001":
-					alert("用户登录失效，请重新登录。");
-					parent.window.open("login.do", "_self");
-					break;
-				case -1:
-					flg = true;
-					break;
-				}
-				if (data.exec_code == 1 && flg) {
-					alert("删除成功。");
-					$("#hiddenID").val("");
-					LoadData();
-				}
-			});
-		} else {
-			$("#hiddenID").val("");
-			ClearNews();
-		}
-	}
-
-	function openDetail(objid) {
-		if (objid == null) {//Add
-			document.getElementById("spTitle").innerText = "新增院务新闻";
-		} else {//Edit
-			document.getElementById("spTitle").innerText = "修改院务新闻";
-
-			$.ajax({
-				async : false,
-				url : "GetNewsByNewsID.do",
-				data : {
-					newsid : $("#hiddenID").val()
-				},
-				type : "post",
-				success : function(data) {
-					if (data != null) {
-						$("#hiddenID").val(data.NewsID);
-						$("#PublishDate").val(data.PublishDate);
-						$("#NewsTitle").val(data.NewsTitle);
-						$("#CreateBy").val(data.CreateBy);
-
-						$("#editlink").val(data.LinkAddress);
-						$("#editlink").show();
-						var picurls = "";
-						for (var i = 0; i < data.picturesList.length; i++) {
-							picurls += data.picturesList[i] + ";";
-						}
-						if (picurls != "") {
-							$("#editpic").val(picurls);
-							$("#editpic").show();
-						}
-					}
-				}
-			});
-		}
-	}
 	//页面跳转
 	function srchange(obj){
 	    $("body", parent.document).find('iframe').attr('src',obj);
@@ -197,7 +117,7 @@
 	<div>
 		<ul class="breadcrumb">
 			<li><a href="javascript:void(0);">首页</a></li>
-			<li><a href="javascript:void(0);">荣誉奖励修改</a></li>
+			<li><a href="javascript:void(0);">员工风采添加</a></li>
 		</ul>
 	</div>
 
@@ -206,7 +126,7 @@
 			<div class="box-inner">
 				<div class="box-header well">
 					<h2>
-						<i class="glyphicon glyphicon-forward"></i> 荣誉奖励修改
+						<i class="glyphicon glyphicon-forward"></i> 员工风采添加
 					</h2>
 				</div>
 				<div>
@@ -239,7 +159,6 @@
 										<div id="editor">
 									        <p>请输入内容</p>
 									    </div>
-									
 									</td>
 								</tr>
 							</table>
@@ -250,41 +169,22 @@
 			    <!-- 注意， 只需要引用 JS，无需引用任何 CSS ！！！-->
 			    <script type="text/javascript" src="Resources/js/wangEditor.min.js"></script>
 			    <script type="text/javascript">
-				    var E = window.wangEditor
-			        var editor = new E('#editor')					
-			     	editor.customConfig.uploadImgServer = '/upload'  // 上传图片到服务器
-			        editor.create()
-			       
-			        $(function() {
-						//alert(${param.id});//获取地址携带id
-						$.ajax({
-							async : false,
-							url : "getNews.do",
-							data : {
-								id: ${param.id}
-							},
-							type : "post",
-							success : function(data) {
-					           /*  console.log(data); */
-					            $("#NewsTitle").val(data.NewsTitle);
-						        $("#PublishDate").val(data.PublishDate);
-						        $("#CreateBy").val(data.CreateBy);
-						        editor.txt.html(data.html_content)
-							}
-						})
-						
-						$("#btnClose").click(function() {
-							srchange("ZhongYaoRongYu.do");
-						});
-						$("#btnSave").click(function() {
-							Save();
-						});
-				
-						$("#btnmodalclose").click(function() {
-							Close();
-						});
-				
-					});
+			        var E = window.wangEditor
+			        var editor = new E('#editor')
+			        // 或者 var editor = new E( document.getElementById('editor') )
+					// editor.customConfig.uploadImgShowBase64 = true   // 使用 base64 保存图片
+			     	editor.customConfig.uploadImgServer = '/uploadfile.do'  // 上传图片到服务器
+			     	editor.customConfig.uploadFileName = 'LinkAddress'
+		     		editor.customConfig.uploadImgParams = {
+			     		category: 'H'
+		     		}
+			     	editor.customConfig.uploadImgHooks = {
+		     		    customInsert: function (insertImg, result, editor) {
+		     		        var url = result.data
+		     		        insertImg(url)
+		     		    }
+			     	}
+			     	editor.create()
 			    </script>
 				<div class="modal-footer">
 					<button id="btnClose" type="button" class="btn btn-default">返&nbsp;&nbsp;回</button>
