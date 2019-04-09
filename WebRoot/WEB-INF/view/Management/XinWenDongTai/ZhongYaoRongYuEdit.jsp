@@ -29,6 +29,7 @@
 	$(document).ready(function() {
 		$("#UserID").val(sessionStorage.getItem("AccountID"));
 		UserID = sessionStorage.getItem("AccountID");
+		$("#hiddenID").val(${param.id});
 	});
 
 	function SelectNews(trid, objid) {

@@ -25,6 +25,8 @@ public class mPageController extends BaseController {
 	private static final String LingDaoShiChaEdit_PAGE = "Management/XinWenDongTai/LingDaoShiChaEdit"; // 新闻动态-领导视察-修改
 	
 	private static final String ZhengQiDuiJie_PAGE = "Management/XinWenDongTai/ZhengQiDuiJie"; // 新闻动态-政企对接
+	private static final String ZhengQiDuiJieAdd_PAGE = "Management/XinWenDongTai/ZhengQiDuiJieAdd"; // 新闻动态-政企对接-添加
+	private static final String ZhengQiDuiJieEdit_PAGE = "Management/XinWenDongTai/ZhengQiDuiJieEdit"; // 新闻动态-政企对接-修改
 	
 	private static final String YuanGongFengCai_PAGE = "Management/XinWenDongTai/YuanGongFengCai"; // 新闻动态-员工风采
 	private static final String YuanGongFengCaiAdd_PAGE = "Management/XinWenDongTai/YuanGongFengCaiAdd"; // 新闻动态-员工风采添加
@@ -81,17 +83,47 @@ public class mPageController extends BaseController {
 	public String TongZhiTongGao() {
 		return TongZhiTongGao_PAGE;
 	}
+	// 新闻动态-通知通告添加
+	@RequestMapping(value = "TongZhiTongGaoAdd.do")
+	public String TongZhiTongGaoAdd() {
+		return TongZhiTongGaoAdd_PAGE;
+	}
+	// 新闻动态-通知通告修改
+	@RequestMapping(value = "TongZhiTongGaoEdit.do")
+	public String TongZhiTongGaoEdit() {
+		return TongZhiTongGaoEdit_PAGE;
+	}
 
 	// 新闻动态-领导视察
 	@RequestMapping(value = "LingDaoShiCha.do")
 	public String LingDaoShiCha() {
 		return LingDaoShiCha_PAGE;
 	}
+	// 新闻动态-领导视察添加
+	@RequestMapping(value = "LingDaoShiChaAdd.do")
+	public String LingDaoShiChaAdd() {
+		return LingDaoShiChaAdd_PAGE;
+	}
+	// 新闻动态-领导视察修改
+	@RequestMapping(value = "LingDaoShiChaEdit.do")
+	public String LingDaoShiChaEdit() {
+		return LingDaoShiChaEdit_PAGE;
+	}
 
 	// 新闻动态-政企对接
 	@RequestMapping(value = "ZhengQiDuiJie.do")
 	public String ZhengQiDuiJie() {
 		return ZhengQiDuiJie_PAGE;
+	}
+	// 新闻动态-政企对接添加
+	@RequestMapping(value = "ZhengQiDuiJieAdd.do")
+	public String ZhengQiDuiJieAdd() {
+		return ZhengQiDuiJieAdd_PAGE;
+	}
+	// 新闻动态-政企对接修改
+	@RequestMapping(value = "ZhengQiDuiJieEdit.do")
+	public String ZhengQiDuiJieEdit() {
+		return ZhengQiDuiJieEdit_PAGE;
 	}
 
 	// 新闻动态-员工风采
