@@ -257,7 +257,7 @@ public class NewsController extends BaseController {
 			strRealPath = strRealPath.replaceAll("WEB-INF/classes/", "");
 			String realpath = strRealPath + "fileload/html/News/";
 			String newsType = request.getParameter("category");
-			StringBuilder path = new StringBuilder("html/News/");
+			StringBuilder path = new StringBuilder("../fileload/html/News/");
 			path.append(newsType + "/");
 			realpath = realpath + newsType + "/";
 			MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;

@@ -5,12 +5,12 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
 
-//单例，用于全局上传文件,返回绝对路径
+//用于全局上传文件,返回绝对路径
 public class FileUtil {
     public static String upFile(MultipartFile file, String realFilePath, String path) throws IOException {
         String fileName = file.getOriginalFilename();
         String newFileName = System.currentTimeMillis() + fileName.substring(fileName.lastIndexOf("."));
-        StringBuilder result = new StringBuilder("www.qaii.cn/");
+        StringBuilder result = new StringBuilder();
         result.append(path);
         result.append(newFileName);
         String fullyName = realFilePath + newFileName;
@@ -28,7 +28,7 @@ public class FileUtil {
 //                os.write(bs);
             while ((len = is.read(bs))!= -1)
                 os.write(bs, 0, len);
-            os.write(is.read());
+//            os.write(is.read());
             is.close();
             os.close();
         } catch (IOException e){

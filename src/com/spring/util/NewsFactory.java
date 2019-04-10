@@ -11,9 +11,9 @@ public class NewsFactory {
 		case "A":
 			return "领导视察";
 		case "B":
-			return "政企对接";
+			return "合作交流";
 		case "C":
-			return "重要荣誉";
+			return "荣誉奖励";
 		case "D":
 			return "学术盛宴";
 		case "E":
@@ -24,6 +24,8 @@ public class NewsFactory {
 			return "院务新闻";
 		case "H":
 			return "员工风采";
+		case "I":
+			return "孵化通知通告";
 		default:
 			return null;
 		}
