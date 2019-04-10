@@ -23,12 +23,13 @@
 
 <script type="text/javascript">
 	//新闻类型
-	var NewsCategory = "H";
+	var NewsCategory = "F";
 	var UserID = "";
 	var htmlConten="";
 	$(document).ready(function() {
 		$("#UserID").val(sessionStorage.getItem("AccountID"));
 		UserID = sessionStorage.getItem("AccountID");
+		$("#hiddenID").val(${param.id});
 	});
 
 	function SelectNews(trid, objid) {
@@ -94,7 +95,8 @@
 			url : "updateNews.do",
 			data : {
 				UserID: UserID,
-		        category: "H",
+		        category: "F",
+		        id : $("#hiddenID").val(),
 		        title: $("#NewsTitle").val(),
 		        publishDate: $("#PublishDate").val(),
 		        createBy: $("#CreateBy").val(),
@@ -196,7 +198,7 @@
 	<div>
 		<ul class="breadcrumb">
 			<li><a href="javascript:void(0);">首页</a></li>
-			<li><a href="javascript:void(0);">员工风采修改</a></li>
+			<li><a href="javascript:void(0);">通知通告修改</a></li>
 		</ul>
 	</div>
 
@@ -205,7 +207,7 @@
 			<div class="box-inner">
 				<div class="box-header well">
 					<h2>
-						<i class="glyphicon glyphicon-forward"></i> 员工风采修改
+						<i class="glyphicon glyphicon-forward"></i> 通知通告修改
 					</h2>
 				</div>
 				<div>
@@ -214,7 +216,7 @@
 							<!-- TODO 修改隐藏域hiddenID 的name属性 -->
 							<input type="hidden" id="hiddenID" name="NewsID" /> <input
 								type="hidden" id="UserID" name="UserID" /> <input type="hidden"
-								id="NewsCategory" name="NewsCategory" value="H" />
+								id="NewsCategory" name="NewsCategory" value="F" />
 							<table class="table">
 								<tr>
 									<td style="width:130px;">创建日期：</td>
@@ -273,7 +275,7 @@
 						})
 						
 						$("#btnClose").click(function() {
-							srchange("YuanGongFengCai.do");
+							srchange("TongZhiTongGao.do");
 						});
 						$("#btnSave").click(function() {
 							Save();

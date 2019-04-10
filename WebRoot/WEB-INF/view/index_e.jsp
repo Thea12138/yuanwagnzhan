@@ -711,7 +711,7 @@ padding-top:137px;}
 					</ul>
 				</li>
 				<li>
-					<div class="footTitle">创新孵化<div class="footline"></div></div>
+					<div class="footTitle">产业孵化<div class="footline"></div></div>
 					<ul>
 						<li><a
 							href="javascript:ContentJump('cxfh_fhfw.do','cxfhframe');">孵化服务</a></li>					

@@ -77,7 +77,7 @@
 								for (var i = 0; i < list.length; i++) {
 									ht = ht
 											+ "<tr>"
-											+ "<td class='new_title;'>"
+											+ "<td class='new_title'>"
 											+"<img src='Resources/img/icon_point.png'/>"
 											+"<a href='javascript:ContentJumpPage(\"NewsShow.do?NewsID="
 											+ list[i].NewsID
@@ -86,7 +86,7 @@
 											+ "\");'>"
 											+ SubStrFun(list[i].NewsTitle, 50)
 											+ "</a></td>"
-											+ "<td class='new_time;'>"
+											+ "<td class='new_time'>"
 											+ (list[i].PublishDate == null ? ""
 													: ("["
 															+ (ymdDate(
@@ -120,7 +120,7 @@
 								for (var i = 0; i < list.length; i++) {
 									ht = ht
 											+ "<tr>"
-											+ "<td class='new_title;'>"
+											+ "<td class='new_title'>"
 											+"<img src='Resources/img/icon_point.png'/>"
 											+"<a href='javascript:ContentJumpPage(\"NewsShow.do?NewsID="
 											+ list[i].NewsID
@@ -129,7 +129,7 @@
 											+ "\");'>"
 											+ SubStrFun(list[i].NewsTitle, 50)
 											+ "</a></td>"
-											+ "<td class='new_time;'>"
+											+ "<td class='new_time'>"
 											+ (list[i].PublishDate == null ? ""
 													: ("["
 															+ (ymdDate(
@@ -213,8 +213,8 @@
 							href="javascript:ContentJump('cxfh_zcfc.do','cxfhframe');">众创风采</a></li>
 						<li><a
 							href="javascript:ContentJump('cxfh_zcjj.do','cxfhframe');">众创基金</a></li>
-						<li><a
-							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li>
+						<!-- <li><a
+							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li> -->
 						<li><a
 							href="javascript:ContentJump('cxfh_tztg_frame.do','cxfhframe');">通知通告</a></li>
 					</ul>
@@ -366,7 +366,7 @@
 					</ul>
 				</li>
 				<li>
-					<div class="footTitle">创新孵化<div class="footline"></div></div>
+					<div class="footTitle">产业孵化<div class="footline"></div></div>
 					<ul>
 						<li><a
 							href="javascript:ContentJump('cxfh_fhfw.do','cxfhframe');">孵化服务</a></li>					
@@ -374,8 +374,8 @@
 							href="javascript:ContentJump('cxfh_zcfc.do','cxfhframe');">众创风采</a></li>
 						<li><a
 							href="javascript:ContentJump('cxfh_zcjj.do','cxfhframe');">众创基金</a></li>
-						<li><a
-							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li>
+						<!-- <li><a
+							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li> -->
 						<li><a
 							href="javascript:ContentJump('cxfh_tztg_frame.do','cxfhframe');">通知公告</a></li>
 					</ul>

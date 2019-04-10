@@ -145,8 +145,8 @@
 							href="javascript:ContentJump('cxfh_zcfc.do','cxfhframe');">众创风采</a></li>
 						<li><a
 							href="javascript:ContentJump('cxfh_zcjj.do','cxfhframe');">众创基金</a></li>
-						<li><a
-							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li>
+						<!-- <li><a
+							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li> -->
 						<li><a
 							href="javascript:ContentJump('cxfh_tztg_frame.do','cxfhframe');">通知通告</a></li>
 					</ul>
@@ -258,7 +258,7 @@
 						<p style="margin-top:0px;">目前拥有核心成员20余人，其中博士3人，硕士7人；美国、英国等国留学归国人员3人；包括海外智慧医疗系统专家，国内移动电子设备专家，以及临床医学、健康咨询、人工智能算法、大数据分析、计算机软件研发、数据库、信息系统架构等领域的专门人才。</p>
 						
 						<p class="protitlt">核心业务内容</p>
-						<div style="padding-left: 2rem;line-height: 29px;font-size: 16px;color: #000000;opacity: 0.8;">
+						<div class="subcontext">
 							●&nbsp;平行痛风辅助诊疗系统<br>
 							●&nbsp;基于平行智能的医学图像处理  <br>
 							●&nbsp;健康监护平台与大数据中心<br>
@@ -356,7 +356,7 @@
 					</ul>
 				</li>
 				<li>
-					<div class="footTitle">创新孵化<div class="footline"></div></div>
+					<div class="footTitle">产业孵化<div class="footline"></div></div>
 					<ul>
 						<li><a
 							href="javascript:ContentJump('cxfh_fhfw.do','cxfhframe');">孵化服务</a></li>					
@@ -364,8 +364,8 @@
 							href="javascript:ContentJump('cxfh_zcfc.do','cxfhframe');">众创风采</a></li>
 						<li><a
 							href="javascript:ContentJump('cxfh_zcjj.do','cxfhframe');">众创基金</a></li>
-						<li><a
-							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li>
+						<!-- <li><a
+							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li> -->
 						<li><a
 							href="javascript:ContentJump('cxfh_tztg_frame.do','cxfhframe');">通知公告</a></li>
 					</ul>

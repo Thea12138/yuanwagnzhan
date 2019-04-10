@@ -86,8 +86,10 @@
 				alert("请选择操作对象。");
 				return false;
 			}
-			$("#btnEdit").attr("data-target", "#myModal");//添加时需要去掉该值，否则也能打开
-			openDetail($("#hiddenID").val()); //打开编辑操作
+			var ids=$("#hiddenID").val().trim();
+			srchange("YuanGongFengCaiEdit.do?id="+ids)
+			//$("#btnEdit").attr("data-target", "#myModal");//添加时需要去掉该值，否则也能打开
+			//openDetail($("#hiddenID").val()); //打开编辑操作
 		});
 
 		$("#btnmodalclose").click(function() {
@@ -130,9 +132,9 @@
 									+ (list[i].CreateBy == null ? ""
 											: list[i].CreateBy)
 									+ "</td>"
-									+ "<td style='text-align:center;'>"
+									/* + "<td style='text-align:center;'>"
 									+ (list[i].LinkAddress == null ? ""
-											: list[i].LinkAddress) + "</td>"
+											: list[i].LinkAddress) + "</td>" */
 									+ "</tr>";
 						}
 						$("#datatb").append(ht);
@@ -377,6 +379,10 @@
 			}
 		});
 	}
+	//页面跳转
+	function srchange(obj){
+	    $("body", parent.document).find('iframe').attr('src',obj);
+	}
 </script>
 </head>
 
@@ -402,8 +408,8 @@
 					<div class="col-lg-7 col-md-12">
 
 						<div class="alert alert-info">
-							<a id="btnAdd" class="btn btn-primary" data-toggle="modal"
-								data-target="#myModal" data-backdrop='static'> <i
+							<a class="btn btn-primary"
+								href="javascript:srchange('TongZhiTongGaoAdd.do');"> <i
 								class="glyphicon glyphicon-plus icon-white"></i> 增加
 							</a> <a id="btnEdit" class="btn btn-info" data-toggle="modal"
 								data-backdrop='static'> <i
@@ -419,7 +425,7 @@
 									<th style="width:170px;text-align:center;">标题</th>
 									<th style="width:110px;text-align:center;">创建日期</th>
 									<th style="width:110px;text-align:center;">创建人</th>
-									<th style="width:150px;text-align:center;">内容页</th>
+									<!-- <th style="width:150px;text-align:center;">内容页</th> -->
 
 								</tr>
 							</thead>

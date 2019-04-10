@@ -87,9 +87,21 @@
 				alert("请选择操作对象。");
 				return false;
 			}
-			$("#btnEdit").attr("data-target", "#myModal");//添加时需要去掉该值，否则也能打开
-			openDetail($("#hiddenID").val()); //打开编辑操作
+			var ids=$("#hiddenID").val().trim();
+			srchange("YuanGongFengCaiEdit.do?id="+ids)
+			/* $("#btnEdit").attr("data-target", "#myModal"); *///添加时需要去掉该值，否则也能打开
+			/* openDetail($("#hiddenID").val());  *///打开编辑操作
 		});
+		/* $("#btnEdit").click(function() {
+			if ($("#hiddenID").val().trim() == "") {
+				alert("请选择操作对象。");
+				return false;
+			}
+			var ids=$("#hiddenID").val().trim();
+			srchange("ZhengQiDuiJieEdit?id="+ids)
+			//$("#btnEdit").attr("data-target", "#myModal");//添加时需要去掉该值，否则也能打开
+			//openDetail($("#hiddenID").val()); //打开编辑操作
+		}); */
 
 		$("#btnmodalclose").click(function() {
 			Close();
@@ -135,7 +147,7 @@
 											+ (list[i].CreateBy == null ? ""
 													: list[i].CreateBy)
 											+ "</td>"
-											+ "<td style='text-align:center;'>"
+											/* + "<td style='text-align:center;'>"
 											+ (list[i].LinkAddress == null ? ""
 													: list[i].LinkAddress)
 											+ "</td>"
@@ -143,7 +155,8 @@
 											+ "<img style='width:200px;height:100px;' src= \'"
 										    +  list[i].ThumbPicture
 										    + " \' />"
-											+ "</td>" + "</tr>";
+											+ "</td>"  */
+											+ "</tr>";
 								}
 								$("#datatb").append(ht);
 								pages(data.rows, pagerow, pageno);
@@ -405,6 +418,10 @@
 			}
 		});
 	}
+	//页面跳转
+	function srchange(obj){
+	    $("body", parent.document).find('iframe').attr('src',obj);
+	}
 </script>
 </head>
 
@@ -414,7 +431,7 @@
 	<div>
 		<ul class="breadcrumb">
 			<li><a href="javascript:void(0);">首页</a></li>
-			<li><a href="javascript:void(0);">政企对接</a></li>
+			<li><a href="javascript:void(0);">合作交流</a></li>
 		</ul>
 	</div>
 
@@ -423,17 +440,21 @@
 			<div class="box-inner">
 				<div class="box-header well">
 					<h2>
-						<i class="glyphicon glyphicon-forward"></i> 政企对接
+						<i class="glyphicon glyphicon-forward"></i> 合作交流
 					</h2>
 				</div>
 				<div class="box-content row">
 					<div class="col-lg-7 col-md-12">
 
 						<div class="alert alert-info">
-							<a id="btnAdd" class="btn btn-primary" data-toggle="modal"
+							<a class="btn btn-primary"
+								href="javascript:srchange('ZhengQiDuiJieAdd.do');"> <i
+								class="glyphicon glyphicon-plus icon-white"></i> 增加
+							</a>
+							<!-- <a id="btnAdd" class="btn btn-primary" data-toggle="modal"
 								data-target="#myModal" data-backdrop='static'> <i
 								class="glyphicon glyphicon-plus icon-white"></i> 增加
-							</a> <a id="btnEdit" class="btn btn-info" data-toggle="modal"
+							</a> --> <a id="btnEdit" class="btn btn-info" data-toggle="modal"
 								data-backdrop='static'> <i
 								class="glyphicon glyphicon-edit icon-white"></i> 修改
 							</a> <a id="btnDel" class="btn btn-danger"
@@ -448,8 +469,8 @@
 									<th style="width:130px;text-align:center;">标题</th>
 									<th style="width:90px;text-align:center;">创建日期</th>
 									<th style="width:90px;text-align:center;">创建人</th>
-									<th style="width:120px;text-align:center;">内容页</th>
-									<th style="width:120px;text-align:center;">首页图片</th>
+									<!-- <th style="width:120px;text-align:center;">内容页</th>
+									<th style="width:120px;text-align:center;">首页图片</th> -->
 
 								</tr>
 							</thead>
@@ -476,7 +497,7 @@
 							<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 						</button>
 						<h4 class="modal-title" id="myModalLabel">
-							<span id="spTitle">政企对接</span>
+							<span id="spTitle">合作交流</span>
 						</h4>
 					</div>
 					<div class="modal-body">

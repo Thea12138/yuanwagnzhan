@@ -502,7 +502,7 @@
 
 					</ul></li>
 				<li id="zxnsframe"><a
-					href="javascript:PageJump('zxns_zxns_frame');">创新孵化</a></li>
+					href="javascript:PageJump('zxns_zxns_frame');">产业孵化</a></li>
 				<li id="contactus"><a href="javascript:PageJump('lxwm_lxwm');">联系我们</a>
 				</li>
 			</ul>

@@ -125,9 +125,9 @@
 									+ (list[i].CreateBy == null ? ""
 											: list[i].CreateBy)
 									+ "</td>"
-									+ "<td style='text-align:center;'>"
+									/* + "<td style='text-align:center;'>"
 									+ (list[i].LinkAddress == null ? ""
-											: list[i].LinkAddress) + "</td>"
+											: list[i].LinkAddress) + "</td>" */
 									+ "</tr>";
 						}
 						$("#datatb").append(ht);
@@ -170,9 +170,6 @@
 									+ (list[i].CreateBy == null ? ""
 											: list[i].CreateBy)
 									+ "</td>"
-									+ "<td style='text-align:center;'>"
-									+ (list[i].LinkAddress == null ? ""
-											: list[i].LinkAddress) + "</td>"
 									+ "</tr>";
 						}
 						$("#datatb").append(ht);
@@ -424,7 +421,6 @@
 									<th style="width:200px;text-align:center;">标题</th>
 									<th style="width:90px;text-align:center;">创建日期</th>
 									<th style="width:90px;text-align:center;">创建人</th>
-									<th style="width:170px;text-align:center;">内容页</th>
 
 								</tr>
 							</thead>
