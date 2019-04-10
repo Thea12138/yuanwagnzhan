@@ -10,7 +10,7 @@ public class FileUtil {
     public static String upFile(MultipartFile file, String realFilePath, String path) throws IOException {
         String fileName = file.getOriginalFilename();
         String newFileName = System.currentTimeMillis() + fileName.substring(fileName.lastIndexOf("."));
-        StringBuilder result = new StringBuilder("www.qaii.cn/");
+        StringBuilder result = new StringBuilder();
         result.append(path);
         result.append(newFileName);
         String fullyName = realFilePath + newFileName;

@@ -24,6 +24,8 @@ public class NewsFactory {
 			return "院务新闻";
 		case "H":
 			return "员工风采";
+		case "I":
+			return "孵化通知通告";
 		default:
 			return null;
 		}
