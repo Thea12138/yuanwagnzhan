@@ -97,8 +97,7 @@
 			},
 			type : "post",
 			success : function(data) {
-				alert("请求已提交！我们会尽快与您取得联系");
-	            console.log(data);
+				srchange("YuanGongFengCai.do");
 			}
 		})
 	}
@@ -171,8 +170,6 @@
 			    <script type="text/javascript">
 			        var E = window.wangEditor
 			        var editor = new E('#editor')
-			        // 或者 var editor = new E( document.getElementById('editor') )
-					// editor.customConfig.uploadImgShowBase64 = true   // 使用 base64 保存图片
 			     	editor.customConfig.uploadImgServer = '/uploadfile.do'  // 上传图片到服务器
 			     	editor.customConfig.uploadFileName = 'LinkAddress'
 		     		editor.customConfig.uploadImgParams = {

@@ -35,7 +35,7 @@
 
 	//每页加载记录数量
 	var pagerow = 20;
-	var NewsCategory = "H";
+	var NewsCategory = "F";
 	//数据记录数
 	var rowcount;
 	window.onload = function() {
@@ -43,13 +43,13 @@
 
 	};
 	$(function() {
-	if(sessionStorage.focusUrl_Name=="xwdt_ygfc_frame.do" ){
+	if(sessionStorage.focusUrl_Name=="xwdt_tztg_frame.do" ){
 		if(sessionStorage.pageno!=undefined && sessionStorage.pageno!='')	{
 		    pageno=sessionStorage.pageno;
 		}
 		
 	 }
-	    sessionStorage.focusUrl_Name = "xwdt_ygfc_frame.do";
+	    sessionStorage.focusUrl_Name = "xwdt_tztg_frame.do";
 		sessionStorage.focusUrl_ID = "xwdtyjydtframe";
 	
 		initNewsList();
@@ -242,7 +242,7 @@
 			<div class=blank></div>
 			<div class=contentshow>
 				<div class=leftnav>
-					<div class=ld>新闻动态</div>
+					<div class=ld>新闻中心</div>
 					<div class=secondnav>
 						<ul>							
 							<li id="xwdttztgframe"><a class="active"

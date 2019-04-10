@@ -97,8 +97,7 @@
 			},
 			type : "post",
 			success : function(data) {
-				alert("请求已提交！我们会尽快与您取得联系");
-	            console.log(data);
+				srchange("ZhongYaoRongYu.do");
 			}
 		})
 	}

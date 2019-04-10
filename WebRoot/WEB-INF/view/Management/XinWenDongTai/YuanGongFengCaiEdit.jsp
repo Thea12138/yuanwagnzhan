@@ -84,7 +84,7 @@
 			},
 			type : "post",
 			success : function(data) {
-	            console.log(data);
+				srchange("YuanGongFengCai.do");
 			}
 		})
 	}
@@ -232,9 +232,19 @@
 			    <script type="text/javascript" src="Resources/js/wangEditor.min.js"></script>
 			    <script type="text/javascript">
 				    var E = window.wangEditor
-			        var editor = new E('#editor')					
-			     	editor.customConfig.uploadImgServer = '/upload'  // 上传图片到服务器
-			        editor.create()
+			        var editor = new E('#editor')
+			     	editor.customConfig.uploadImgServer = '/uploadfile.do'  // 上传图片到服务器
+			     	editor.customConfig.uploadFileName = 'LinkAddress'
+		     		editor.customConfig.uploadImgParams = {
+			     		category: 'H'
+		     		}
+			     	editor.customConfig.uploadImgHooks = {
+		     		    customInsert: function (insertImg, result, editor) {
+		     		        var url = result.data
+		     		        insertImg(url)
+		     		    }
+			     	}
+			     	editor.create()
 			       
 			        $(function() {
 						//alert(${param.id});//获取地址携带id

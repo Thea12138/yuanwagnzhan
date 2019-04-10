@@ -74,7 +74,7 @@ public class NewsController extends BaseController {
 
 	/** XXXXXXXX 要替换成院务新闻前端展示html页面的名称 ***/
 	private static final String page_error_PAGE = "error";
-	private static final String xwdt_tztg_show_PAGE = "ChuangXinFuHua/cxfh_tztg_show"; // 新闻动态-通知通告详情
+	private static final String xwdt_tztg_show_PAGE = "XinWenDongTai/xwdt_tztg_show"; // 新闻动态-通知通告详情
 	private static final String xwdt_ldsc_show_PAGE = "XinWenDongTai/xwdt_ldsc_show"; // 新闻动态-领导视察详情
 	private static final String xwdt_zqdj_show_PAGE = "XinWenDongTai/xwdt_zqdj_show"; // 新闻动态-政企对接详情
 	private static final String xwdt_ygfc_show_PAGE = "XinWenDongTai/xwdt_ygfc_show"; // 新闻动态-员工风采详情
