@@ -97,12 +97,12 @@
 
 </style>
 <script>
-$(function() {
+/* $(function() {
 	$(".handle").click(function(){
 		$(this).siblings().children(".showbox").hide();
 		 $(this).children(".showbox").toggle();
 	});
-});	
+});	 */
 </script>
 </head>
 
@@ -172,8 +172,8 @@ $(function() {
 							href="javascript:ContentJump('cxfh_zcfc.do','cxfhframe');">众创风采</a></li>
 						<li><a
 							href="javascript:ContentJump('cxfh_zcjj.do','cxfhframe');">众创基金</a></li>
-						<li><a
-							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li>
+						<!-- <li><a
+							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li> -->
 						<li><a
 							href="javascript:ContentJump('cxfh_tztg_frame.do','cxfhframe');">通知通告</a></li>
 					</ul>
@@ -218,10 +218,10 @@ $(function() {
 									class="glyphicon glyphicon-triangle-right"
 									style="font-size:10px;"></span> 众创基金</a></li>											
 							
-							<li><a
+							<!-- <li><a
 								href="javascript:ContentJump('cxfh_hdrl.do');"><span
 									class="glyphicon glyphicon-triangle-right"
-									style="font-size:10px;"></span> 活动日历</a></li>
+									style="font-size:10px;"></span> 活动日历</a></li> -->
 							<li><a 
 								href="javascript:ContentJump('cxfh_tztg_frame.do');"><span
 									class="glyphicon glyphicon-triangle-right"
@@ -239,7 +239,7 @@ $(function() {
 						</p>					
 					</div>
 					<div class="contents">
-						<p>青岛智能院采用“投资+全方位孵化”服务模式，为智能领域的大学生、科研人员和青岛智能院创业者等创客个人和团体提供创业辅导、管理咨询、交流培训、项目推介、市场推广、融资投资、人才引进、技术支持等专业服务，致力于搭建多元化创新孵化服务体系，培育高成长性的智能科技创业公司，加快推动智能产业发展。服务内容包括：</p>
+						<p>青岛智能院采用“投资+全方位孵化”服务模式，为智能领域的大学生、科研人员和青岛智能院创业者等创客个人和团体提供创业辅导、管理咨询、交流培训、项目推介、市场推广、融资投资、人才引进、技术支持等专业服务，致力于搭建多元化产业孵化服务体系，培育高成长性的智能科技创业公司，加快推动智能产业发展。服务内容包括：</p>
 						<ul class="fuserver">
 							<li class="handle">
 								<div><span style="color:#134290;font-weight:bold;">①创业辅导。</span>包含创业咨询、政策辅导、手续代理等内容。
@@ -394,7 +394,7 @@ $(function() {
 					</ul>
 				</li>
 				<li>
-					<div class="footTitle">创新孵化<div class="footline"></div></div>
+					<div class="footTitle">产业孵化<div class="footline"></div></div>
 					<ul>
 						<li><a
 							href="javascript:ContentJump('cxfh_fhfw.do','cxfhframe');">孵化服务</a></li>					
@@ -402,8 +402,8 @@ $(function() {
 							href="javascript:ContentJump('cxfh_zcfc.do','cxfhframe');">众创风采</a></li>
 						<li><a
 							href="javascript:ContentJump('cxfh_zcjj.do','cxfhframe');">众创基金</a></li>
-						<li><a
-							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li>
+						<!-- <li><a
+							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li> -->
 						<li><a
 							href="javascript:ContentJump('cxfh_tztg_frame.do','cxfhframe');">通知公告</a></li>
 					</ul>

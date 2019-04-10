@@ -145,8 +145,8 @@
 							href="javascript:ContentJump('cxfh_zcfc.do','cxfhframe');">众创风采</a></li>
 						<li><a
 							href="javascript:ContentJump('cxfh_zcjj.do','cxfhframe');">众创基金</a></li>
-						<li><a
-							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li>
+						<!-- <li><a
+							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li> -->
 						<li><a
 							href="javascript:ContentJump('cxfh_tztg_frame.do','cxfhframe');">通知通告</a></li>
 					</ul>
@@ -258,7 +258,7 @@
 						
 						<p class="protitlt">核心业务内容</p>
 						
-						<div style="padding-left: 2rem;line-height: 29px;font-size: 16px;color: #000000;opacity: 0.8;">
+						<div class="subcontext">
 							①农业CPSS框架和应用研究<br />
 							②农业环境数据解析和应用<br />
 							③基于生育期预测的作物管理智能决策支持<br />
@@ -370,7 +370,7 @@
 					</ul>
 				</li>
 				<li>
-					<div class="footTitle">创新孵化<div class="footline"></div></div>
+					<div class="footTitle">产业孵化<div class="footline"></div></div>
 					<ul>
 						<li><a
 							href="javascript:ContentJump('cxfh_fhfw.do','cxfhframe');">孵化服务</a></li>					
@@ -378,8 +378,8 @@
 							href="javascript:ContentJump('cxfh_zcfc.do','cxfhframe');">众创风采</a></li>
 						<li><a
 							href="javascript:ContentJump('cxfh_zcjj.do','cxfhframe');">众创基金</a></li>
-						<li><a
-							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li>
+						<!-- <li><a
+							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li> -->
 						<li><a
 							href="javascript:ContentJump('cxfh_tztg_frame.do','cxfhframe');">通知公告</a></li>
 					</ul>

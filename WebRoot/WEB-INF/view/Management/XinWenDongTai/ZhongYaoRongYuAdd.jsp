@@ -23,7 +23,7 @@
 
 <script type="text/javascript">
 	//新闻类型
-	var NewsCategory = "H";
+	var NewsCategory = "C";
 	var UserID = "";
 	$(document).ready(function() {
 		$("#UserID").val(sessionStorage.getItem("AccountID"));
@@ -89,7 +89,7 @@
 			url : "insertNews.do",
 			data : {
 				UserID: UserID,
-		        category: "H",
+		        category: "C",
 		        title: $("#NewsTitle").val(),
 		        publishDate: $("#PublishDate").val(),
 		        createBy: $("#CreateBy").val(),
@@ -135,7 +135,7 @@
 							<!-- TODO 修改隐藏域hiddenID 的name属性 -->
 							<input type="hidden" id="hiddenID" name="NewsID" /> <input
 								type="hidden" id="UserID" name="UserID" /> <input type="hidden"
-								id="NewsCategory" name="NewsCategory" value="H" />
+								id="NewsCategory" name="NewsCategory" value="C" />
 							<table class="table">
 								<tr>
 									<td style="width:130px;">创建日期：</td>
@@ -176,7 +176,7 @@
 			     	editor.customConfig.uploadImgServer = '/uploadfile.do'  // 上传图片到服务器
 			     	editor.customConfig.uploadFileName = 'LinkAddress'
 		     		editor.customConfig.uploadImgParams = {
-			     		category: 'H'
+			     		category: 'C'
 		     		}
 			     	editor.customConfig.uploadImgHooks = {
 		     		    customInsert: function (insertImg, result, editor) {

@@ -177,8 +177,8 @@
 							href="javascript:ContentJump('kyhd_kycg_kyjl.do','cxfhframe');">众创风采</a></li>
 						<li><a
 							href="javascript:ContentJump('cxfh_zcjj.do','cxfhframe');">众创基金</a></li>
-						<li><a
-							href="javascript:ContentJump('kyhd_kycg_kyjl.do','cxfhframe');">活动日历</a></li>
+						<!-- <li><a
+							href="javascript:ContentJump('kyhd_kycg_kyjl.do','cxfhframe');">活动日历</a></li> -->
 						<li><a
 							href="javascript:ContentJump('cxfh_tztg_frame.do','cxfhframe');">通知通告</a></li>
 					</ul>
@@ -223,10 +223,10 @@
 									class="glyphicon glyphicon-triangle-right"
 									style="font-size:10px;"></span> 众创基金</a></li>											
 							
-							<li><a
+							<!-- <li><a
 								href="javascript:ContentJump('cxfh_hdrl.do');"><span
 									class="glyphicon glyphicon-triangle-right"
-									style="font-size:10px;"></span> 活动日历</a></li>
+									style="font-size:10px;"></span> 活动日历</a></li> -->
 							<li><a 
 								href="javascript:ContentJump('cxfh_tztg_frame.do');"><span
 									class="glyphicon glyphicon-triangle-right"
@@ -244,56 +244,58 @@
 						</p>					
 					</div>
 					<div class="contents">
-						<p>青岛智能院以提高自主创新能力为先导，不断提升科技创新能力，积极推进科研成果转化工作，重点围绕平行驾驶、智慧健康、智慧教育、智慧交通、智慧农业、智慧物流、智能制造等方向进行创新孵化。成立至今，青岛智能院以独资、参股等方式注册成立了孵化企业25家，总注册资本7550万元。其中，高新技术企业2家、青岛市“千帆计划”入库企业16家。累计产值过亿元，取得了良好的社会经济效益。经过四年的孵化和发展，青岛智能院成功培育出青岛慧拓智能机器有限公司、青岛万龙智控科技有限公司、青岛慧城智能科技有限公司、青岛中科慧畅信息科技有限公司、青岛传视智能科技有限公司、青岛智铭智能科技有限公司、青岛中科慧农科技有限公司、青岛中科慧康科技有限公司等明星企业。</p>						
+						<p>青岛智能院以提高自主创新能力为先导，不断提升科技创新能力，积极推进科研成果转化工作，重点围绕平行驾驶、智慧健康、智慧教育、智慧交通、智慧农业、智慧物流、智能制造等方向进行产业孵化。成立至今，青岛智能院以独资、参股等方式注册成立了孵化企业25家，总注册资本7550万元。其中，高新技术企业2家、青岛市“千帆计划”入库企业16家。累计产值过亿元，取得了良好的社会经济效益。经过四年的孵化和发展，青岛智能院成功培育出青岛慧拓智能机器有限公司、青岛万龙智控科技有限公司、青岛慧城智能科技有限公司、青岛中科慧畅信息科技有限公司、青岛传视智能科技有限公司、青岛智铭智能科技有限公司、青岛中科慧农科技有限公司、青岛中科慧康科技有限公司等明星企业。</p>						
 						
 						<table id="newsTable">
 							<tr>
 								<td style="border-right:1px solid #ccc;"><img src="Resources/img/ic_link.png"/>
 									<a href="http://vipioneers.com/">青岛慧拓智能机器有限公司</a></td>
-								<td><img src="Resources/img/ic_phone.png"/>电话：0532-86875544<br>
+								<td><img src="Resources/img/ic_phone.png"/>电话：0532-68012353<br>
 								    <img src="Resources/img/ic_location.png"/> &nbsp地址：高新区创业大厦
 								</td>
 							</tr>
 							<tr>
 								<td style="border-right:1px solid #ccc;"><img src="Resources/img/ic_link.png"/>
 									<a href="http://www.wanlong-zk.com/">青岛万龙智控科技有限公司</a></td>
-								<td><img src="Resources/img/ic_phone.png"/>电话：0532-86875544<br>
+								<td><img src="Resources/img/ic_phone.png"/>电话：0532-83939536<br>
 								    <img src="Resources/img/ic_location.png"/>&nbsp地址：高新区创业大厦
 								</td>
 							</tr>
 							<tr>
-								<td style="border-right:1px solid #ccc;"><img src="Resources/img/ic_link.png"/><a>青岛慧城智能科技有限公司</a></td>
-								<td><img src="Resources/img/ic_phone.png"/>电话：0532-86875544<br>
-								    <img src="Resources/img/ic_location.png"/>&nbsp地址：高新区创业大厦
-								</td>
-							</tr>
-							<tr>
-								<td style="border-right:1px solid #ccc;"><img src="Resources/img/ic_link.png"/><a>青岛中科慧畅信息科技有限公司</a></td>
-								<td><img src="Resources/img/ic_phone.png"/>电话：0532-86875544<br>
-								    <img src="Resources/img/ic_location.png"/>&nbsp地址：高新区创业大厦
-								</td>
-							</tr>
-							<tr>
-								<td style="border-right:1px solid #ccc;"><img src="Resources/img/ic_link.png"/><a>青岛传视智能科技有限公司</a></td>
-								<td><img src="Resources/img/ic_phone.png"/>电话：0532-86875544<br>
+								<td style="border-right:1px solid #ccc;"><img src="Resources/img/ic_link.png"/>
+								<a>青岛传视科技有限公司</a></td>
+								<td><img src="Resources/img/ic_phone.png"/>电话：0532-68012033<br>
 								    <img src="Resources/img/ic_location.png"/>&nbsp地址：高新区创业大厦
 								</td>
 							</tr>
 							<tr>
 								<td style="border-right:1px solid #ccc;"><img src="Resources/img/ic_link.png"/><a>青岛智铭智能科技有限公司</a></td>
-								<td><img src="Resources/img/ic_phone.png"/>电话：0532-86875544<br>
+								<td><img src="Resources/img/ic_phone.png"/>电话：0532-68012037<br>
 								    <img src="Resources/img/ic_location.png"/>&nbsp地址：高新区创业大厦
 								</td>
 							</tr>
 							<tr>
 								<td style="border-right:1px solid #ccc;"><img src="Resources/img/ic_link.png"/><a>青岛中科慧农科技有限公司</a></td>
-								<td><img src="Resources/img/ic_phone.png"/>电话：0532-86875544<br>
+								<td><img src="Resources/img/ic_phone.png"/>电话：0532-68012033<br>
 								    <img src="Resources/img/ic_location.png"/>&nbsp地址：高新区创业大厦
 								</td>
 							</tr>
-							<tr>
-								<td style="border-right:1px solid #ccc;"><img src="Resources/img/ic_link.png"/><a>青岛中科慧康科技有限公司</a></td>
+							<!-- <tr>
+								<td style="border-right:1px solid #ccc;"><img src="Resources/img/ic_link.png"/><a>青岛慧城智能科技有限公司</a></td>
 								<td><img src="Resources/img/ic_phone.png"/>电话：0532-86875544<br>
+								    <img src="Resources/img/ic_location.png"/>&nbsp地址：高新区创业大厦
+								</td>
+							</tr> -->
+							<tr>
+								<td style="border-right:1px solid #ccc;"><img src="Resources/img/ic_link.png"/><a>青岛中科慧畅信息科技有限公司</a></td>
+								<td><img src="Resources/img/ic_phone.png"/>电话：0532-68013920<br>
+								    <img src="Resources/img/ic_location.png"/>&nbsp地址：高新区创业大厦
+								</td>
+							</tr>
+							
+							<tr>
+								<td style="border-right:1px solid #ccc;"><img src="Resources/img/ic_link.png"/><a>青岛慧城智能科技有限公司</a></td>
+								<td><img src="Resources/img/ic_phone.png"/>电话：0532-68012033<br>
 								    <img src="Resources/img/ic_location.png"/>&nbsp地址：高新区创业大厦
 								</td>
 							</tr>
@@ -386,7 +388,7 @@
 					</ul>
 				</li>
 				<li>
-					<div class="footTitle">创新孵化<div class="footline"></div></div>
+					<div class="footTitle">产业孵化<div class="footline"></div></div>
 					<ul>
 						<li><a
 							href="javascript:ContentJump('cxfh_fhfw.do','cxfhframe');">孵化服务</a></li>					
@@ -394,8 +396,8 @@
 							href="javascript:ContentJump('cxfh_zcfc.do','cxfhframe');">众创风采</a></li>
 						<li><a
 							href="javascript:ContentJump('cxfh_zcjj.do','cxfhframe');">众创基金</a></li>
-						<li><a
-							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li>
+						<!-- <li><a
+							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li> -->
 						<li><a
 							href="javascript:ContentJump('cxfh_tztg_frame.do','cxfhframe');">通知公告</a></li>
 					</ul>

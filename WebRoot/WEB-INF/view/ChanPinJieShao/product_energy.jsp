@@ -145,8 +145,8 @@
 							href="javascript:ContentJump('cxfh_zcfc.do','cxfhframe');">众创风采</a></li>
 						<li><a
 							href="javascript:ContentJump('cxfh_zcjj.do','cxfhframe');">众创基金</a></li>
-						<li><a
-							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li>
+						<!-- <li><a
+							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li> -->
 						<li><a
 							href="javascript:ContentJump('cxfh_tztg_frame.do','cxfhframe');">通知通告</a></li>
 					</ul>
@@ -257,7 +257,7 @@
 						<p style="margin-top:0px;">平行能源创新技术中心目前拥有国内知名高校和海外归来的专家教授、海外留学博士等10余人。中心人才包括国际能源分析管理系统专家，国内电网设备专家，以及能源互联网、核电站仪控、人工智能算法、大数据分析、计算机软件开发、数据库、区块链技术、信息系统架构等领域的专门人才。</p>
 						
 						<p class="protitlt">核心业务内容</p>
-						<div style="padding-left: 2rem;line-height: 29px;font-size: 16px;color: #000000;opacity: 0.8;">
+						<div class="subcontext">
 						• &nbsp;平行智慧能源管理系统  <br/> 
 						• &nbsp;平行智能电网监控管理平台与大数据中心  <br/> 
 						• &nbsp;平行核电人机一体化智能运行与安全保障平台  <br/>           
@@ -368,7 +368,7 @@
 					</ul>
 				</li>
 				<li>
-					<div class="footTitle">创新孵化<div class="footline"></div></div>
+					<div class="footTitle">产业孵化<div class="footline"></div></div>
 					<ul>
 						<li><a
 							href="javascript:ContentJump('cxfh_fhfw.do','cxfhframe');">孵化服务</a></li>					
@@ -376,8 +376,8 @@
 							href="javascript:ContentJump('cxfh_zcfc.do','cxfhframe');">众创风采</a></li>
 						<li><a
 							href="javascript:ContentJump('cxfh_zcjj.do','cxfhframe');">众创基金</a></li>
-						<li><a
-							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li>
+						<!-- <li><a
+							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li> -->
 						<li><a
 							href="javascript:ContentJump('cxfh_tztg_frame.do','cxfhframe');">通知公告</a></li>
 					</ul>

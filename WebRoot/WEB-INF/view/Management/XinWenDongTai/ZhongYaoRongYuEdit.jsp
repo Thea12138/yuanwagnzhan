@@ -23,7 +23,7 @@
 
 <script type="text/javascript">
 	//新闻类型
-	var NewsCategory = "H";
+	var NewsCategory = "C";
 	var UserID = "";
 	var htmlConten="";
 	$(document).ready(function() {
@@ -96,7 +96,7 @@
 			data : {
 				UserID: UserID,
 				id : $("#hiddenID").val(),
-		        category: "H",
+		        category: "C",
 		        title: $("#NewsTitle").val(),
 		        publishDate: $("#PublishDate").val(),
 		        createBy: $("#CreateBy").val(),
@@ -216,7 +216,7 @@
 							<!-- TODO 修改隐藏域hiddenID 的name属性 -->
 							<input type="hidden" id="hiddenID" name="NewsID" /> <input
 								type="hidden" id="UserID" name="UserID" /> <input type="hidden"
-								id="NewsCategory" name="NewsCategory" value="H" />
+								id="NewsCategory" name="NewsCategory" value="C" />
 							<table class="table">
 								<tr>
 									<td style="width:130px;">创建日期：</td>

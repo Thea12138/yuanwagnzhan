@@ -145,8 +145,8 @@
 							href="javascript:ContentJump('cxfh_zcfc.do','cxfhframe');">众创风采</a></li>
 						<li><a
 							href="javascript:ContentJump('cxfh_zcjj.do','cxfhframe');">众创基金</a></li>
-						<li><a
-							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li>
+						<!-- <li><a
+							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li> -->
 						<li><a
 							href="javascript:ContentJump('cxfh_tztg_frame.do','cxfhframe');">通知通告</a></li>
 					</ul>
@@ -259,7 +259,7 @@
 						<p>李灵犀，技术总监，青岛智能产业技术研究院副院长，美国印第安那大学终身教授，中国科学院大学教授。美国印第安那大学普渡大学印第安那波利斯分校终身教授，博士生导师；电子与计算机工程系副教授；车辆主动安全研究所智能汽车实验室主任。</p>
 						<p>朱津毅，市场总监，具有10年弱电、安防、智能交通行业项目营销经验，曾在海康威视、博康智能负责营销。参与过多个大型安防、智能交通及智慧城市项目的方案设计和市场开拓工作。具有丰富的系统设计、项目运作经验。</p>
 						<p class="protitlt">核心业务</p>
-						<div style="padding-left: 2rem;line-height: 29px;font-size: 16px;color: #000000;opacity: 0.8;">
+						<div class="subcontext">
 							●&nbsp;平行管控系统<br>
 							●&nbsp;基于人工智能的互联网舆情采集与分析系统
 						</div>
@@ -362,7 +362,7 @@
 					</ul>
 				</li>
 				<li>
-					<div class="footTitle">创新孵化<div class="footline"></div></div>
+					<div class="footTitle">产业孵化<div class="footline"></div></div>
 					<ul>
 						<li><a
 							href="javascript:ContentJump('cxfh_fhfw.do','cxfhframe');">孵化服务</a></li>					
@@ -370,8 +370,8 @@
 							href="javascript:ContentJump('cxfh_zcfc.do','cxfhframe');">众创风采</a></li>
 						<li><a
 							href="javascript:ContentJump('cxfh_zcjj.do','cxfhframe');">众创基金</a></li>
-						<li><a
-							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li>
+						<!-- <li><a
+							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li> -->
 						<li><a
 							href="javascript:ContentJump('cxfh_tztg_frame.do','cxfhframe');">通知公告</a></li>
 					</ul>

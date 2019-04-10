@@ -77,11 +77,11 @@ public class PageController extends BaseController {
 	
 	private static final String kxhd_kyfx_PAGE = "KeYanHuoDong/kyhd_kyfx"; // 科研活动-科研方向
 	
-	private static final String cxfh_fhfw_PAGE = "ChuangXinFuHua/cxfh_fhfw"; // 创新孵化-孵化服务
-	private static final String cxfh_zcfc_PAGE = "ChuangXinFuHua/cxfh_zcfc"; // 创新孵化-众创风采
-	private static final String cxfh_zcjj_PAGE = "ChuangXinFuHua/cxfh_zcjj"; // 创新孵化-众创基金
-	private static final String cxfh_hdrl_PAGE = "ChuangXinFuHua/cxfh_hdrl"; // 创新孵化-活动日历
-	private static final String cxfh_tztg_PAGE = "ChuangXinFuHua/cxfh_tztg_frame"; // 创新孵化-通知通告
+	private static final String cxfh_fhfw_PAGE = "ChuangXinFuHua/cxfh_fhfw"; // 产业孵化-孵化服务
+	private static final String cxfh_zcfc_PAGE = "ChuangXinFuHua/cxfh_zcfc"; // 产业孵化-众创风采
+	private static final String cxfh_zcjj_PAGE = "ChuangXinFuHua/cxfh_zcjj"; // 产业孵化-众创基金
+	private static final String cxfh_hdrl_PAGE = "ChuangXinFuHua/cxfh_hdrl"; // 产业孵化-活动日历
+	private static final String cxfh_tztg_PAGE = "ChuangXinFuHua/cxfh_tztg_frame"; // 产业孵化-通知通告
 	
 
 	
@@ -344,31 +344,31 @@ public class PageController extends BaseController {
 		return lxwm_business_PAGE;
 	}
 	
-	// 创新孵化-孵化服务
+	// 产业孵化-孵化服务
 	@RequestMapping(value = "cxfh_fhfw.do")
 	public String cxfh_fhfw() {
 		return cxfh_fhfw_PAGE;
 	}
 	
-	// 创新孵化-众创风采
+	// 产业孵化-众创风采
 	@RequestMapping(value = "cxfh_zcfc.do")
 	public String cxfh_zcfc() {
 		return cxfh_zcfc_PAGE;
 	}
 	
-	// 创新孵化-通知桶盖
+	// 产业孵化-通知桶盖
 	@RequestMapping(value = "cxfh_tztg_frame.do")
 	public String cxfh_tztg_frame() {
 		return cxfh_tztg_PAGE;
 	}
 	
-	// 创新孵化-众创基金
+	// 产业孵化-众创基金
 	@RequestMapping(value = "cxfh_zcjj.do")
 	public String cxfh_zcjj() {
 		return cxfh_zcjj_PAGE;
 	}
 	
-	// 创新孵化-活动日历
+	// 产业孵化-活动日历
 	@RequestMapping(value = "cxfh_hdrl.do")
 	public String cxfh_hdrl() {
 		return cxfh_hdrl_PAGE;

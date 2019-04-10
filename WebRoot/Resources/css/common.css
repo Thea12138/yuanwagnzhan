@@ -894,7 +894,10 @@ color:rgb(9,69,165);font-weight:bold;text-indent: 2em;
 } 
 .submailt{
 	color:#666;font-size:18px;line-height:40px;
-}  
+} 
+.subcontext{
+	padding-left: 2rem;line-height: 29px;font-size: 16px;color: #000000;opacity: 0.8;
+} 
 @media(max-width:1600px){
 	.header .nav ul li a {
     font-size: 16px;
@@ -1122,6 +1125,7 @@ color:rgb(9,69,165);font-weight:bold;text-indent: 2em;
 	} 
 	.pagecontent .contentall .contentshow .rightcontent .contents .listtable tr .new_time{
 		font-size:12px !important;
+		color:#888 !important;
 	}
 	.pagecontent .contentall .contentshow .rightcontent .contents .listtable{
 		line-height:26px !important;
@@ -1139,4 +1143,7 @@ color:rgb(9,69,165);font-weight:bold;text-indent: 2em;
 		padding-left:8%;
 		text-align: justify;
 	}
+	.subcontext{
+		padding-left: 2rem;line-height: 28px; font-size: 13px !important;color: #000000;opacity: 0.8;
+	} 
 }
