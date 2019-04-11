@@ -45,7 +45,11 @@ public class mPageController extends BaseController {
 	private static final String RuanJianZhuZuo_PAGE = "Management/KeYanHuoDong/RuanJianZhuZuo"; // 科研活动-软件著作
 	private static final String ZhuanLiChengGuo_PAGE = "Management/KeYanHuoDong/ZhuanLiChengGuo"; // 科研活动-专利成果
 	private static final String ZhuanJiaFangTan_PAGE = "Management/KeYanHuoDong/ZhuanJiaFangTan"; // 科研活动-专家访谈
-
+	
+	private static final String Tongzhitonggao_PAGE = "Management/Tongzhitonggao/Tongzhitonggao"; // 产业孵化-通知通告
+	private static final String TongzhitonggaoAdd_PAGE = "Management/Tongzhitonggao/TongzhitonggaoAdd"; // 产业孵化-通知通告添加
+	private static final String TongzhitonggaoEdit_PAGE = "Management/Tongzhitonggao/TongzhitonggaoEdit"; // 产业孵化-通知通告修改
+	
 	private static final String ChanPinFangAn_PAGE = "Management/ChanPinFangAn/ChanPinFangAn"; // 产品方案-产品方案
 	private static final String ZhaoXianNaShi_PAGE = "Management/ZhaoXianNaShi/ZhaoXianNaShi"; // 招贤纳士-招贤纳士
 	private static final String YingPinJianLi_PAGE = "Management/ZhaoXianNaShi/YingPinJianLi"; // 招贤纳士-应聘简历
@@ -210,6 +214,21 @@ public class mPageController extends BaseController {
 	@RequestMapping(value = "ChanPinFangAn.do")
 	public String ChanPinFangAn() {
 		return ChanPinFangAn_PAGE;
+	}
+	// 产业孵化-通知通告
+	@RequestMapping(value = "Tongzhitonggao.do")
+	public String Tongzhitonggao() {
+		return Tongzhitonggao_PAGE;
+	}
+	// 产业孵化-添加
+	@RequestMapping(value = "TongzhitonggaoAdd.do")
+	public String TongzhitonggaoAdd() {
+		return TongzhitonggaoAdd_PAGE;
+	}
+	// 产业孵化-修改
+	@RequestMapping(value = "TongzhitonggaoEdit.do")
+	public String TongzhitonggaoEdit() {
+		return TongzhitonggaoEdit_PAGE;
 	}
 
 	// 招贤纳士-招贤纳士

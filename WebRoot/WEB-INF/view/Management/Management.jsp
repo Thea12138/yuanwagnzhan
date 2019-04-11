@@ -192,17 +192,17 @@ a:focus {
 					<div class="nav-canvas">
 						<div class="nav-sm nav nav-stacked"></div>
 						<ul id="navul" class="nav nav-pills nav-stacked main-menu">
-							<li class="nav-header hidden-md">首页</li>
+							<!-- <li class="nav-header hidden-md">首页</li>
 							<li id="LunBoDaTu" class="active"><a class="ajax-link"
 								href="javascript:TrunPage('LunBoDaTu');"> <i
 									class="glyphicon glyphicon-home"> </i> <span> 轮播大图 </span>
-							</a></li>
+							</a></li> -->
 							<li class="nav-header" >基本概况</li>
-							<li id="YuanWuXinWen"><a class="ajax-link"
+							<!-- <li id="YuanWuXinWen"><a class="ajax-link"
 								href="javascript:TrunPage('YuanWuXinWen');"> <i
 									class="glyphicon glyphicon-bell"> </i> <span>
 										院务新闻 </span>
-							</a></li>
+							</a></li> -->
 							<li id="MoBanXiaZai"><a class="ajax-link"
 								href="javascript:TrunPage('MoBanXiaZai');"> <i
 									class="glyphicon glyphicon-download-alt"> </i> <span>
@@ -230,29 +230,34 @@ a:focus {
 								href="javascript:TrunPage('YuanGongFengCai');"> <i
 									class="glyphicon glyphicon-leaf"> </i> <span> 员工风采 </span>
 							</a></li>
-							<li id="HangYeQingBaoJianBao"><a class="ajax-link"
+							<!-- <li id="HangYeQingBaoJianBao"><a class="ajax-link"
 								href="javascript:TrunPage('HangYeQingBaoJianBao');"> <i
 									class="glyphicon glyphicon-list-alt"> </i> <span> 行业情报简报 </span>
+							</a></li> -->
+							
+							<li class="nav-header hidden-md">科学研究</li>
+							<li id="KeYanJiangLi"><a class="ajax-link"
+								href="javascript:TrunPage('KeYanJiangLi');"> <i
+									class="glyphicon glyphicon-gift"> </i> <span> 科研成果 </span>
+							</a></li>
+							<li id="ZhuanLiChengGuo"><a class="ajax-link"
+								href="javascript:TrunPage('ZhuanLiChengGuo');"> <i
+									class="glyphicon glyphicon-briefcase"> </i> <span>
+										知识产权 </span>
 							</a></li>
 							
-							<li class="nav-header">科研活动</li>
-							<li id="XueShuShengYan"><a class="ajax-link"
-								href="javascript:TrunPage('XueShuShengYan');"> <i
-									class="glyphicon glyphicon-map-marker"> </i> <span>
-										学术盛宴 </span>
+							<li class="nav-header hidden-md">产业孵化</li>
+							<li id="Tongzhitonggao"><a class="ajax-link"
+								href="javascript:TrunPage('Tongzhitonggao');"> <i
+									class="glyphicon glyphicon-tower"> </i> <span> 通知通告 </span>
 							</a></li>
-							<li id="ZhongDianXiangMu"><a class="ajax-link"
-								href="javascript:TrunPage('ZhongDianXiangMu');"> <i
-									class="glyphicon glyphicon-exclamation-sign"> </i> <span>
-										重点项目 </span>
-							</a></li>
-							<li class="accordion"><a href="#"> <i
+							<!-- <li class="accordion"><a href="#"> <i
 									class="glyphicon glyphicon-plus"> </i> <span> 科研成果 </span>
 							</a>
 								<ul class="nav nav-pills nav-stacked" style="display: block;">
 									<li id="KeYanJiangLi"><a class="ajax-link"
 										href="javascript:TrunPage('KeYanJiangLi');"> <i
-											class="glyphicon glyphicon-gift"> </i> <span> 科研奖励 </span>
+											class="glyphicon glyphicon-gift"> </i> <span> 科研成果 </span>
 									</a></li>
 									<li id="XueShuZhuZuo"><a class="ajax-link"
 										href="javascript:TrunPage('XueShuZhuZuo');"> <i
@@ -267,19 +272,19 @@ a:focus {
 											class="glyphicon glyphicon-briefcase"> </i> <span>
 												专利成果 </span>
 									</a></li>
-								</ul></li>
-							<li id="ZhuanJiaFangTan"><a class="ajax-link"
+								</ul></li> -->
+							<!-- <li id="ZhuanJiaFangTan"><a class="ajax-link"
 								href="javascript:TrunPage('ZhuanJiaFangTan');"> <i
 									class="glyphicon glyphicon-road"> </i> <span>
 										专家访谈 </span>
-							</a></li>
-							<li class="nav-header hidden-md">产品方案</li>
+							</a></li> -->
+							<!-- <li class="nav-header hidden-md">产品方案</li>
 							<li id="ChanPinFangAn"><a class="ajax-link"
 								href="javascript:TrunPage('ChanPinFangAn');"> <i
 									class="glyphicon glyphicon-wrench"> </i> <span> 产品方案 </span>
-							</a></li>
+							</a></li> -->
 							
-							<li class="nav-header hidden-md">招贤纳士</li>
+							<!-- <li class="nav-header hidden-md">招贤纳士</li>
 							<li id="ZhaoXianNaShi"><a class="ajax-link"
 								href="javascript:TrunPage('ZhaoXianNaShi');"> <i
 									class="glyphicon glyphicon-flag"> </i> <span> 招贤纳士 </span>
@@ -287,7 +292,7 @@ a:focus {
 							<li id="YingPinJianLi"><a class="ajax-link"
 								href="javascript:TrunPage('YingPinJianLi');"> <i
 									class="glyphicon glyphicon-file"> </i> <span> 应聘简历 </span>
-							</a></li>
+							</a></li> -->
 							<li class="nav-header hidden-md">登出</li>
 							<li><a href="javascript:logout();"> <i
 									class="glyphicon glyphicon-lock"> </i> <span> 登出 </span>
@@ -311,7 +316,7 @@ a:focus {
 		<!--/fluid-row-->
 
 		<hr />
-		<footer class="row">
+		<footer class="row" style="position: fixed; bottom: 0px;background: #fff;border-top: 1px solid #dedede;width: 100%; padding: 10px 10px 0px 10px;">
 		<p class="col-md-9 col-sm-9 col-xs-12 copyright">&copy;
 			青岛智能产业技术研究院 2014</p>
 		<p class="col-md-3 col-sm-3 col-xs-12 powered-by">
