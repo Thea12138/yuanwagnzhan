@@ -82,6 +82,7 @@ public class NewsController extends BaseController {
 	private static final String kyhd_xssy_show_PAGE = "KeYanHuoDong/kyhd_xssy_show"; // 科研活动-学术盛宴详情
 	private static final String kyhd_zjft_show_PAGE = "KeYanHuoDong/kyhd_zjft_show"; // 科研活动-专家访谈详情
 	private static final String jbgk_ywxw_show_PAGE = "JiBenGaiKuang/jbgk_ywxw_show"; // 基本概况-院务新闻详情页面
+	private static final String cxfh_tztg_show_PAGE = "ChuangXinFuHua/cxfh_tztg_show"; // 产业孵化-通知通告
 
 	/**
 	 * 获取新闻内容html 入参： NewsID NewsCategory --领导视察 A、政企对接 B、重要荣誉 C、学术盛宴 D、 专家访谈
@@ -118,6 +119,9 @@ public class NewsController extends BaseController {
 			break;
 		case "H":
 			page = xwdt_ygfc_show_PAGE;
+			break;
+		case "I":
+			page = cxfh_tztg_show_PAGE;
 			break;
 		}
 		return page;

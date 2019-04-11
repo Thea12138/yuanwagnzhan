@@ -36,7 +36,7 @@
 
 	//每页加载记录数量
 	var pagerow = 20;
-	var NewsCategory = "F";
+	var NewsCategory = "I";
 	//数据记录数
 	var rowcount;
 	window.onload = function() {
@@ -44,13 +44,13 @@
 
 	};
 	$(function() {
-	if(sessionStorage.focusUrl_Name=="xwdt_ldsc_frame.do" ){
+	if(sessionStorage.focusUrl_Name=="cxfh_tztg_frame.do" ){
 		if(sessionStorage.pageno!=undefined && sessionStorage.pageno!='')	{
 		    pageno=sessionStorage.pageno;
 		}
 		
 	 }
-	 sessionStorage.focusUrl_Name = "xwdt_ldsc_frame.do";
+	 sessionStorage.focusUrl_Name = "cxfh_tztg_frame.do";
 		sessionStorage.focusUrl_ID = "xwdtyjydtframe";
 		initNewsList();
 		NavCXFH();
