@@ -110,7 +110,7 @@ public class NewsDao extends BaseDao {
 	public Map<String, Object> GetNewsShowById(int NewsID) {
 		String sql = "select NewsID,NewsCategory,NewsTitle,Synopsis,"
 				+ "CONCAT('fileload/html/News/',NewsCategory,'/',LinkAddress) as LinkAddress,"
-				+ "PublishDate,CreateBy from qaii_news where NewsID= :NewsID and IsActive='1'";
+				+ "PublishDate,CreateBy,html_content from qaii_news where NewsID= :NewsID and IsActive='1'";
 		SqlParameterSource params = new MapSqlParameterSource();
 		((MapSqlParameterSource) params).addValue("NewsID", NewsID);
 		Map<String, Object> map = new HashMap<String, Object>();
