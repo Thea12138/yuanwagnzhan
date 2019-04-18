@@ -35,9 +35,16 @@
 <script type="text/javascript">
 	$(function() {
 		NavXWDT();
-		$(window).load(function() {
-			parent.setiHeight($(".rightcontent").height() + 240);
-		});
+		
+		var str="";
+		str="${LinkAddress}";
+		if((str == "" || str == null || str == undefined)){
+			$("#html").show();
+			$("#frame_content").hide();
+		}else{
+			$("#html").hide();
+			$("#frame_content").show();
+		}
 	});
 </script>
 <body>
@@ -187,8 +194,13 @@
 
 					<div class=contents>
 						<iframe src="${LinkAddress}" width="760" id="frame_content"
-							scrolling="no" frameborder="0" onload="ContentiFrameHeight();">
-						</iframe>
+							scrolling="no" frameborder="0"  onload ="ContentiFrameHeight();">
+					    </iframe>
+					    <div id="html">
+					    	<div style="padding-top: 10px;height: 66px;line-height: 28px;font-family: '微软雅黑';font-size: 5.55mm;border-bottom: 2px solid #64bf36;text-align: center;">
+							        <b>${NewsTitle}</b>
+							 </div>${html_content}
+						</div>
 					</div>
 
 				</div>

@@ -381,7 +381,7 @@
 	}
 	//页面跳转
 	function srchange(obj){
-	    $("body", parent.document).find('iframe').attr('src',obj);
+	    $("body", parent.document).find('.ch-container #content #miframe:first').attr('src',obj);
 	}
 </script>
 </head>

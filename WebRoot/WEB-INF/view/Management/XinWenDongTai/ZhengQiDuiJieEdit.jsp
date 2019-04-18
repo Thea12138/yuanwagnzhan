@@ -166,7 +166,7 @@
 	}
 	//页面跳转
 	function srchange(obj){
-	    $("body", parent.document).find('iframe').attr('src',obj);
+	    $("body", parent.document).find('.ch-container #content #miframe:first').attr('src',obj);
 	}
 
 </script>
@@ -232,7 +232,8 @@
 			    <script type="text/javascript" src="Resources/js/wangEditor.min.js"></script>
 			    <script type="text/javascript">
 				    var E = window.wangEditor
-			        var editor = new E('#editor')					
+			        var editor = new E('#editor')
+				   /*  editor.customConfig.pasteFilterStyle = false */
 			     	editor.customConfig.uploadImgServer = '/upload'  // 上传图片到服务器
 			        editor.create()
 			       
