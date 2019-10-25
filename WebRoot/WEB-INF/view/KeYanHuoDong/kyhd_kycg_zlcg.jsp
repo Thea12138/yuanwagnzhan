@@ -18,6 +18,7 @@
 <meta http-equiv="expires" content="0">
 <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 <meta http-equiv="description" content="This is my page">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 <link rel="stylesheet" type="text/css" href="Resources/css/common.css">
 <link type="text/css" rel="stylesheet"
 	href="Resources/css/bootstrap.min.css" />
@@ -42,6 +43,9 @@
 	var PatentType = "";
 
 	$(function() {
+		$(".fenlei").click(function(){
+		    $("#mobileflbox").toggle();
+		  });
 	if(sessionStorage.focusUrl_Name=="kyhd_kycg_zlcg.do" ){
 		if(sessionStorage.pageno!=undefined && sessionStorage.pageno!='')	{
 		    pageno=sessionStorage.pageno;
@@ -250,13 +254,23 @@
 	<div id="header" class="header">
 		<div class="headertop">
 			<div class="headerinner">
-				<img src="Resources/img/ic_logo.png" height="40px"/>	
-				<!-- <div class=language>
-					<a class="lanActive" href="index.do">中文</a> | <a href="index_e.do">English</a>
-				</div> -->			
+				<a href="javascript:PageJump('index');">
+					<img src="Resources/img/ic_logo.png" height="40px"/>	
+				</a>
+				<div class="mobile" style="float:right;">
+					<img src="Resources/img/mobile/fenlei.png" class="fenlei"/>
+				</div>		
 			</div>
 		</div>
-		<div class="nav" id="nav">
+		<div class="nav mobile" id="mobileflbox" style="display:none;">
+			<ul class="nav-main">
+				<li class="home"><a href="javascript:PageJump('index');">首页 </a></li>
+				<li><a	href="javascript:ContentJump('kyhd_kyfx.do','kyhdyjfx');">科研方向</a></li>					
+				<li><a	href="javascript:ContentJump('kyhd_kycg_kyjl.do','kyhdyjfx');">科研成果</a></li>
+				<li><a	href="javascript:ContentJump('kyhd_kycg_zlcg.do','kyhdyjfx');">知识产权</a></li>	
+			</ul>
+		</div>
+		<div class="nav computer" id="nav">
 			<ul class="nav-main" id="nav-main">
 				<li id="home" class="home"><a
 					href="javascript:PageJump('index');">首页 </a></li>
@@ -375,7 +389,7 @@
 								style="width:100%;height:80px;font-size:14px;color:#000000;"
 								border="0" cellspacing=0>
 								<tr>
-									<td style="width:30%;height:40px;text-align:right;">专利类型：</td>
+									<td style="width:30%;height:40px;text-align:right;" class="computer">专利类型：</td>
 									<td style="width:30%;height:40px;"><select
 										style="height:30px;width:200px;" id="PatentType"
 										name="PatentType" onchange="PatentCategory_ChangeHandler()">
@@ -450,8 +464,11 @@
 	<div class="clear"></div>
 	
 	<div class="foot">
-		<div class="foottext"></div>
-		<div class="footnav">					
+		<div class="foottext computerb"></div>
+		<div class="footnav mobile" style="text-align:center;">					
+			<img src="Resources/img/ic_code.png" width="40%"/>			
+		</div>
+		<div class="footnav computerb">					
 			<ul>
 				<li>
 					<div class="footTitle">首页<div class="footline"></div></div>
@@ -555,7 +572,7 @@
 				</li>
 			</ul>			
 		</div>
-		<div class="footlink">
+		<div class="footlink computerb">
 			<ul>
 				<li><span style="color:#fff;">友情链接：</span></li>
 				<li><a href="http://www.cas.cn/" target="_blank">中国科学院</a></li>
@@ -569,8 +586,12 @@
 
 			</ul>
 		</div>
-		<div class="copyright">
+		<div class="copyright computerb">
 			<span >青岛智能产业技术研究院 版权所有 鲁ICP备15005983号-1</span>
+		    <span class=address>地址：青岛高新区智力岛路1号创业大厦B座26层</span>
+		</div>
+		<div class="copyright mobile">
+			<span >青岛智能产业技术研究院 版权所有 鲁ICP备15005983号-1</span><br/>
 		    <span class=address>地址：青岛高新区智力岛路1号创业大厦B座26层</span>
 		</div>
 		

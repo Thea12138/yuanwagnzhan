@@ -758,3 +758,129 @@ table {
 	    text-align: center;
 	}
 }
+.computer{
+	display: inline-block;
+}
+.computerb{
+	display:block;
+}
+.mobile{
+	display: none;
+}
+.header .headertop .mobile{
+	display: none;
+}
+@media(max-width:1000px){/*手机端适配*/
+	.computer{
+		display: none !important;
+	}
+	.computerb{
+		display: none !important;
+	}
+	.mobile{
+		display: inline-block;
+	}
+	.header .headertop{
+		padding:12px 15px;
+		background:#093e8e;
+		height:50px;
+	}
+	.header .headertop .mobile{
+		height:25px;
+		display: inline-block;
+	}
+	.header .nav ul{
+	    height:auto;
+	}
+	.header .nav ul li a {
+	    font-size: 14px;
+	}
+	.fenlei{
+		width:25px;
+	}
+	.carousel{
+		top:50px;
+	}
+	.header .nav{
+		background:rgba(9,62,142,0.8);
+		top:50px;
+		left:auto !important;
+		right:0px;
+		width:150px;
+		z-index:100;
+		height:auto;
+	}
+	.header .mobile ul li{
+		display:block;
+		width:100%;
+		border-bottom:1px solid rgba(255,255,255,0.2);
+		min-height:40px;
+		line-height:40px;
+	}
+	.header .nav ul li ul{
+		    background: none;
+		    background:rgba(255,255,255,0.1);
+		    z-index: 100;
+		    padding: 0;
+		    float: none;
+		    width: 100%;
+		    height: auto;
+		    display: none;
+		    padding-top: 8px;
+	}
+	.homepage{
+		padding-top:50px;
+	}
+	.homepage .news{
+		width:94%;
+	}
+	.homepage .news .newscontent{
+	  height:auto;
+	}
+	.homepage .news .newscontent .newsimg{
+		width:100%;
+		float:none;
+	}
+	.homepage .news .newscontent .newslist{
+		margin-top:20px;
+		width:100%;
+		float:none;
+	}
+	.homepage .product .productnav{
+		width:94%;
+		left:3%;
+	}
+	.homepage .product .line{
+		width:94%;
+		left:3%;
+		top:60px;
+	}
+	.homepage .product{
+		height: 2490px !important;
+		background-repeat: repeat;
+	}
+	.header .headertop .language{
+		width:80px;
+	}
+	.homepage .product .productnav{
+		top:25px;
+	}
+	.homepage .product .productshow{
+		top:80px;
+		width:90%;
+		left:5%;
+	}
+	.foot .footnav{
+		width:100%;
+		padding:10px 0px;
+		height:auto;
+	}
+	.foot .copyright{
+		width:100%;
+		height:80px;
+		line-height:25px;
+	}
+	.homepage .news .newscontent .newslist{
+		height:250px;
+	}
+}

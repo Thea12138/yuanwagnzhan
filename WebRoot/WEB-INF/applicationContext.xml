@@ -19,15 +19,15 @@
 		<property name="url">
 			 <!-- <value>jdbc:mysql://192.168.1.81:3306/QAII</value> --> 
 			 <!-- <value>jdbc:mysql://192.168.8.80:53306/QAII</value> -->
-			<!-- <value>jdbc:mysql://localhost:3306/bingsiyu2014?characterEncoding=utf8</value> --><!-- 西部数码 -->
-			 <value>jdbc:mysql://192.168.0.245:3306/qaii?characterEncoding=utf8</value>
+			<value>jdbc:mysql://localhost:3306/bingsiyu2014?characterEncoding=utf8</value><!-- 西部数码 -->
+			 <!-- <value>jdbc:mysql://192.168.0.245:3306/qaii?characterEncoding=utf8</value> --><!-- 服务器 -->
 			<!--  <value>jdbc:mysql://47.105.112.121:3306/qaii?characterEncoding=utf8</value> -->
 		</property>
-		<!-- <property name="username" value="bingsiyu2014"> --><!-- 西部数码 -->
-		<property name="username" value="root"> 
+		<property name="username" value="bingsiyu2014"> <!-- 西部数码 -->
+		<!-- <property name="username" value="root"> -->
 		</property>
-		<!-- <property name="password" value="QAII2014"> --><!-- 西部数码 -->
-		<property name="password" value="Caoxijiang">
+		<property name="password" value="QAII2014"><!-- 西部数码 -->
+		<!-- <property name="password" value="Caoxijiang"> --><!-- 服务器 -->
 		<!-- <property name="password" value="PxgzsQaiisys"> -->
 		</property>
 		<!-- <property name="username" value="capinfo">

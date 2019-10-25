@@ -16,8 +16,10 @@
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
-<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-<meta http-equiv="description" content="This is my page">
+<meta name="keywords" content="青岛智能产业技术研究院，青岛智能产业研究院，青岛研究院，研究院，智能智铭科技有限公司，王飞跃，王晓，郑南宁，高彦臣，于立平，青岛智能产业，自动驾驶，人工智能，智能交通，智能驾驶" />
+<meta name="description" content="青岛智能产业技术研究院（以下简称“青岛智能院”）按照“需求引导、创新驱动、联合协作、扎实推进”的原则，坚持世界眼光、树立国际标准，立足本土优势，在中科院自动化所市科技局、高新区管委的支持下，从无到有，汇集各方面人才与科技资源，走过了开创、建设和积累的四年，与300余位同事共同经历了建队伍、打基础、产学研转化上轨道、本地合作上台阶的四年。在团队建设、科技研发、产业落地等方面，均取得一定的成绩，获得30余项国家及省市区级别奖励。青岛智能院以“新理论支撑新技术，新技术赋能旧产业”为指导方针，时至2018，进一步明确了“科研顶天、产业立地”的发展战略。青岛智能院不断调整优化组织机构，紧紧围绕国际、国内技术进展，山东、青岛的实际需求，围绕智能制造、智能网络、智慧农业、智慧企业、智慧城市、智慧社会、智慧健康、智慧教育、智慧物流等方向设立14个研究所、1个技术研发中心和6个管理支撑部门，并基于平行理论统摄，在各所下设17个平行技术创新中心，为各行业提供灵捷、聚焦、收敛的技术服务。
+智能院坚持世界眼光、国际标准，发挥自身优势，加快产业化步伐，在青岛高新区建立产业孵化基地，遵循“立足青岛、辐射山东、服务全国”的发展方针，围绕国家“十三五”发展重点，以项目合作、产学研结合、举办国际研讨会和学术论坛等多种形式，联合创办国际首家“智能科技学院”，打造智能领域的“黄埔军校”，培养智能产业的“红领人才”。" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 <link rel="stylesheet" type="text/css" href="Resources/css/common.css">
 <link type="text/css" rel="stylesheet"
 	href="Resources/css/bootstrap.min.css" />
@@ -109,27 +111,84 @@
 		text-indent: 0em;
 		
 		
+	}
+	.textarea{
+		border: none;
+	    background: none;
+	    line-height: inherit;
+	    width: 100%;
 	}	
 </style>
 <script>
 $(function() {
-	$(".handle").click(function(){
+	$(".fenlei").click(function(){
+	    $("#mobileflbox").toggle();
+	  });
+	$("#recruitment_data").on("click", ".handle", function(){
 		$(this).siblings().children(".showbox").hide();
-		 $(this).children(".showbox").toggle();
-	});
+		$(this).children(".showbox").toggle();
+	})
+	initRecruitmentList() 
+	var leng=0;
+	function initRecruitmentList() {		
+		$.post(
+			"listRecruit.do",
+			function(data) {
+				if (data != null) {
+					$("#recruitment_data").html('');
+					leng=data.list.length;
+					for (var i = 0; i < data.list.length; i++) {
+						$("#recruitment_data")
+							.append(
+								"<li class='handle'>"
+								+"<div class='titles'>·&nbsp;"+data.list[i].recruit_name+" <div class='show'></div></div>"
+								+"<div class='showbox'>"
+								+	"<div>需求部门："+data.list[i].recruit_unit+"</div>"
+								+	"<div>需求人数："+data.list[i].recruit_person+"人</div>"
+								+	"<div>岗位职责：</div>"
+								+	"<div class='responsible'>"
+								/* +data.list[i].recruit_responsibility */
+								+data.list[i].recruit_responsibility.replace(/\r\n/g, '<br/>').replace(/\n/g, '<br/>').replace(/\s/g, ' ')
+								+	"</div>"
+								+	"<div>任职要求：</div>"
+								+	"<div>"
+								+		data.list[i].recruit_require.replace(/\r\n/g, '<br/>').replace(/\n/g, '<br/>').replace(/\s/g, ' ')
+								+	"</div>"
+								+"</div>"
+								+"</li>"	)	
+					} 
+				}
+			});
+	}
+	
+
+	
+	/* var text = $("div.text").text(); //先取出未转换格式前端数据
+	var des = text.replace(/\r\n/g, '<br/>').replace(/\n/g, '<br/>').replace(/\s/g, ' ');  //转换格式
+	$("div.text").empty(); 
+	$("div.text").append(des); */
 });	
 </script>
 <body style="overflow:auto;overflow-x:hidden;margin:0 0">
 	<div id="header" class="header">
 		<div class="headertop">
 			<div class="headerinner">
-				<img src="Resources/img/ic_logo.png" height="40px"/>	
-				<!-- <div class=language>
-					<a class="lanActive" href="index.do">中文</a> | <a href="index_e.do">English</a>
-				</div> -->			
+				<a href="javascript:PageJump('index');">
+					<img src="Resources/img/ic_logo.png" height="40px"/>	
+				</a>
+				<div class="mobile" style="float:right;">
+					<img src="Resources/img/mobile/fenlei.png" class="fenlei"/>
+				</div>		
 			</div>
 		</div>
-		<div class="nav" id="nav">
+		<div class="nav mobile" id="mobileflbox" style="display:none;">
+			<ul class="nav-main">
+				<li class="home"><a href="javascript:PageJump('index');">首页 </a></li>
+				<li><a	href="javascript:ContentJump('lxwm_zxns.do','contactus');">招贤纳士</a></li>					
+				<li><a	href="javascript:ContentJump('lxwm_business.do','contactus');">商务</a></li>
+			</ul>
+		</div>
+		<div class="nav computer" id="nav">
 			<ul class="nav-main" id="nav-main">
 				<li id="home" class="home"><a
 					href="javascript:PageJump('index');">首页 </a></li>
@@ -242,120 +301,8 @@ $(function() {
 
 					<div class=contents>
 						<p>人才是最宝贵的财富，是发展的真正动力。智能院信奉以人为本的管理理念，重视人才的开发和培养，并竭力为人才成长创造条件，做到以事业留人、以发展留人、以文化留人。通过对人员的合理配置、丰富的员工培训、完善的劳动关系管理和绩效评估体系等一系列活动，将先进的人力资源管理思想转化为适合智能院发展的、可操作的制度，提高人力资源的管理水准。遵循"招培同步，内外结合，德才兼备”的原则，以爱才之心，求才之渴，结九州人脉，纳四海英才。随时接收员工的合理化建议，与员工互动，营造规范化管理与人文管理相结合的环境和氛围，通过各种方式培养员工的荣誉感，激发工作的积极性，培养创新的意识，激发创新的潜能，提供创新的舞台。</p>
-						<ul class="fuserver">
-							<li class="handle">
-								<div class="titles">·&nbsp;科研助理<div class="show"></div></div>
-								<div class="showbox">
-									<div>需求部门：平行工作室</div>
-									<div>需求人数：1人</div>
-									<div>岗位职责：</div>
-									<div>
-										1. 身体健康，品行端正，工作踏实，责任心强，乐于奉献；<br />
-										2. 有较强的综合协调能力. 团队协作精神，较好的服务意识和创新意识；<br />
-										3. 工作积极主动，执行力强，善于沟通； <br />
-										4. 硕士及以上学历，优先考虑985或211高校毕业学生； <br />
-										5. 较好的科研基础和组织管理能力，曾发表SCI/EI论文. 撰写过专利；<br />
-										6. 有较强的英语表达及计算机应用能力；<br />
-										7. 负责科技活动报告PPT制作；<br />
-										8. 协助工作室负责人做好学术成果梳理等科研管理工作； <br />
-										9. 对于各类最新的智能科技产品及其功能有一定了解。
-									</div>
-								</div>
-							</li>
-							<li class="handle">
-								<div class="titles">·&nbsp;文案策划<div class="show"></div></div>
-								<div class="showbox">
-									<div>需求部门：平行工作室</div>
-									<div>需求人数：1人</div>
-									<div>岗位职责：</div>
-									<div>
-										1. 独立策划并撰写各类稿件（新闻稿、综述稿、专访稿等）； <br />
-										2. 擅长科技话题与人物大咖的跟踪、深入调研与文案撰写； <br />
-										3. 具备较强的创新与智能科技应用分析能力，分析与解决问题的能力。
-									</div>
-									<div>任职要求：</div>
-									<div>
-										1. 有一定的科技行业积累，可以独立组织和策划选题；<br />
-										2. 逻辑清晰，表达流畅，文笔出色，善于交流，对于当前人工智能领域的各领军人物有基本了解；<br />
-										3. 自我驱动，热爱这份工作，并把它当作一份事业来看待；<br />
-										4. 英语6级及以上；<br />
-										5. 大学本科以上学历。
-									</div>
-								</div>
-							</li>
-							<li class="handle">
-								<div class="titles">·&nbsp;市场推广专员<div class="show"></div></div>
-								<div class="showbox">
-									<div>需求部门：智能制造研究所</div>
-									<div>需求人数：1人</div>
-									<div>岗位职责：</div>
-									<div>
-										1. 负责市场各类宣传活动的策划及实施，拓展销售渠道；<br />
-										2. 开展讲座、解答无人机的相关问题；<br />
-										3. 区域市场操作思路与操作模式；<br />
-										4. 媒体信息的收集、整理与反馈；<br />
-										5. 有一定的设计能力和软件应用；<br />
-										6. 业务流程的了解与熟悉。
-									</div>
-									<div>任职要求：</div>
-									<div>
-										1. 本科学历及其以上，市场营销专业优先；<br />
-										2. 良好的沟通能力，语言表达能力强；<br />
-										3. 性格积极向上，团队合作意识强；<br />
-										4. 工作主动性强，耐心细致，有责任心；<br />
-										5. 敏锐、独到的观察力和策划、组织能力，具有开拓创新精神；<br />
-										6. 口头表达能力和文档写作能力强，做过报告、课程辅导、讲座等相关经验者优先；<br />
-										7. 了解无人机的飞行原理优先。
-									</div>
-								</div>
-							</li>
-							<li class="handle">
-								<div class="titles">·&nbsp;创客教育研发工程师<div class="show"></div></div>
-								<div class="showbox">
-									<div>需求部门：高端教育与服务中心</div>
-									<div>需求人数：1人</div>
-									<div>岗位职责：</div>
-									<div>
-										1. 研发物联网、机器人、虚拟现实等电子类、编程类课程及配套教程、课件；<br />
-										2. 结合研究所已有成果，研发面向中小学生的教育装备和系统；<br />
-										3. 中小学创客教育课程的定制设计；<br />
-										4. 参与课程教学；<br />
-										5. 配合部门安排的课程推广活动和宣传活动；<br />
-										6. 指导中小学生参加物联网和机器人等大赛。
-									</div>
-									<div>任职要求：</div>
-									<div>
-										１. 熟悉智能硬件、 软件编程、3D打印及建模、激光切割及设计的一种或多种技能；<br />
-										２. 有乐高、少儿编程、机器人课程或STEAM课程的教授及研发经验者优先；<br />
-										３. 有青少年创客培训从业经验者优先；<br />
-										４. 擅长沟通表达，喜欢与人交流互动，善于学习钻研，有独立开发课程的能力。
-									</div>
-								</div>
-							</li>			
-							
-							<!-- <li class="handle">
-								<div class="titles">·&nbsp;市场专员<div class="show"></div></div>
-								<div class="showbox">
-									<div>岗位职责：</div>
-									<div>
-										1、组织编制与修订工程成本管理规范文件，并对各项目的执行情况进行监督；参与基建项目的招投标工作；<br />
-										
-										2、组织编制目项招标控制价并进行复审，负责施工过程中成本管理（含进度款、各类变更签证审核）等管理；<br />
-										
-										3、负责本部门所有对内对外的协调工作；组织内部造价合约的业务交流培训；负责工程团队成本合约交底及检查监督；<br />
-										
-										4、组织数据库归档、整理；提供决策所需各项成本数据信息、对项目进行经济后评价；
-									</div>
-									<div>招聘要求：</div>
-									<div>
-										1、工程造价或相关专业大学专科及以上学历；<br />
+						<ul class="fuserver" id="recruitment_data">	
 
-										2、有工程造价、成本管理等方面培训经历；<br />
-										
-										3、5年以上工程造价管理经验，初级职称及以上，注册造价师尤佳；
-									</div>
-								</div>
-							</li> -->
 						</ul>
 						
 						<div class="contact_way">
@@ -363,6 +310,9 @@ $(function() {
 							<p>工作地点：青岛高新区智力岛路1号创业大厦B座26层</p>
 							<p>招聘热线：0532-68012187</p>
 							<p>简历投递邮箱：hr@qaii.ac.cn</p>
+							<p>邮件标题：姓名-毕业学校/原单位-应聘岗位名称</p>
+							<p>咨询电话：0532-68012187</p>
+
 						</div>
 					</div>
 
@@ -375,8 +325,11 @@ $(function() {
 	
 	
 		<div class="foot">
-		<div class="foottext"></div>
-		<div class="footnav">					
+		<div class="foottext computerb"></div>
+		<div class="footnav mobile" style="text-align:center;">					
+			<img src="Resources/img/ic_code.png" width="40%"/>			
+		</div>
+		<div class="footnav computerb">					
 			<ul>
 				<li>
 					<div class="footTitle">首页<div class="footline"></div></div>
@@ -480,7 +433,7 @@ $(function() {
 				</li>
 			</ul>			
 		</div>
-		<div class="footlink">
+		<div class="footlink computerb">
 			<ul>
 				<li><span style="color:#fff;">友情链接：</span></li>
 				<li><a href="http://www.cas.cn/" target="_blank">中国科学院</a></li>
@@ -494,8 +447,12 @@ $(function() {
 
 			</ul>
 		</div>
-		<div class="copyright">
+		<div class="copyright computerb">
 			<span >青岛智能产业技术研究院 版权所有 鲁ICP备15005983号-1</span>
+		    <span class=address>地址：青岛高新区智力岛路1号创业大厦B座26层</span>
+		</div>
+		<div class="copyright mobile">
+			<span >青岛智能产业技术研究院 版权所有 鲁ICP备15005983号-1</span><br/>
 		    <span class=address>地址：青岛高新区智力岛路1号创业大厦B座26层</span>
 		</div>
 		

@@ -50,9 +50,13 @@ public class mPageController extends BaseController {
 	private static final String TongzhitonggaoAdd_PAGE = "Management/Tongzhitonggao/TongzhitonggaoAdd"; // 产业孵化-通知通告添加
 	private static final String TongzhitonggaoEdit_PAGE = "Management/Tongzhitonggao/TongzhitonggaoEdit"; // 产业孵化-通知通告修改
 	
-	private static final String ChanPinFangAn_PAGE = "Management/ChanPinFangAn/ChanPinFangAn"; // 产品方案-产品方案
 	private static final String ZhaoXianNaShi_PAGE = "Management/ZhaoXianNaShi/ZhaoXianNaShi"; // 招贤纳士-招贤纳士
-	private static final String YingPinJianLi_PAGE = "Management/ZhaoXianNaShi/YingPinJianLi"; // 招贤纳士-应聘简历
+	private static final String ZhaoXianNaShiAdd_PAGE = "Management/ZhaoXianNaShi/ZhaoXianNaShiAdd"; // 招贤纳士-招贤纳士添加
+	private static final String ZhaoXianNaShiEdit_PAGE = "Management/ZhaoXianNaShi/ZhaoXianNaShiEdit"; // 招贤纳士-招贤纳士修改
+	
+	private static final String ChanPinFangAn_PAGE = "Management/ChanPinFangAn/ChanPinFangAn"; // 产品方案-产品方案
+//	private static final String ZhaoXianNaShi_PAGE = "Management/ZhaoXianNaShi/ZhaoXianNaShi"; // 招贤纳士-招贤纳士
+	private static final String YingPinJianLi_PAGE = "Management/ZhaoXianNaShi/YingPinJianLi"; // 招贤纳士-应聘简历 
 
 	// 跳转页面
 	@RequestMapping(value = "login.do")
@@ -231,11 +235,27 @@ public class mPageController extends BaseController {
 		return TongzhitonggaoEdit_PAGE;
 	}
 
-	// 招贤纳士-招贤纳士
+	// 招贤纳士
 	@RequestMapping(value = "ZhaoXianNaShi.do")
 	public String ZhaoXianNaShi() {
 		return ZhaoXianNaShi_PAGE;
 	}
+	// 招贤纳士-添加
+	@RequestMapping(value = "ZhaoXianNaShiAdd.do")
+	public String ZhaoXianNaShiAdd() {
+		return ZhaoXianNaShiAdd_PAGE;
+	}
+	// 招贤纳士-修改
+	@RequestMapping(value = "ZhaoXianNaShiEdit.do")
+	public String ZhaoXianNaShiEdit() {
+		return ZhaoXianNaShiEdit_PAGE;
+	}
+	
+//	// 招贤纳士-招贤纳士
+//	@RequestMapping(value = "ZhaoXianNaShi.do")
+//	public String ZhaoXianNaShi() {
+//		return ZhaoXianNaShi_PAGE;
+//	}
 
 	// 招贤纳士-应聘简历
 	@RequestMapping(value = "YingPinJianLi.do")

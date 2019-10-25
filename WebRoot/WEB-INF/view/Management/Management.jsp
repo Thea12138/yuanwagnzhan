@@ -284,12 +284,12 @@ a:focus {
 									class="glyphicon glyphicon-wrench"> </i> <span> 产品方案 </span>
 							</a></li> -->
 							
-							<!-- <li class="nav-header hidden-md">招贤纳士</li>
+							<li class="nav-header hidden-md">招贤纳士</li>
 							<li id="ZhaoXianNaShi"><a class="ajax-link"
 								href="javascript:TrunPage('ZhaoXianNaShi');"> <i
 									class="glyphicon glyphicon-flag"> </i> <span> 招贤纳士 </span>
 							</a></li>
-							<li id="YingPinJianLi"><a class="ajax-link"
+							<!-- <li id="YingPinJianLi"><a class="ajax-link"
 								href="javascript:TrunPage('YingPinJianLi');"> <i
 									class="glyphicon glyphicon-file"> </i> <span> 应聘简历 </span>
 							</a></li> -->

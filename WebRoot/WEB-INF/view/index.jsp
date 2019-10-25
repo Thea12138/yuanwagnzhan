@@ -4,7 +4,11 @@
 <head>
 <title>青岛智能产业技术研究院</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="青岛智能产业技术研究院，青岛智能产业研究院，青岛研究院，研究院，智能智铭科技有限公司，王飞跃，王晓，郑南宁，高彦臣，于立平，青岛智能产业，自动驾驶，人工智能，智能交通，智能驾驶" />
+<meta name="description" content="青岛智能产业技术研究院（以下简称“青岛智能院”）按照“需求引导、创新驱动、联合协作、扎实推进”的原则，坚持世界眼光、树立国际标准，立足本土优势，在中科院自动化所市科技局、高新区管委的支持下，从无到有，汇集各方面人才与科技资源，走过了开创、建设和积累的四年，与300余位同事共同经历了建队伍、打基础、产学研转化上轨道、本地合作上台阶的四年。在团队建设、科技研发、产业落地等方面，均取得一定的成绩，获得30余项国家及省市区级别奖励。青岛智能院以“新理论支撑新技术，新技术赋能旧产业”为指导方针，时至2018，进一步明确了“科研顶天、产业立地”的发展战略。青岛智能院不断调整优化组织机构，紧紧围绕国际、国内技术进展，山东、青岛的实际需求，围绕智能制造、智能网络、智慧农业、智慧企业、智慧城市、智慧社会、智慧健康、智慧教育、智慧物流等方向设立14个研究所、1个技术研发中心和6个管理支撑部门，并基于平行理论统摄，在各所下设17个平行技术创新中心，为各行业提供灵捷、聚焦、收敛的技术服务。
+智能院坚持世界眼光、国际标准，发挥自身优势，加快产业化步伐，在青岛高新区建立产业孵化基地，遵循“立足青岛、辐射山东、服务全国”的发展方针，围绕国家“十三五”发展重点，以项目合作、产学研结合、举办国际研讨会和学术论坛等多种形式，联合创办国际首家“智能科技学院”，打造智能领域的“黄埔军校”，培养智能产业的“红领人才”。" />
 <meta name="renderer" content="webkit" />
+<meta name="baidu-site-verification" content="jxlhsis1qT" />
 <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
   
 <link type="text/css" rel="stylesheet" href="Resources/css/style.css" />
@@ -226,34 +230,6 @@
             perspective: inherit;
     z-index: 2;
 } 
-
-/* .containerpro .back{
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-} */
-
-/* .containerpro .front{
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-}
-
-.containerpro:hover .back{
-  -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-}
-
-.containerpro:hover .front{
-  -webkit-transform: rotateY(-180deg);
-          transform: rotateY(-180deg);
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-} */
 
 .front .inner p{
   font-size: 26px;
@@ -509,23 +485,7 @@ margin-bottom:30px;}
 								rowcount = data.rows;
 								var list = data.list;
 							    var ht = "";
-							    /* 	ht=+ "<li>"
-								+"<img src='Resources/img/icon_point.png'/>"
-								+"<a href='javascript:ContentJumpPage(\"NewsShow.do?NewsID="
-								+ list[0].NewsID
-								+ "&NewsCategory="
-								+ NewsCategory
-								+ "\");'>"
-								+"<span class='itemtitle'>"
-								+ SubStrFun(list[0].NewsTitle, 50)
-								+ "</span><span class='itemtime'>"
-								+ (list[i].PublishDate == null ? ""
-										: ("["
-												+ (ymdDate(
-														list[0].PublishDate,
-														'yyyy-MM-dd')) + "]"))
-								+ "</span></a></li>"; */
-								for (var i = 1; i <9; i++) {
+								for (var i = 0; i <9; i++) {
 									ht = ht
 											+ "<li>"
 											+"<img src='Resources/img/icon_point.png'/>"
@@ -637,21 +597,42 @@ margin-bottom:30px;}
 	    <div id="demo" class="carousel slide" data-ride="carousel">
 		</div>
 	    <div class="headertop">			
-			<img src="Resources/img/logo.png" height="40px"/>
+			<img src="Resources/img/logo.png" height="40px" class="computer"/>
+			<img src="Resources/img/mobile/ic_logo.png" class="mobile"/>
 			<div class=language>
 				<!-- <img src="Resources/img/fir1.png" height="40px"/> -->	
 				<!-- <div class="langue">
 					<a class="lanActive" href="index.do">中文</a> | <a href="index_e.do" target="_blank">English</a>
 				</div> -->	
-				<div>
+				<div class="computer">
 					<img src="Resources/img/weibo.png" height="40px" style="float:right;"/>
 					<div class="wechat" style="display:none;"><img src="Resources/img/code.png"/></div>
 					<img src="Resources/img/wechart.png" height="40px" id="wechat" style="float:right;margin-right:5px;"/>
 				</div>	
+				<div class="mobile">
+					<img src="Resources/img/mobile/fenlei.png" class="fenlei" style="float:right;"/>
+					<!-- <img src="Resources/img/mobile/home.png" style="float:right;"/> -->
+				</div>	
 			</div>
 														
 		</div>
-		<div class="nav" id="nav">
+		<div class="nav mobile" id="mobileflbox" style="display:none;">
+			<ul class="nav-main">
+				<li class="home"><a href="javascript:PageJump('index');">首页 </a></li>
+				<li><a	href="javascript:ContentJump('jbgk_wyjs.do','jibengk');">智能院概况</a></li>
+				<li><a	href="javascript:ContentJump('xwdt_tztg_frame.do','xwdtyjydtframe');">新闻中心</a></li>	
+				<li class="cpfayyhygl">
+					<a href="javascript:ContentJump('product_industry.do','kyhdyjfx');">
+					<span class="spanhov">产品介绍</span>
+					</a>
+				</li>
+				<li><a href="javascript:ContentJump('kyhd_kyfx.do','kyhdyjfx');">科学研究</a></li>
+				<li><a href="javascript:ContentJump('cxfh_fhfw.do','cxfhframe');">产业孵化</a></li>	
+				<li><a href="javascript:ContentJump('lxwm_zxns.do','contactus');">联系我们</a></li>				
+			</ul>
+
+		</div>
+		<div class="nav computer" id="nav">
 			<ul class="nav-main" id="nav-main">
 				<li id="home" class="home"><a
 					href="javascript:PageJump('index');"><span class="spanactive">首页</span> </a></li>
@@ -731,6 +712,8 @@ margin-bottom:30px;}
 		</div>
 
 	</div>	
+
+	</div>	
 	<div class="clear"></div>
 	<div id="homepage" class="homepage">
 		<div class="news">
@@ -744,13 +727,17 @@ margin-bottom:30px;}
 				 <img src="Resources/img/ic_line.png" width="100%">			
 			</div>
 			<div class="newscontent"> 
+				<a href="http://www.qaii.cn/NewsShow.do?NewsID=1019&NewsCategory=F">
 				<div class="newsimg">
 					<div class="newsTitle">王飞跃院长受邀参加2018世界科技创新论坛</div>
-				</div>				
+				</div>	
+				</a>			
 				<div class="newslist">
 					<div class="newshow">
+						<a href="http://www.qaii.cn/NewsShow.do?NewsID=1052&NewsCategory=H">
 						<p class="newshowtitle">2018国家智能产业峰会取得圆满结束</p>
 						<p class="newshowcontent">为丰富员工的业余生活，加强精神文明建设，增强团队凝聚力，舒缓工作压力，青岛智能产业技术研究院工会于5月27日组织开展。</p>
+						</a>
 					</div>
 					<div class="newsotherlist">
 						<!-- <table id="newsTable" class="listtable">
@@ -950,13 +937,17 @@ margin-bottom:30px;}
 					 <img src="Resources/img/ic_line.png" width="100%">			
 				</div>
 			</div>
-			<img src="Resources/img/pic_partner.png" width="100%" style="margin-top: -20px;">
+			<img class="computer" src="Resources/img/pic_partner.png" width="100%" style="margin-top: -20px;">
+			<img class="mobile" src="Resources/img/mobile/company.png" width="100%" style="margin-top: -20px;">
 		</div>
 	</div>
 	
 	<div class="foot">
-		<div class="foottext"></div>
-		<div class="footnav">					
+		<div class="foottext computerb"></div>
+		<div class="footnav mobile" style="text-align:center;">					
+			<img src="Resources/img/ic_code.png" width="40%"/>			
+		</div>
+		<div class="footnav computerb">					
 			<ul>
 				<li>
 					<div class="footTitle">首页<div class="footline"></div></div>
@@ -1060,7 +1051,7 @@ margin-bottom:30px;}
 				</li>
 			</ul>			
 		</div>
-		<div class="footlink">
+		<div class="footlink computerb">
 			<ul>
 				<li><span style="color:#fff;">友情链接：</span></li>
 				<li><a href="http://www.cas.cn/" target="_blank">中国科学院</a></li>
@@ -1074,12 +1065,23 @@ margin-bottom:30px;}
 
 			</ul>
 		</div>
-		<div class="copyright">
+		<div class="copyright computerb">
 			<span >青岛智能产业技术研究院 版权所有 鲁ICP备15005983号-1</span>
+		    <span class=address>地址：青岛高新区智力岛路1号创业大厦B座26层</span>
+		</div>
+		<div class="copyright mobile">
+			<span >青岛智能产业技术研究院 版权所有 鲁ICP备15005983号-1</span><br/>
 		    <span class=address>地址：青岛高新区智力岛路1号创业大厦B座26层</span>
 		</div>
 		
 	</div>
 	<div class="clear"></div>
+	<script>
+	$(document).ready(function(){
+	  $(".fenlei").click(function(){
+	    $("#mobileflbox").toggle();
+	  });
+	});
+	</script>
 </body>
 </html>

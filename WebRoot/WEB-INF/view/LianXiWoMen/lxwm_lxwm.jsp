@@ -15,8 +15,10 @@
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
-<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-<meta http-equiv="description" content="This is my page">
+<meta name="keywords" content="青岛智能产业技术研究院，青岛智能产业研究院，青岛研究院，研究院，智能智铭科技有限公司，王飞跃，王晓，郑南宁，高彦臣，于立平，青岛智能产业，自动驾驶，人工智能，智能交通，智能驾驶" />
+<meta name="description" content="青岛智能产业技术研究院（以下简称“青岛智能院”）按照“需求引导、创新驱动、联合协作、扎实推进”的原则，坚持世界眼光、树立国际标准，立足本土优势，在中科院自动化所市科技局、高新区管委的支持下，从无到有，汇集各方面人才与科技资源，走过了开创、建设和积累的四年，与300余位同事共同经历了建队伍、打基础、产学研转化上轨道、本地合作上台阶的四年。在团队建设、科技研发、产业落地等方面，均取得一定的成绩，获得30余项国家及省市区级别奖励。青岛智能院以“新理论支撑新技术，新技术赋能旧产业”为指导方针，时至2018，进一步明确了“科研顶天、产业立地”的发展战略。青岛智能院不断调整优化组织机构，紧紧围绕国际、国内技术进展，山东、青岛的实际需求，围绕智能制造、智能网络、智慧农业、智慧企业、智慧城市、智慧社会、智慧健康、智慧教育、智慧物流等方向设立14个研究所、1个技术研发中心和6个管理支撑部门，并基于平行理论统摄，在各所下设17个平行技术创新中心，为各行业提供灵捷、聚焦、收敛的技术服务。
+智能院坚持世界眼光、国际标准，发挥自身优势，加快产业化步伐，在青岛高新区建立产业孵化基地，遵循“立足青岛、辐射山东、服务全国”的发展方针，围绕国家“十三五”发展重点，以项目合作、产学研结合、举办国际研讨会和学术论坛等多种形式，联合创办国际首家“智能科技学院”，打造智能领域的“黄埔军校”，培养智能产业的“红领人才”。" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 <link type="text/css" rel="stylesheet" href="Resources/css/style.css" />
 <link rel="stylesheet" type="text/css" href="Resources/css/common.css">
 <link rel="stylesheet"
@@ -33,6 +35,9 @@
 
 <script type="text/javascript">
 	$(function() {
+		$(".fenlei").click(function(){
+		    $("#mobileflbox").toggle();
+		  });
 	   sessionStorage.focusUrl_Name = "lxwm_lxwm";
 		sessionStorage.focusUrl_ID = "";
 
@@ -121,20 +126,22 @@
 	<div id="header" class="header">
 		<div class="headertop">
 			<div class="headerinner">
-				<div class=logo>
-					<div class=language>
-						<a class="lanActive" href="index.do">中文</a> | <a href="index_e.do">English</a>
-					</div>
-					<div class=qrcode>
-						<img src="Resources/css/img/qrcode.png" width=50px height=50px />
-					</div>
-					<div class=code>
-						<img src="Resources/css/img/code.png" width=50px height=50px />
-					</div>
-				</div>
+				<a href="javascript:PageJump('index');">
+					<img src="Resources/img/ic_logo.png" height="40px"/>	
+				</a>
+				<div class="mobile" style="float:right;">
+					<img src="Resources/img/mobile/fenlei.png" class="fenlei"/>
+				</div>		
 			</div>
 		</div>
-		<div class="nav" id="nav">
+		<div class="nav mobile" id="mobileflbox" style="display:none;">
+			<ul class="nav-main">
+				<li class="home"><a href="javascript:PageJump('index');">首页 </a></li>
+				<li><a	href="javascript:ContentJump('lxwm_zxns.do','contactus');">招贤纳士</a></li>					
+				<li><a	href="javascript:ContentJump('lxwm_business.do','contactus');">商务</a></li>
+			</ul>
+		</div>
+		<div class="nav computer" id="nav">
 			<ul class="nav-main" id="nav-main">
 				<li id="home" class="home"><a
 					href="javascript:PageJump('index');">首页 </a></li>
@@ -301,22 +308,137 @@
 	</div>
 	
 	<div class="foot">
-		<div class="foottext"></div>
-		<div class="footnav">
+		<div class="foottext computerb"></div>
+		<div class="footnav mobile" style="text-align:center;">					
+			<img src="Resources/img/ic_code.png" width="40%"/>			
+		</div>
+		<div class="footnav computerb">					
 			<ul>
-				<li><a href="http://www.cas.cn/">中国科学院</a></li>
+				<li>
+					<div class="footTitle">首页<div class="footline"></div></div>
+				</li>
+				<li>
+					<div class="footTitle">智能院概况<div class="footline"></div></div>
+					<ul>
+						<li ><a
+							href="javascript:ContentJump('jbgk_wyjs.do','jibengk');">院情简介</a></li>
+						<li ><a
+							href="javascript:ContentJump('jbgk_fzlc.do','jibengk');">发展历程</a></li>
+						<li ><a
+							href="javascript:ContentJump('jbgk_xswyh.do','jibengk');">学术委员会</a></li>
+						<li ><a
+							href="javascript:ContentJump('jbgk_sxkxj.do','jibengk');">首席科学家</a></li>
+						<li ><a
+							href="javascript:ContentJump('jbgk_yjyld.do','jibengk');">现任领导</a></li>
+						<li ><a
+							href="javascript:ContentJump('jbgk_ywxw_frame.do','jibengk');">荣誉奖励</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="footTitle">新闻中心<div class="footline"></div></div>
+					<ul>
+						<li><a
+							href="javascript:ContentJump('xwdt_ldsc_frame.do','xwdtyjydtframe');">通知公告</a></li>
+						<li><a
+							href="javascript:ContentJump('xwdt_ldsc_frame.do','xwdtyjydtframe');">领导视察</a></li>
+						<li><a
+							href="javascript:ContentJump('xwdt_zqdj_frame.do','xwdtyjydtframe');">合作交流</a></li>
+						<li><a
+							href="javascript:ContentJump('xwdt_ygfc_frame.do','xwdtyjydtframe');">员工风采</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="footTitle">科学研究<div class="footline"></div></div>
+					<ul>
+						<li><a
+							href="javascript:ContentJump('kyhd_kyfx.do','kyhdyjfx');">科研方向</a></li>					
+						<li><a
+							href="javascript:ContentJump('kyhd_kycg_kyjl.do','kyhdyjfx');">科研成果</a></li>
+						<li><a
+							href="javascript:ContentJump('kyhd_kycg_kyjl.do','kyhdyjfx');">知识产权</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="footTitle">产品介绍<div class="footline"></div></div>
+					<ul class="small">
+						<li><a
+							href="javascript:ContentJump('product_industry.do','kyhdyjfx');">智能产业</a></li>					
+						<li><a
+							href="javascript:ContentJump('product_manufacture.do','kyhdyjfx');">智能制造</a></li>
+						<li><a
+							href="javascript:ContentJump('product_driving.do','kyhdyjfx');">平行驾驶</a></li>
+						<li><a
+							href="javascript:ContentJump('product_traffic.do','kyhdyjfx');">平行交通</a></li>
+						<li><a
+							href="javascript:ContentJump('product_data.do','kyhdyjfx');">视频大数据</a></li>
+						<li><a
+							href="javascript:ContentJump('product_health.do','kyhdyjfx');">智慧医疗</a></li>
+						<li><a
+							href="javascript:ContentJump('product_logistics.do','kyhdyjfx');">智慧物流</a></li>
+						<li><a
+							href="javascript:ContentJump('product_education.do','kyhdyjfx');">智慧教育</a></li>
+						<li><a
+							href="javascript:ContentJump('product_argiculture.do','kyhdyjfx');">智慧农业</a></li>
+						<li><a
+							href="javascript:ContentJump('product_energy.do','kyhdyjfx');">平行能源</a></li>
+						<li><a
+							href="javascript:ContentJump('product_media.do','kyhdyjfx');">平行传媒</a></li>
+						<li><a
+							href="javascript:ContentJump('product_drone.do','kyhdyjfx');">无人机</a></li>									
+					</ul>
+				</li>
+				<li>
+					<div class="footTitle">产业孵化<div class="footline"></div></div>
+					<ul>
+						<li><a
+							href="javascript:ContentJump('cxfh_fhfw.do','cxfhframe');">孵化服务</a></li>					
+						<li><a
+							href="javascript:ContentJump('cxfh_zcfc.do','cxfhframe');">众创风采</a></li>
+						<li><a
+							href="javascript:ContentJump('cxfh_zcjj.do','cxfhframe');">众创基金</a></li>
+						<!-- <li><a
+							href="javascript:ContentJump('cxfh_hdrl.do','cxfhframe');">活动日历</a></li> -->
+						<li><a
+							href="javascript:ContentJump('cxfh_tztg_frame.do','cxfhframe');">通知公告</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="footTitle">联系我们<div class="footline"></div></div>
+					<ul>
+						<li><a
+							href="javascript:ContentJump('lxwm_zxns.do','contactus');">招贤纳士</a></li>					
+						<li><a
+							href="javascript:ContentJump('lxwm_business.do','contactus');">商务</a></li>
+					</ul>
+				</li>
+				<li style="width: 13.8%;">
+					<img src="Resources/img/ic_code.png" width="100%"/>
+				</li>
+			</ul>			
+		</div>
+		<div class="footlink computerb">
+			<ul>
+				<li><span style="color:#fff;">友情链接：</span></li>
+				<li><a href="http://www.cas.cn/" target="_blank">中国科学院</a></li>
 				<li><span style="color:#fff;">|</span></li>
-				<li><a href="http://www.ia.cas.cn/">中国科学院自动化研究所</a></li>
+				<li><a href="http://www.ia.cas.cn/" target="_blank">中国科学院自动化研究所</a></li>
 				<li><span style="color:#fff;">|</span></li>
-				<li><a href="http://www.compsys.ia.ac.cn/">复杂系统管理与控制国家重点实验室</a>
+				<li><a href="http://www.compsys.ia.ac.cn/" target="_blank">复杂系统管理与控制国家重点实验室</a>
 				</li>
 				<li><span style="color:#fff;">|</span></li>
-				<li><a href="http://www.casc.ac.cn/">东莞科学院云计算产业技术创新与育成中心</a></li>
+				<li><a href="http://www.casc.ac.cn/" target="_blank">东莞科学院云计算产业技术创新与育成中心</a></li>
 
 			</ul>
 		</div>
-		<div class=copyright>青岛智能产业技术研究院 版权所有 鲁ICP备15005983号-1</div>
-		<div class=address>地址：青岛高新区智力岛路1号创业大厦B座26层</div>
+		<div class="copyright computerb">
+			<span >青岛智能产业技术研究院 版权所有 鲁ICP备15005983号-1</span>
+		    <span class=address>地址：青岛高新区智力岛路1号创业大厦B座26层</span>
+		</div>
+		<div class="copyright mobile">
+			<span >青岛智能产业技术研究院 版权所有 鲁ICP备15005983号-1</span><br/>
+		    <span class=address>地址：青岛高新区智力岛路1号创业大厦B座26层</span>
+		</div>
+		
 	</div>
 	<div class="clear"></div>
 </body>

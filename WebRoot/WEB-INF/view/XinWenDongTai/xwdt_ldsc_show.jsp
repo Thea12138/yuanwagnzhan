@@ -16,8 +16,11 @@
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
-<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-<meta http-equiv="description" content="This is my page">
+<meta name="keywords" content="青岛智能产业技术研究院，青岛智能产业研究院，青岛研究院，研究院，智能智铭科技有限公司，王飞跃，王晓，郑南宁，高彦臣，于立平，青岛智能产业，自动驾驶，人工智能，智能交通，智能驾驶" />
+<meta name="description" content="青岛智能产业技术研究院（以下简称“青岛智能院”）按照“需求引导、创新驱动、联合协作、扎实推进”的原则，坚持世界眼光、树立国际标准，立足本土优势，在中科院自动化所市科技局、高新区管委的支持下，从无到有，汇集各方面人才与科技资源，走过了开创、建设和积累的四年，与300余位同事共同经历了建队伍、打基础、产学研转化上轨道、本地合作上台阶的四年。在团队建设、科技研发、产业落地等方面，均取得一定的成绩，获得30余项国家及省市区级别奖励。青岛智能院以“新理论支撑新技术，新技术赋能旧产业”为指导方针，时至2018，进一步明确了“科研顶天、产业立地”的发展战略。青岛智能院不断调整优化组织机构，紧紧围绕国际、国内技术进展，山东、青岛的实际需求，围绕智能制造、智能网络、智慧农业、智慧企业、智慧城市、智慧社会、智慧健康、智慧教育、智慧物流等方向设立14个研究所、1个技术研发中心和6个管理支撑部门，并基于平行理论统摄，在各所下设17个平行技术创新中心，为各行业提供灵捷、聚焦、收敛的技术服务。
+智能院坚持世界眼光、国际标准，发挥自身优势，加快产业化步伐，在青岛高新区建立产业孵化基地，遵循“立足青岛、辐射山东、服务全国”的发展方针，围绕国家“十三五”发展重点，以项目合作、产学研结合、举办国际研讨会和学术论坛等多种形式，联合创办国际首家“智能科技学院”，打造智能领域的“黄埔军校”，培养智能产业的“红领人才”。" />
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 <link rel="stylesheet" type="text/css" href="Resources/css/common.css">
 <link type="text/css" rel="stylesheet"
 	href="Resources/css/bootstrap.min.css" />
@@ -34,6 +37,9 @@
 <script type="text/javascript">
 
 	$(function() {
+		$(".fenlei").click(function(){
+		    $("#mobileflbox").toggle();
+		  });
 		NavXWDT();
 		$(window).load(function() {
 			parent.setiHeight($(".rightcontent").height() + 240);
@@ -55,13 +61,24 @@
 	<div id="header" class="header">
 		<div class="headertop">
 			<div class="headerinner">
-				<img src="Resources/img/ic_logo.png" height="40px"/>	
-				<div class=language>
-					<a class="lanActive" href="index.do">中文</a> | <a href="index_e.do">English</a>
-				</div>			
+				<a href="javascript:PageJump('index');">
+					<img src="Resources/img/ic_logo.png" height="40px"/>	
+				</a>
+				<div class="mobile" style="float:right;">
+					<img src="Resources/img/mobile/fenlei.png" class="fenlei"/>
+				</div>		
 			</div>
 		</div>
-		<div class="nav" id="nav">
+		<div class="nav mobile" id="mobileflbox" style="display:none;">
+			<ul class="nav-main">
+				<li class="home"><a href="javascript:PageJump('index');">首页 </a></li>
+				<li><a	href="javascript:ContentJump('xwdt_tztg_frame.do','xwdtyjydtframe');">通知通告</a></li>	
+				<li><a	href="javascript:ContentJump('xwdt_ldsc_frame.do','xwdtyjydtframe');">领导视察</a></li>
+				<li><a	href="javascript:ContentJump('xwdt_zqdj_frame.do','xwdtyjydtframe');">合作交流</a></li>
+				<li><a	href="javascript:ContentJump('xwdt_ygfc_frame.do','xwdtyjydtframe');">员工风采</a></li>	
+			</ul>
+		</div>
+		<div class="nav computer" id="nav">
 			<ul class="nav-main" id="nav-main">
 				<li id="home" class="home"><a
 					href="javascript:PageJump('index');">首页 </a></li>
@@ -196,9 +213,12 @@
 	</div>
 	<div class="clear"></div>
 	
-	<div class="foot">
-		<div class="foottext"></div>
-		<div class="footnav">					
+<div class="foot">
+		<div class="foottext computerb"></div>
+		<div class="footnav mobile" style="text-align:center;">					
+			<img src="Resources/img/ic_code.png" width="40%"/>			
+		</div>
+		<div class="footnav computerb">					
 			<ul>
 				<li>
 					<div class="footTitle">首页<div class="footline"></div></div>
@@ -302,7 +322,7 @@
 				</li>
 			</ul>			
 		</div>
-		<div class="footlink">
+		<div class="footlink computerb">
 			<ul>
 				<li><span style="color:#fff;">友情链接：</span></li>
 				<li><a href="http://www.cas.cn/" target="_blank">中国科学院</a></li>
@@ -316,8 +336,12 @@
 
 			</ul>
 		</div>
-		<div class="copyright">
+		<div class="copyright computerb">
 			<span >青岛智能产业技术研究院 版权所有 鲁ICP备15005983号-1</span>
+		    <span class=address>地址：青岛高新区智力岛路1号创业大厦B座26层</span>
+		</div>
+		<div class="copyright mobile">
+			<span >青岛智能产业技术研究院 版权所有 鲁ICP备15005983号-1</span><br/>
 		    <span class=address>地址：青岛高新区智力岛路1号创业大厦B座26层</span>
 		</div>
 		
